@@ -1,0 +1,6 @@
+framework module Pods_MyTrax {
+  umbrella header "Pods-MyTrax-umbrella.h"
+
+  export *
+  module * { export * }
+}
