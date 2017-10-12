@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class RegisterOwnerVC: UIViewController {
     
@@ -49,6 +51,27 @@ class RegisterOwnerVC: UIViewController {
         Auth.auth().removeStateDidChangeListener(handle!)
     }
     
+    @IBAction func facebookLogin(_ sender: Any) {
+        let facebookLogin = FBSDKLoginManager()
+        print("Logging In")
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self, handler:{(facebookResult, facebookError) -> Void in
+            if facebookError != nil {
+                print("Facebook login failed. Error \(String(describing: facebookError))")
+            } else if (facebookResult?.isCancelled)! {
+                print("Facebook login was cancelled.")
+            } else {
+                print("You’re inz ;)")
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                Auth.auth().signIn(with: credential, completion: { (user, error) in
+                    guard let name = user?.displayName else {return}
+                    guard let mail = user?.email else {return}
+                    self.emailTextField.text = mail
+                    self.firstNameTextField.text = name
+                    self.emailTextField.endEditing(true)
+                })
+            }
+        })
+    }
     
     
     

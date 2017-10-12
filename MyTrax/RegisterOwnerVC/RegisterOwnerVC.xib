@@ -73,14 +73,23 @@
                         <action selector="registerButtonAction:" destination="-1" eventType="touchUpInside" id="xSu-RP-ZHh"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E45-AG-oVo">
+                    <rect key="frame" x="154" y="399" width="67" height="30"/>
+                    <state key="normal" title="Facebook"/>
+                    <connections>
+                        <action selector="facebookLogin:" destination="-1" eventType="touchUpInside" id="DFM-cm-gU7"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="E45-AG-oVo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3Oz-hp-xPm"/>
                 <constraint firstItem="bSy-B6-VWI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MYA-0C-pzL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wx4-m2-gR3" secondAttribute="trailing" constant="16" id="OUX-ke-hI9"/>
                 <constraint firstItem="Wx4-m2-gR3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PLc-H8-6LO"/>
                 <constraint firstItem="bSy-B6-VWI" firstAttribute="top" secondItem="Wev-8p-6ue" secondAttribute="bottom" constant="20" id="aHe-Z3-dh9"/>
                 <constraint firstItem="Wx4-m2-gR3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="djl-kB-mVK"/>
+                <constraint firstItem="E45-AG-oVo" firstAttribute="top" secondItem="bSy-B6-VWI" secondAttribute="bottom" constant="8" id="h6g-ds-uvX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="32.5" y="101.5"/>
