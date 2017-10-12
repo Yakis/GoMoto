@@ -29,12 +29,11 @@ class RestAPIManager {
             do {
                 //Decode retrived data with JSONDecoder and assing type of Article object
                 let decoder = JSONDecoder()
-                let articlesData = try decoder.decode([Owner].self, from: data)
+                let owners = try decoder.decode([Owner].self, from: data)
                 
                 //Get back to the main queue
                 DispatchQueue.main.async {
-                    //print(articlesData)
-                    //self.articles = articlesData
+                    print(owners.count)
                 }
                 
             } catch let jsonError {

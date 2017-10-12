@@ -18,7 +18,7 @@ class AppController: NSObject {
     class func createAndReturnRoot() -> UIViewController {
         //let dashboardViewController = DashboardVC(nibName: DashboardNibs.dashboardVC, bundle: nil)
         let welcomeViewController = WelcomeVC(nibName: WelcomeNibs.welcomeVC, bundle: nil)
-        let navigationController = UINavigationController(rootViewController: welcomeViewController)
+       // let navigationController = UINavigationController(rootViewController: welcomeViewController)
         return welcomeViewController
     }
     
