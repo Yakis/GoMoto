@@ -6,9 +6,6 @@ target 'MyTrax' do
   use_frameworks!
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
-pod 'FacebookCore'
-pod 'FacebookLogin'
-pod 'FacebookShare'
   # Pods for MyTrax
 
 end
