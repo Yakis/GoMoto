@@ -8,8 +8,8 @@
 
 import UIKit
 import FirebaseAuth
-import FBSDKCoreKit
-import FBSDKLoginKit
+import FacebookCore
+import FacebookLogin
 
 class RegisterOwnerVC: UIViewController {
     
@@ -34,14 +34,18 @@ class RegisterOwnerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let accessToken = AccessToken.current {
+            print("User is already logged in until: \(accessToken.expirationDate)")
+        } else {
+            print("You need to press that f button :]")
+        }
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            // ...
+            
         }
     }
     
@@ -52,22 +56,19 @@ class RegisterOwnerVC: UIViewController {
     }
     
     @IBAction func facebookLogin(_ sender: Any) {
-        let facebookLogin = FBSDKLoginManager()
-        facebookLogin.logIn(withReadPermissions: ["email", "public_profile", "user_friends"], from: self, handler:{(facebookResult, facebookError) -> Void in
-            if facebookError != nil {
-                print("Facebook login failed. Error \(String(describing: facebookError))")
-            } else if (facebookResult?.isCancelled)! {
-                print("Facebook login was cancelled.")
-            } else {
-                print("You’re inz ;)")
-                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        let facebookLogin = LoginManager()
+        facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: self) { (result) in
+            switch result {
+            case .failed(let error):
+                print(error.localizedDescription)
+            case .cancelled:
+                print("User cancelled login")
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
                 Auth.auth().signIn(with: credential, completion: { (user, error) in
                     user?.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
                         print(tokenString!)
                     })
-//                    user?.getIDToken(completion: { (tokenString, error) in
-//                        print(tokenString)
-//                    })
                     guard let fullName = user?.displayName else {return}
                     let array = fullName.components(separatedBy: " ")
                     let firstName = array[0]
@@ -81,7 +82,7 @@ class RegisterOwnerVC: UIViewController {
                     self.contactNumberTextField.text = phone
                 })
             }
-        })
+        }
     }
     
     
