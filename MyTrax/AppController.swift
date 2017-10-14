@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AppController: NSObject {
     
@@ -20,6 +21,11 @@ class AppController: NSObject {
         let welcomeViewController = WelcomeVC(nibName: WelcomeNibs.welcomeVC, bundle: nil)
        // let navigationController = UINavigationController(rootViewController: welcomeViewController)
         return welcomeViewController
+    }
+    
+    class func setupFirebase() {
+        FirebaseConfiguration.shared.setLoggerLevel(.min)
+        FirebaseApp.configure()
     }
     
     

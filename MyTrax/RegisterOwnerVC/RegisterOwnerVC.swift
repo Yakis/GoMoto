@@ -113,6 +113,7 @@ class RegisterOwnerVC: UIViewController {
                 return
             }
             user.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
+                guard let tokenString = tokenString else {return}
                 print(tokenString)
             })
             let token = user.uid

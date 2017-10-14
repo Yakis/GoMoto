@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0900"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "19B507CA28BC9A27E40B5E7FFC8FD386"
-               BuildableName = "Pods_MyTrax.framework"
-               BlueprintName = "Pods-MyTrax"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "1521D8981F8BF40A00105C17"
+               BuildableName = "MyTrax.app"
+               BlueprintName = "MyTrax"
+               ReferencedContainer = "container:MyTrax.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,6 +30,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1521D8981F8BF40A00105C17"
+            BuildableName = "MyTrax.app"
+            BlueprintName = "MyTrax"
+            ReferencedContainer = "container:MyTrax.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -44,15 +53,23 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "19B507CA28BC9A27E40B5E7FFC8FD386"
-            BuildableName = "Pods_MyTrax.framework"
-            BlueprintName = "Pods-MyTrax"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "1521D8981F8BF40A00105C17"
+            BuildableName = "MyTrax.app"
+            BlueprintName = "MyTrax"
+            ReferencedContainer = "container:MyTrax.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -62,6 +79,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1521D8981F8BF40A00105C17"
+            BuildableName = "MyTrax.app"
+            BlueprintName = "MyTrax"
+            ReferencedContainer = "container:MyTrax.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
