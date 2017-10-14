@@ -14,13 +14,13 @@ class OwnerInfoVC: UIViewController {
     @IBOutlet weak var ownerInfoLabel: UILabel!
     
     
-    var owner: Owner?
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let owner = owner else {return}
-        self.ownerInfoLabel.text = "Welcome, \(owner.first_name) \(owner.last_name)! 😀"
+        guard let user = user else {return}
+        self.ownerInfoLabel.text = "Welcome, \(user.first_name) \(user.last_name)! 😀"
         
     }
 

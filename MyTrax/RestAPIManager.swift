@@ -29,7 +29,7 @@ class RestAPIManager {
             do {
                 //Decode retrived data with JSONDecoder and assing type of Article object
                 let decoder = JSONDecoder()
-                let owners = try decoder.decode([Owner].self, from: data)
+                let owners = try decoder.decode([User].self, from: data)
                 
                 //Get back to the main queue
                 DispatchQueue.main.async {
@@ -46,8 +46,8 @@ class RestAPIManager {
     
     
     
-    func saveOwner(owner: Owner, completionHandler: @escaping (Error?) -> Void) {
-        let ownersEndpoint = "\(Endpoints.Owners.baseUrl)\(Endpoints.createNew)"
+    func saveOwner(owner: User, completionHandler: @escaping (Error?) -> Void) {
+        let ownersEndpoint = "\(Endpoints.Users.baseUrl)\(Endpoints.createNew)"
         guard let ownersUrl = URL(string: ownersEndpoint) else {return}
         var ownersUrlRequest = URLRequest(url: ownersUrl)
         ownersUrlRequest.httpMethod = "POST"

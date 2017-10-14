@@ -26,8 +26,8 @@ struct Endpoints {
     static let getAll = "/all"
     static let createNew = "/create"
     
-    struct Owners {
-        static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/owners"
+    struct Users {
+        static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/users"
         
     }
     

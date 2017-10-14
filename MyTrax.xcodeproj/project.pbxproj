@@ -12,11 +12,9 @@
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
 		1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8AE1F8BF47900105C17 /* AppController.swift */; };
 		1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B01F8BF4A800105C17 /* Constants.swift */; };
-		1521D8B41F8BF4DE00105C17 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B21F8BF4DE00105C17 /* DashboardVC.swift */; };
-		1521D8B51F8BF4DE00105C17 /* DashboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8B31F8BF4DE00105C17 /* DashboardVC.xib */; };
 		154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */; };
 		154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */; };
-		154C71BD1F8E955200EBAFFF /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BC1F8E955200EBAFFF /* Owner.swift */; };
+		154C71BD1F8E955200EBAFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BC1F8E955200EBAFFF /* User.swift */; };
 		154D8A291F8E9F5700F4DE08 /* OwnerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154D8A271F8E9F5700F4DE08 /* OwnerInfoVC.swift */; };
 		154D8A2A1F8E9F5700F4DE08 /* OwnerInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154D8A281F8E9F5700F4DE08 /* OwnerInfoVC.xib */; };
 		1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C5151F8BF5610018D52B /* WelcomeVC.swift */; };
@@ -36,11 +34,9 @@
 		1521D8A81F8BF40A00105C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1521D8AE1F8BF47900105C17 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		1521D8B01F8BF4A800105C17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1521D8B21F8BF4DE00105C17 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
-		1521D8B31F8BF4DE00105C17 /* DashboardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardVC.xib; sourceTree = "<group>"; };
 		154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
-		154C71BC1F8E955200EBAFFF /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		154C71BC1F8E955200EBAFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		154D8A271F8E9F5700F4DE08 /* OwnerInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerInfoVC.swift; sourceTree = "<group>"; };
 		154D8A281F8E9F5700F4DE08 /* OwnerInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerInfoVC.xib; sourceTree = "<group>"; };
 		1568C5151F8BF5610018D52B /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -94,7 +90,6 @@
 				1521D8A81F8BF40A00105C17 /* Info.plist */,
 				1521D8AE1F8BF47900105C17 /* AppController.swift */,
 				1521D8B01F8BF4A800105C17 /* Constants.swift */,
-				1521D8B61F8BF4F700105C17 /* DashboardVC */,
 				1568C5191F8BF5640018D52B /* WelcomeVC */,
 				15A7AECE1F8E650000ABBFA6 /* Extensions */,
 				154C71BF1F8E95CB00EBAFFF /* RegisterOwnerVC */,
@@ -105,19 +100,10 @@
 			path = MyTrax;
 			sourceTree = "<group>";
 		};
-		1521D8B61F8BF4F700105C17 /* DashboardVC */ = {
-			isa = PBXGroup;
-			children = (
-				1521D8B21F8BF4DE00105C17 /* DashboardVC.swift */,
-				1521D8B31F8BF4DE00105C17 /* DashboardVC.xib */,
-			);
-			path = DashboardVC;
-			sourceTree = "<group>";
-		};
 		154C71BE1F8E95BB00EBAFFF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				154C71BC1F8E955200EBAFFF /* Owner.swift */,
+				154C71BC1F8E955200EBAFFF /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */,
-				1521D8B51F8BF4DE00105C17 /* DashboardVC.xib in Resources */,
 				154D8A2A1F8E9F5700F4DE08 /* OwnerInfoVC.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterOwnerVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
@@ -308,9 +293,8 @@
 				154D8A291F8E9F5700F4DE08 /* OwnerInfoVC.swift in Sources */,
 				1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */,
 				1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */,
-				1521D8B41F8BF4DE00105C17 /* DashboardVC.swift in Sources */,
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
-				154C71BD1F8E955200EBAFFF /* Owner.swift in Sources */,
+				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,
 				15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */,
 				1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */,
 			);
