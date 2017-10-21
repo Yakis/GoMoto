@@ -46,24 +46,22 @@ class RestAPIManager {
     
     
     
-    func saveOwner(owner: User, completionHandler: @escaping (Error?) -> Void) {
-        let ownersEndpoint = "\(Endpoints.Users.baseUrl)\(Endpoints.createNew)"
-        guard let ownersUrl = URL(string: ownersEndpoint) else {return}
-        var ownersUrlRequest = URLRequest(url: ownersUrl)
-        ownersUrlRequest.httpMethod = "POST"
-        ownersUrlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    func saveUser(user: User, completionHandler: @escaping (Error?) -> Void) {
+        let usersEndpoint = "\(Endpoints.Users.baseUrl)\(Endpoints.createNew)"
+        guard let usersUrl = URL(string: usersEndpoint) else {return}
+        var request = URLRequest(url: usersUrl)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let encoder = JSONEncoder()
         do {
-            let newOwnerAsJSON = try encoder.encode(owner)
-            ownersUrlRequest.httpBody = newOwnerAsJSON
+            let newUserAsJSON = try encoder.encode(user)
+            request.httpBody = newUserAsJSON
         } catch {
             print(error)
             completionHandler(error)
         }
-        
-        // ...
         let session = URLSession.shared
-        let task = session.dataTask(with: ownersUrlRequest, completionHandler: {
+        let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
             completionHandler(error)
             print("\(String(describing: response)) Account created!")

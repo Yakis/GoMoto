@@ -88,44 +88,30 @@ class RegisterOwnerVC: UIViewController {
     
     
     @IBAction func registerButtonAction(_ sender: Any) {
-        emailRegistration(email: self.emailTextField.text!, password: passwordTextField.text!) { uid in
-            let owner = User(id: nil, username: "", email: self.emailTextField.text!, first_name: self.firstNameTextField.text!, last_name: self.lastNameTextField.text!, postcode: "AL10 8HD", contact_number: self.contactNumberTextField.text!, user_type: "owner", avatar: "https://google.com/iamges", device_token: "h809sbd8dbsj", firebase_uid: uid, created_at: nil, updated_at: nil)
-            RestAPIManager.shared.saveOwner(owner: owner, completionHandler: { (error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                DispatchQueue.main.async {
-                    let ownerInfoVC = OwnerInfoVC(nibName: "OwnerInfoVC", bundle: nil)
-                    ownerInfoVC.user = owner
-                    self.present(ownerInfoVC, animated: true, completion: nil)
-                }
-            })
+        FirebaseManager.emailRegistration(email: self.emailTextField.text!, password: passwordTextField.text!) { [weak self] uid in
+            self?.saveRegisteredUserToBackend(uid: uid)
         }
     }
     
     
-    
-    func emailRegistration(email: String, password: String, completion: @escaping (String) -> ()) {
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            guard let user = user else {
-                guard let error = error else {return}
+    func saveRegisteredUserToBackend (uid: String) {
+        let user = User(id: nil, username: "", email: self.emailTextField.text!, first_name: self.firstNameTextField.text!, last_name: self.lastNameTextField.text!, postcode: "AL10 8HD", contact_number: self.contactNumberTextField.text!, user_type: "owner", avatar: "https://google.com/iamges", device_token: "h809sbd8dbsj", firebase_uid: uid, created_at: nil, updated_at: nil)
+        RestAPIManager.shared.saveUser(user: user, completionHandler: { [weak self] (error) in
+            if let error = error {
                 print(error.localizedDescription)
-                return
             }
-            user.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
-                guard let tokenString = tokenString else {return}
-                print(tokenString)
-            })
-            let token = user.uid
-            completion(token)
-        }
+            DispatchQueue.main.async {
+            self?.showOwnerView(with: user)
+            }
+        })
     }
-
     
-    func signInWithEmail(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            
-        }
+    
+    
+    func showOwnerView(with user: User) {
+            let ownerInfoVC = OwnerInfoVC(nibName: "OwnerInfoVC", bundle: nil)
+            ownerInfoVC.user = user
+            self.present(ownerInfoVC, animated: true, completion: nil)
     }
     
     
