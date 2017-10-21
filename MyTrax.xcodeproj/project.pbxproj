@@ -12,6 +12,7 @@
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
 		1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8AE1F8BF47900105C17 /* AppController.swift */; };
 		1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B01F8BF4A800105C17 /* Constants.swift */; };
+		1541F2A41F9B83090078B2FB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541F2A31F9B83090078B2FB /* Default-568h@2x.png */; };
 		154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */; };
 		154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */; };
 		154C71BD1F8E955200EBAFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BC1F8E955200EBAFFF /* User.swift */; };
@@ -35,6 +36,7 @@
 		1521D8A81F8BF40A00105C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1521D8AE1F8BF47900105C17 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		1521D8B01F8BF4A800105C17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1541F2A31F9B83090078B2FB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		154C71BC1F8E955200EBAFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		1521D8901F8BF40A00105C17 = {
 			isa = PBXGroup;
 			children = (
+				1541F2A31F9B83090078B2FB /* Default-568h@2x.png */,
 				1521D89B1F8BF40A00105C17 /* MyTrax */,
 				1521D89A1F8BF40A00105C17 /* Products */,
 				A143EB5D798FCDF29CD960EB /* Pods */,
@@ -85,21 +88,45 @@
 		1521D89B1F8BF40A00105C17 /* MyTrax */ = {
 			isa = PBXGroup;
 			children = (
-				154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */,
-				1521D89C1F8BF40A00105C17 /* AppDelegate.swift */,
-				1521D8A31F8BF40A00105C17 /* Assets.xcassets */,
-				1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */,
-				1521D8A81F8BF40A00105C17 /* Info.plist */,
-				1521D8AE1F8BF47900105C17 /* AppController.swift */,
+				1541F2A21F9B82D10078B2FB /* SupportingFiles */,
+				1541F2A11F9B82C20078B2FB /* AppMain */,
 				1521D8B01F8BF4A800105C17 /* Constants.swift */,
 				1568C5191F8BF5640018D52B /* WelcomeVC */,
 				15A7AECE1F8E650000ABBFA6 /* Extensions */,
 				154C71BF1F8E95CB00EBAFFF /* RegisterOwnerVC */,
-				154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */,
+				1541F2A01F9B828E0078B2FB /* RestAPIManager */,
 				154C71BE1F8E95BB00EBAFFF /* Models */,
 				154D8A2B1F8E9F6300F4DE08 /* OwnerInfoVC */,
 			);
 			path = MyTrax;
+			sourceTree = "<group>";
+		};
+		1541F2A01F9B828E0078B2FB /* RestAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */,
+			);
+			path = RestAPIManager;
+			sourceTree = "<group>";
+		};
+		1541F2A11F9B82C20078B2FB /* AppMain */ = {
+			isa = PBXGroup;
+			children = (
+				1521D89C1F8BF40A00105C17 /* AppDelegate.swift */,
+				1521D8AE1F8BF47900105C17 /* AppController.swift */,
+			);
+			path = AppMain;
+			sourceTree = "<group>";
+		};
+		1541F2A21F9B82D10078B2FB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */,
+				1521D8A31F8BF40A00105C17 /* Assets.xcassets */,
+				1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */,
+				1521D8A81F8BF40A00105C17 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		154C71BE1F8E95BB00EBAFFF /* Models */ = {
@@ -231,6 +258,7 @@
 				15D108BE1F8E7BC400043F02 /* RegisterOwnerVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */,
+				1541F2A41F9B83090078B2FB /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +484,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = MyTrax/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyTrax/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.MyTrax;
@@ -477,7 +505,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = MyTrax/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyTrax/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.MyTrax;
