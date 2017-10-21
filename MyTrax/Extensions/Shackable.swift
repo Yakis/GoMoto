@@ -10,7 +10,6 @@ import UIKit
 
 extension UIView {
     func shake() {
-        //implementation
         let anim = CABasicAnimation(keyPath: "position")
         anim.duration = 0.05
         anim.repeatCount = 5

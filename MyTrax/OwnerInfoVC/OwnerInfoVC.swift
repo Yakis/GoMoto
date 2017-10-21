@@ -20,7 +20,9 @@ class OwnerInfoVC: UIViewController {
         super.viewDidLoad()
 
         guard let user = user else {return}
-        self.ownerInfoLabel.text = "Welcome, \(user.first_name) \(user.last_name)! 😀"
+        let firstName = user.first_name ?? "Nicu"
+        let lastName = user.last_name ?? "Holder"
+        self.ownerInfoLabel.text = "Welcome, \(firstName)) \(lastName)! 😀\(user.avatar)"
         
     }
 

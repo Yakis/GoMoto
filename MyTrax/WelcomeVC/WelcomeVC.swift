@@ -33,15 +33,21 @@ class WelcomeVC: UIViewController {
     
     
     @IBAction func ownerButtonAction(_ sender: Any) {
-        let registerOwnerVC = RegisterOwnerVC(nibName: "RegisterOwnerVC", bundle: nil)
-        self.present(registerOwnerVC, animated: true, completion: nil)
+        showRegistrationVC(userType: "owner", imageName: "OwnerLogo")
     }
     
     
     @IBAction func userButtonAction(_ sender: Any) {
+        showRegistrationVC(userType: "biker", imageName: "UserLogo")
     }
     
     
+    func showRegistrationVC(userType: String, imageName: String) {
+        let registerVC = RegisterVC(nibName: "RegisterVC", bundle: nil)
+        let info = ["userType": userType, "imageName": imageName]
+        registerVC.userInfo = info
+       self.present(registerVC, animated: true, completion: nil)
+    }
     
 
 }
