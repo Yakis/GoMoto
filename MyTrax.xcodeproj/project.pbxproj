@@ -19,6 +19,7 @@
 		154D8A2A1F8E9F5700F4DE08 /* OwnerInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154D8A281F8E9F5700F4DE08 /* OwnerInfoVC.xib */; };
 		1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C5151F8BF5610018D52B /* WelcomeVC.swift */; };
 		1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1568C5161F8BF5610018D52B /* WelcomeVC.xib */; };
+		156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F20D91F9B7D7B007FEE27 /* Beautifier.swift */; };
 		15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */; };
 		15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */; };
 		15D108BD1F8E7BC400043F02 /* RegisterOwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D108BB1F8E7BC400043F02 /* RegisterOwnerVC.swift */; };
@@ -41,6 +42,7 @@
 		154D8A281F8E9F5700F4DE08 /* OwnerInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerInfoVC.xib; sourceTree = "<group>"; };
 		1568C5151F8BF5610018D52B /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		1568C5161F8BF5610018D52B /* WelcomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
+		156F20D91F9B7D7B007FEE27 /* Beautifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautifier.swift; sourceTree = "<group>"; };
 		15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shackable.swift; sourceTree = "<group>"; };
 		15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		15D108BB1F8E7BC400043F02 /* RegisterOwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterOwnerVC.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */,
 				15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */,
+				156F20D91F9B7D7B007FEE27 /* Beautifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */,
+				156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */,
 				154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */,
 				15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */,
 				15D108BD1F8E7BC400043F02 /* RegisterOwnerVC.swift in Sources */,

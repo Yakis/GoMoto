@@ -20,7 +20,7 @@ struct User: Codable {
     var user_type: String
     var avatar: String
     var device_token: String
-    var facebook_uid: String
+    var firebase_uid: String
     var created_at: Date?
     var updated_at: Date?
 }

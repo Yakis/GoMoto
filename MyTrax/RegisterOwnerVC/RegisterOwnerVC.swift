@@ -88,9 +88,8 @@ class RegisterOwnerVC: UIViewController {
     
     
     @IBAction func registerButtonAction(_ sender: Any) {
-        emailRegistration(email: self.emailTextField.text!, password: passwordTextField.text!) { token in
-           print("Success! User with token: \(String(describing: token)) has been logged id.")
-            let owner = User(id: nil, username: "", email: "", first_name: "", last_name: "", postcode: "", contact_number: "", user_type: "", avatar: "", device_token: "", facebook_uid: "", created_at: nil, updated_at: nil)
+        emailRegistration(email: self.emailTextField.text!, password: passwordTextField.text!) { uid in
+            let owner = User(id: nil, username: "", email: self.emailTextField.text!, first_name: self.firstNameTextField.text!, last_name: self.lastNameTextField.text!, postcode: "AL10 8HD", contact_number: self.contactNumberTextField.text!, user_type: "owner", avatar: "https://google.com/iamges", device_token: "h809sbd8dbsj", firebase_uid: uid, created_at: nil, updated_at: nil)
             RestAPIManager.shared.saveOwner(owner: owner, completionHandler: { (error) in
                 if let error = error {
                     print(error.localizedDescription)
