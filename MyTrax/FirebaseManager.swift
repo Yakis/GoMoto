@@ -15,6 +15,26 @@ import FacebookLogin
 class FirebaseManager {
     
     
+    static func facebookRegistration(viewController: UIViewController, completion: @escaping (String) -> ()) {
+        let facebookLogin = LoginManager()
+        facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: viewController) { (result) in
+            switch result {
+            case .failed(let error):
+                print(error.localizedDescription)
+            case .cancelled:
+                print("User cancelled login")
+            case .success(_, _, let accessToken):
+                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
+                Auth.auth().signIn(with: credential, completion: { (user, error) in
+                    user?.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
+                        guard let tokenString = tokenString else {return}
+                        completion(tokenString)
+                    })
+                })
+            }
+        }
+    }
+    
     
     static func emailRegistration(email: String, password: String, completion: @escaping (String) -> ()) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in

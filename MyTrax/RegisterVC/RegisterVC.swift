@@ -60,49 +60,21 @@ class RegisterVC: UIViewController {
     }
     
     @IBAction func facebookLogin(_ sender: Any) {
-        let facebookLogin = LoginManager()
-        facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: self) { (result) in
-            switch result {
-            case .failed(let error):
-                print(error.localizedDescription)
-            case .cancelled:
-                print("User cancelled login")
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                print("\(declinedPermissions) \(grantedPermissions)")
-                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
-                Auth.auth().signIn(with: credential, completion: { (user, error) in
-                    user?.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
-                        print(tokenString!)
-                    })
-//                    guard let fullName = user?.displayName else {return}
-//                    let array = fullName.components(separatedBy: " ")
-//                    let firstName = array[0]
-//                    let lastName = array[1]
-//                    self.firstNameTextField.text = firstName
-//                    self.lastNameTextField.text = lastName
-//                    guard let mail = user?.email else {return}
-//                    self.emailTextField.text = mail
-//                    guard let phone = user?.phoneNumber else {return}
-//                    print(phone)
-//                    self.contactNumberTextField.text = phone
-                })
-            }
+        FirebaseManager.facebookRegistration(viewController: self) { (token) in
+            
         }
     }
     
-    
-    
-    @IBAction func registerButtonAction(_ sender: Any) {
-//        FirebaseManager.emailRegistration(email: self.emailTextField.text!, password: passwordTextField.text!) { [weak self] uid in
-//            self?.saveRegisteredUserToBackend(uid: uid)
-//        }
+    @IBAction func emailButtonAction(_ sender: Any) {
+        let formRegistrationVC = FormRegistrationVC(nibName: "FormRegistrationVC", bundle: nil)
+        self.present(formRegistrationVC, animated: true, completion: nil)
     }
     
     
     func saveRegisteredUserToBackend (uid: String) {
+        print(uid)
         let user = User(id: nil, username: nil, email: nil, first_name: nil, last_name: nil, postcode: nil, contact_number: nil, user_type: "owner", avatar: nil, device_token: nil, firebase_uid: uid, created_at: nil, updated_at: nil)
         DispatchQueue.main.async {
-            self.showOwnerView(with: user)
         }
 //        RestAPIManager.shared.saveUser(user: user, completionHandler: { [weak self] (error) in
 //            if let error = error {
@@ -116,11 +88,11 @@ class RegisterVC: UIViewController {
     
     
     
-    func showOwnerView(with user: User) {
-            let ownerInfoVC = OwnerInfoVC(nibName: "OwnerInfoVC", bundle: nil)
-            ownerInfoVC.user = user
-            ownerInfoVC.user?.avatar = "Mata de avatar"
-            self.present(ownerInfoVC, animated: true, completion: nil)
+    func showOwnerRegistrationForm(with user: User) {
+//            let ownerInfoVC = OwnerInfoVC(nibName: "OwnerInfoVC", bundle: nil)
+//            ownerInfoVC.user = user
+//            ownerInfoVC.user?.avatar = "Mata de avatar"
+//            self.present(ownerInfoVC, animated: true, completion: nil)
     }
     
     

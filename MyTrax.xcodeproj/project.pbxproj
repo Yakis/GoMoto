@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152033E01FA0C6740069CB57 /* FormRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152033DE1FA0C6740069CB57 /* FormRegistrationVC.swift */; };
+		152033E11FA0C6740069CB57 /* FormRegistrationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152033DF1FA0C6740069CB57 /* FormRegistrationVC.xib */; };
 		1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D89C1F8BF40A00105C17 /* AppDelegate.swift */; };
 		1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A31F8BF40A00105C17 /* Assets.xcassets */; };
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
@@ -17,8 +19,6 @@
 		154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */; };
 		154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */; };
 		154C71BD1F8E955200EBAFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BC1F8E955200EBAFFF /* User.swift */; };
-		154D8A291F8E9F5700F4DE08 /* OwnerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154D8A271F8E9F5700F4DE08 /* OwnerInfoVC.swift */; };
-		154D8A2A1F8E9F5700F4DE08 /* OwnerInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154D8A281F8E9F5700F4DE08 /* OwnerInfoVC.xib */; };
 		1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C5151F8BF5610018D52B /* WelcomeVC.swift */; };
 		1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1568C5161F8BF5610018D52B /* WelcomeVC.xib */; };
 		156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F20D91F9B7D7B007FEE27 /* Beautifier.swift */; };
@@ -30,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		152033DE1FA0C6740069CB57 /* FormRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRegistrationVC.swift; sourceTree = "<group>"; };
+		152033DF1FA0C6740069CB57 /* FormRegistrationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormRegistrationVC.xib; sourceTree = "<group>"; };
 		1521D8991F8BF40A00105C17 /* MyTrax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521D89C1F8BF40A00105C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1521D8A31F8BF40A00105C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		154C71BC1F8E955200EBAFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		154D8A271F8E9F5700F4DE08 /* OwnerInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerInfoVC.swift; sourceTree = "<group>"; };
-		154D8A281F8E9F5700F4DE08 /* OwnerInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerInfoVC.xib; sourceTree = "<group>"; };
 		1568C5151F8BF5610018D52B /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		1568C5161F8BF5610018D52B /* WelcomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
 		156F20D91F9B7D7B007FEE27 /* Beautifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautifier.swift; sourceTree = "<group>"; };
@@ -68,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		152033E21FA0C6780069CB57 /* FormRegistrationVC */ = {
+			isa = PBXGroup;
+			children = (
+				152033DE1FA0C6740069CB57 /* FormRegistrationVC.swift */,
+				152033DF1FA0C6740069CB57 /* FormRegistrationVC.xib */,
+			);
+			path = FormRegistrationVC;
+			sourceTree = "<group>";
+		};
 		1521D8901F8BF40A00105C17 = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +107,8 @@
 				154C71BF1F8E95CB00EBAFFF /* RegisterVC */,
 				1541F2A01F9B828E0078B2FB /* RestAPIManager */,
 				154C71BE1F8E95BB00EBAFFF /* Models */,
-				154D8A2B1F8E9F6300F4DE08 /* OwnerInfoVC */,
 				1541F2A51F9B85290078B2FB /* FirebaseManager.swift */,
+				152033E21FA0C6780069CB57 /* FormRegistrationVC */,
 			);
 			path = MyTrax;
 			sourceTree = "<group>";
@@ -147,15 +156,6 @@
 				15D108BC1F8E7BC400043F02 /* RegisterVC.xib */,
 			);
 			path = RegisterVC;
-			sourceTree = "<group>";
-		};
-		154D8A2B1F8E9F6300F4DE08 /* OwnerInfoVC */ = {
-			isa = PBXGroup;
-			children = (
-				154D8A271F8E9F5700F4DE08 /* OwnerInfoVC.swift */,
-				154D8A281F8E9F5700F4DE08 /* OwnerInfoVC.xib */,
-			);
-			path = OwnerInfoVC;
 			sourceTree = "<group>";
 		};
 		1568C5191F8BF5640018D52B /* WelcomeVC */ = {
@@ -257,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */,
-				154D8A2A1F8E9F5700F4DE08 /* OwnerInfoVC.xib in Resources */,
+				152033E11FA0C6740069CB57 /* FormRegistrationVC.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */,
@@ -346,13 +346,13 @@
 				154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */,
 				15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */,
 				15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */,
-				154D8A291F8E9F5700F4DE08 /* OwnerInfoVC.swift in Sources */,
 				1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */,
 				1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */,
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
 				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,
 				15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */,
 				1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */,
+				152033E01FA0C6740069CB57 /* FormRegistrationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
