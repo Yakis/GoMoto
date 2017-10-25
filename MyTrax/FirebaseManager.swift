@@ -15,7 +15,7 @@ import FacebookLogin
 class FirebaseManager {
     
     
-    static func facebookRegistration(viewController: UIViewController, completion: @escaping (String) -> ()) {
+    static func facebookRegistration(userType: String, viewController: UIViewController, completion: @escaping (User?) -> ()) {
         let facebookLogin = LoginManager()
         facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: viewController) { (result) in
             switch result {
@@ -27,8 +27,9 @@ class FirebaseManager {
                 let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
                 Auth.auth().signIn(with: credential, completion: { (user, error) in
                     user?.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
-                        guard let tokenString = tokenString else {return}
-                        completion(tokenString)
+                       // guard let tokenString = tokenString else {return}
+                        let user = User(id: nil, username: nil, email: user?.email, first_name: user?.displayName?.splitName().first, last_name: user?.displayName?.splitName().last, postcode: nil, contact_number: nil, user_type: userType, avatar: nil, device_token: nil, firebase_uid: user?.uid, created_at: nil, updated_at: nil)
+                        completion(user)
                     })
                 })
             }

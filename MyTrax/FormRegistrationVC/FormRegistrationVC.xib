@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OwnerFormRegistrationVC" customModule="MyTrax" customModuleProvider="target">
             <connections>
+                <outlet property="emailField" destination="4i8-CS-HjU" id="Rrg-6s-ZRn"/>
+                <outlet property="firstNameField" destination="YB0-HN-osa" id="eHt-Jg-Oes"/>
+                <outlet property="lastNameField" destination="Afv-DE-UcF" id="4ls-Iy-Nna"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SRO-X5-GOr">
-                    <rect key="frame" x="16" y="70" width="343" height="135"/>
+                    <rect key="frame" x="16" y="70" width="343" height="65"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CwP-O1-E8i">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -46,22 +49,10 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OKV-Lc-RnG">
-                            <rect key="frame" x="0.0" y="70" width="343" height="30"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="retype password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFG-tf-7OG">
-                            <rect key="frame" x="0.0" y="105" width="343" height="30"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="SRO-X5-GOr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Hce-yU-VtB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SRO-X5-GOr" secondAttribute="trailing" constant="16" id="ZH1-pH-j1R"/>

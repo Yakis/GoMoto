@@ -25,7 +25,7 @@ class RegisterVC: UIViewController {
     
     @IBOutlet weak var userTypeLabel: UILabel!
     
-    var userInfo: [String: String]!
+    var userType: UserType!
     
     var handle: AuthStateDidChangeListenerHandle?
     
@@ -35,8 +35,8 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
         emailButtonOutlet.roundCorners()
         facebookButtonOutlet.roundCorners()
-        self.userTypeLabel.text = userInfo["userType"]!
-        self.userLogoImageView.image = UIImage(named: userInfo["imageName"]!)
+        self.userTypeLabel.text = userType.rawValue
+        self.userLogoImageView.image = UIImage(named: userType.rawValue)
         
         if let accessToken = AccessToken.current {
             print("User is already logged in until: \(accessToken.expirationDate)")
@@ -59,11 +59,14 @@ class RegisterVC: UIViewController {
         Auth.auth().removeStateDidChangeListener(handle!)
     }
     
+    
     @IBAction func facebookLogin(_ sender: Any) {
-        FirebaseManager.facebookRegistration(viewController: self) { (token) in
-            
+        FirebaseManager.facebookRegistration(userType: userType.rawValue, viewController: self) { (user) in
+            guard let user = user else {return}
+            self.showRegistrationForm(with: user)
         }
     }
+    
     
     @IBAction func emailButtonAction(_ sender: Any) {
         let formRegistrationVC = FormRegistrationVC(nibName: "FormRegistrationVC", bundle: nil)
@@ -71,28 +74,11 @@ class RegisterVC: UIViewController {
     }
     
     
-    func saveRegisteredUserToBackend (uid: String) {
-        print(uid)
-        let user = User(id: nil, username: nil, email: nil, first_name: nil, last_name: nil, postcode: nil, contact_number: nil, user_type: "owner", avatar: nil, device_token: nil, firebase_uid: uid, created_at: nil, updated_at: nil)
-        DispatchQueue.main.async {
-        }
-//        RestAPIManager.shared.saveUser(user: user, completionHandler: { [weak self] (error) in
-//            if let error = error {
-//                print(error.localizedDescription)
-//            }
-//            DispatchQueue.main.async {
-//            self?.showOwnerView(with: user)
-//            }
-//        })
-    }
     
-    
-    
-    func showOwnerRegistrationForm(with user: User) {
-//            let ownerInfoVC = OwnerInfoVC(nibName: "OwnerInfoVC", bundle: nil)
-//            ownerInfoVC.user = user
-//            ownerInfoVC.user?.avatar = "Mata de avatar"
-//            self.present(ownerInfoVC, animated: true, completion: nil)
+    func showRegistrationForm(with user: User) {
+        let formRegistrationVC = FormRegistrationVC(nibName: "FormRegistrationVC", bundle: nil)
+        formRegistrationVC.user = user
+        self.present(formRegistrationVC, animated: true, completion: nil)
     }
     
     

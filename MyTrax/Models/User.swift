@@ -24,3 +24,9 @@ struct User: Codable {
     var created_at: Date?
     var updated_at: Date?
 }
+
+
+enum UserType: String {
+    case owner = "owner"
+    case biker = "biker"
+}
