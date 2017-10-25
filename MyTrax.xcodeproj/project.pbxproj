@@ -25,6 +25,9 @@
 		15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */; };
 		15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */; };
 		15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE891FA0DC6600298E51 /* Utils.swift */; };
+		15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */; };
+		15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */; };
+		15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */; };
 		15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D108BB1F8E7BC400043F02 /* RegisterVC.swift */; };
 		15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D108BC1F8E7BC400043F02 /* RegisterVC.xib */; };
 		5315066CE885F02197A6D372 /* Pods_MyTrax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8BFA37C4E2E2D1F335CE46 /* Pods_MyTrax.framework */; };
@@ -51,6 +54,9 @@
 		15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shackable.swift; sourceTree = "<group>"; };
 		15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		15BDBE891FA0DC6600298E51 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationVC.swift; sourceTree = "<group>"; };
+		15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailRegistrationVC.xib; sourceTree = "<group>"; };
+		15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		15D108BB1F8E7BC400043F02 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		15D108BC1F8E7BC400043F02 /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
 		21EF99C86E5B2EE0F63B9D2B /* Pods-MyTrax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrax.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTrax/Pods-MyTrax.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 				154C71BE1F8E95BB00EBAFFF /* Models */,
 				1541F2A51F9B85290078B2FB /* FirebaseManager.swift */,
 				152033E21FA0C6780069CB57 /* FormRegistrationVC */,
+				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,
 			);
 			path = MyTrax;
 			sourceTree = "<group>";
@@ -178,6 +185,16 @@
 				15BDBE891FA0DC6600298E51 /* Utils.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */ = {
+			isa = PBXGroup;
+			children = (
+				15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */,
+				15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */,
+				15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */,
+			);
+			path = EmailRegistrationVC;
 			sourceTree = "<group>";
 		};
 		6DBCC0C8F3285FA51E106789 /* Frameworks */ = {
@@ -263,6 +280,7 @@
 				152033E11FA0C6740069CB57 /* FormRegistrationVC.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
+				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
 				1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */,
 				1541F2A41F9B83090078B2FB /* Default-568h@2x.png in Resources */,
 			);
@@ -350,7 +368,9 @@
 				154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */,
 				15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */,
 				15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */,
+				15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */,
 				1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */,
+				15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */,
 				1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */,
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
 				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,

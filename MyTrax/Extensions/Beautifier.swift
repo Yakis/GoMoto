@@ -26,4 +26,21 @@ extension UIView {
     }
     
     
+    func validate() {
+        let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 70, height: 20))
+        let imageView = UIImageView(frame: CGRect(x: 40, y: 0, width: 20, height: 20))
+        imageView.image = UIImage(named: "checkmark")
+        rightView.addSubview(imageView)
+        guard let textField = self as? UITextField else {return}
+        textField.rightView = rightView
+        textField.rightViewMode = .always
+    }
+    
+    func invalidate() {
+        guard let textField = self as? UITextField else {return}
+        textField.rightView = nil
+    }
+    
+    
+    
 }

@@ -69,8 +69,9 @@ class RegisterVC: UIViewController {
     
     
     @IBAction func emailButtonAction(_ sender: Any) {
-        let formRegistrationVC = FormRegistrationVC(nibName: "FormRegistrationVC", bundle: nil)
-        self.present(formRegistrationVC, animated: true, completion: nil)
+        let emailRegisterVC = EmailRegistrationVC(nibName: "EmailRegistrationVC", bundle: nil)
+        self.present(emailRegisterVC, animated: true, completion: nil)
+        
     }
     
     
