@@ -15,6 +15,8 @@ import FacebookLogin
 class FirebaseManager {
     
     
+    static var firebaseUser: User!
+    
     static func facebookRegistration(userType: String, viewController: UIViewController, completion: @escaping (User?) -> ()) {
         let facebookLogin = LoginManager()
         facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: viewController) { (result) in
@@ -44,6 +46,7 @@ class FirebaseManager {
                 print(error.localizedDescription)
                 return
             }
+            print("FIR USER TYPE === \(user)")
             user.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
                 guard let tokenString = tokenString else {return}
                 print(tokenString)

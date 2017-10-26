@@ -21,9 +21,17 @@ class EmailRegistrationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerForKeyboardShowHide()
         setupTextfields()
         registerButtonOutlet.roundCorners()
     }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeNotificationForKeyboardShowHide()
+    }
+    
 
     func setupTextfields() {
         self.emailField.delegate = self
@@ -33,9 +41,12 @@ class EmailRegistrationVC: UIViewController {
     
     
     @IBAction func registerButtonAction(_ sender: Any) {
+        guard let email = emailField.text else {return}
+        guard let password = passwordField.text else {return}
+        FirebaseManager.emailRegistration(email: email, password: password) { (uid) in
+            print("User registered with uid: \(uid)")
+        }
     }
-    
-    
     
 
 }
