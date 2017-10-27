@@ -9,43 +9,20 @@
 import UIKit
 
 class EmailRegistrationVC: UIViewController {
-
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var rePasswordField: UITextField!
     
-    @IBOutlet weak var registerButtonOutlet: UIButton!
-    
-    
-    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerForKeyboardShowHide()
-        setupTextfields()
-        registerButtonOutlet.roundCorners()
+        setupTableView()
     }
     
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        removeNotificationForKeyboardShowHide()
-    }
     
-
-    func setupTextfields() {
-        self.emailField.delegate = self
-        self.passwordField.delegate = self
-        self.rePasswordField.delegate = self
-    }
-    
-    
-    @IBAction func registerButtonAction(_ sender: Any) {
-        guard let email = emailField.text else {return}
-        guard let password = passwordField.text else {return}
-        FirebaseManager.emailRegistration(email: email, password: password) { (uid) in
-            print("User registered with uid: \(uid)")
-        }
+    func setupTableView () {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(EmailRegistrationCell.self)
     }
     
 

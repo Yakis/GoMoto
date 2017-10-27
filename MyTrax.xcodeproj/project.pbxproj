@@ -14,7 +14,12 @@
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
 		1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8AE1F8BF47900105C17 /* AppController.swift */; };
 		1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B01F8BF4A800105C17 /* Constants.swift */; };
-		153127AE1FA23B8F002CFF82 /* KeyboardShowHideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153127AD1FA23B8F002CFF82 /* KeyboardShowHideManager.swift */; };
+		152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */; };
+		152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */; };
+		152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D23281FA3722C0032F789 /* NibLoadable.swift */; };
+		152D232B1FA3727C0032F789 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D232A1FA3727C0032F789 /* ReusableView.swift */; };
+		152D232D1FA372E50032F789 /* TableViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D232C1FA372E50032F789 /* TableViewExt.swift */; };
+		152D232F1FA374F60032F789 /* EmailRegTVExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D232E1FA374F60032F789 /* EmailRegTVExtension.swift */; };
 		1541F2A41F9B83090078B2FB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541F2A31F9B83090078B2FB /* Default-568h@2x.png */; };
 		1541F2A61F9B85290078B2FB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1541F2A51F9B85290078B2FB /* FirebaseManager.swift */; };
 		154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */; };
@@ -44,7 +49,12 @@
 		1521D8A81F8BF40A00105C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1521D8AE1F8BF47900105C17 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		1521D8B01F8BF4A800105C17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		153127AD1FA23B8F002CFF82 /* KeyboardShowHideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShowHideManager.swift; sourceTree = "<group>"; };
+		152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationCell.swift; sourceTree = "<group>"; };
+		152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailRegistrationCell.xib; sourceTree = "<group>"; };
+		152D23281FA3722C0032F789 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		152D232A1FA3727C0032F789 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		152D232C1FA372E50032F789 /* TableViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExt.swift; sourceTree = "<group>"; };
+		152D232E1FA374F60032F789 /* EmailRegTVExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegTVExtension.swift; sourceTree = "<group>"; };
 		1541F2A31F9B83090078B2FB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1541F2A51F9B85290078B2FB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -109,6 +119,7 @@
 		1521D89B1F8BF40A00105C17 /* MyTrax */ = {
 			isa = PBXGroup;
 			children = (
+				152D23271FA3721A0032F789 /* Protocols */,
 				1541F2A21F9B82D10078B2FB /* SupportingFiles */,
 				1541F2A11F9B82C20078B2FB /* AppMain */,
 				1521D8B01F8BF4A800105C17 /* Constants.swift */,
@@ -122,6 +133,25 @@
 				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,
 			);
 			path = MyTrax;
+			sourceTree = "<group>";
+		};
+		152D23261FA370150032F789 /* EmailRegistrationCell */ = {
+			isa = PBXGroup;
+			children = (
+				152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */,
+				152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */,
+			);
+			name = EmailRegistrationCell;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		152D23271FA3721A0032F789 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				152D23281FA3722C0032F789 /* NibLoadable.swift */,
+				152D232A1FA3727C0032F789 /* ReusableView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		1541F2A01F9B828E0078B2FB /* RestAPIManager */ = {
@@ -185,6 +215,7 @@
 				15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */,
 				156F20D91F9B7D7B007FEE27 /* Beautifier.swift */,
 				15BDBE891FA0DC6600298E51 /* Utils.swift */,
+				152D232C1FA372E50032F789 /* TableViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,7 +226,8 @@
 				15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */,
 				15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */,
 				15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */,
-				153127AD1FA23B8F002CFF82 /* KeyboardShowHideManager.swift */,
+				152D23261FA370150032F789 /* EmailRegistrationCell */,
+				152D232E1FA374F60032F789 /* EmailRegTVExtension.swift */,
 			);
 			path = EmailRegistrationVC;
 			sourceTree = "<group>";
@@ -284,6 +316,7 @@
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
+				152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */,
 				1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */,
 				1541F2A41F9B83090078B2FB /* Default-568h@2x.png in Resources */,
 			);
@@ -367,16 +400,20 @@
 				1541F2A61F9B85290078B2FB /* FirebaseManager.swift in Sources */,
 				154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */,
 				156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */,
-				153127AE1FA23B8F002CFF82 /* KeyboardShowHideManager.swift in Sources */,
 				15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */,
 				154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */,
 				15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */,
 				15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */,
+				152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */,
 				15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */,
 				1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */,
+				152D232B1FA3727C0032F789 /* ReusableView.swift in Sources */,
 				15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */,
+				152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */,
+				152D232D1FA372E50032F789 /* TableViewExt.swift in Sources */,
 				1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */,
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
+				152D232F1FA374F60032F789 /* EmailRegTVExtension.swift in Sources */,
 				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,
 				15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */,
 				1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */,

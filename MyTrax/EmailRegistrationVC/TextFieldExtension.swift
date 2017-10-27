@@ -8,11 +8,16 @@
 
 import UIKit
 
-extension EmailRegistrationVC: UITextFieldDelegate {
+extension EmailRegistrationCell: UITextFieldDelegate {
     
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-    print(reason)
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        // Execute Registration here
+        print("Registration action!!!")
+        return true
     }
+    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let placeholder = textField.placeholder {
@@ -21,8 +26,10 @@ extension EmailRegistrationVC: UITextFieldDelegate {
             validateEmailTextField(textField: textField, character: string)
         case "password":
             validatePasswordTextField(textField: textField, character: string)
+            case "retype password":
+                validateRetypeTextField(textField: textField, character: string)
         default:
-            validateRetypeTextField(textField: textField, character: string)
+            print("Nothing else")
         }
         }
         return true
@@ -32,8 +39,6 @@ extension EmailRegistrationVC: UITextFieldDelegate {
     func validateEmailTextField(textField: UITextField, character: String) {
         guard let text = textField.text else {return}
         let string = text + character
-        print("TEXT=== \(text)")
-        print("STRING=== \(string)")
         if string.contains("@") && string.contains(".") {
             textField.validate()
         } else if !text.contains("@") || !text.contains(".") {
@@ -54,10 +59,10 @@ extension EmailRegistrationVC: UITextFieldDelegate {
     func validateRetypeTextField(textField: UITextField, character: String) {
         guard let text = textField.text else {return}
         let string = text + character
-        let password = self.passwordField
-        if (string == password?.text) {
+        guard let password = passwordTextField.text else {return}
+        if (string == password) {
             textField.validate()
-        } else if (text != password?.text) {
+        } else if (text != password) {
             textField.invalidate()
         }
     }
