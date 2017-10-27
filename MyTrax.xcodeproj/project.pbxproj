@@ -22,6 +22,8 @@
 		152D232F1FA374F60032F789 /* EmailRegTVExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D232E1FA374F60032F789 /* EmailRegTVExtension.swift */; };
 		1541F2A41F9B83090078B2FB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541F2A31F9B83090078B2FB /* Default-568h@2x.png */; };
 		1541F2A61F9B85290078B2FB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1541F2A51F9B85290078B2FB /* FirebaseManager.swift */; };
+		154B96B81FA3AC7700FF71E2 /* LogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B96B61FA3AC7700FF71E2 /* LogoCell.swift */; };
+		154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154B96B71FA3AC7700FF71E2 /* LogoCell.xib */; };
 		154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */; };
 		154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */; };
 		154C71BD1F8E955200EBAFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BC1F8E955200EBAFFF /* User.swift */; };
@@ -57,6 +59,8 @@
 		152D232E1FA374F60032F789 /* EmailRegTVExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegTVExtension.swift; sourceTree = "<group>"; };
 		1541F2A31F9B83090078B2FB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1541F2A51F9B85290078B2FB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		154B96B61FA3AC7700FF71E2 /* LogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCell.swift; sourceTree = "<group>"; };
+		154B96B71FA3AC7700FF71E2 /* LogoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoCell.xib; sourceTree = "<group>"; };
 		154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		154C71BC1F8E955200EBAFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -182,6 +186,15 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		154B96BA1FA3AC7D00FF71E2 /* LogoCell */ = {
+			isa = PBXGroup;
+			children = (
+				154B96B61FA3AC7700FF71E2 /* LogoCell.swift */,
+				154B96B71FA3AC7700FF71E2 /* LogoCell.xib */,
+			);
+			path = LogoCell;
+			sourceTree = "<group>";
+		};
 		154C71BE1F8E95BB00EBAFFF /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +241,7 @@
 				15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */,
 				152D23261FA370150032F789 /* EmailRegistrationCell */,
 				152D232E1FA374F60032F789 /* EmailRegTVExtension.swift */,
+				154B96BA1FA3AC7D00FF71E2 /* LogoCell */,
 			);
 			path = EmailRegistrationVC;
 			sourceTree = "<group>";
@@ -312,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */,
+				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
 				152033E11FA0C6740069CB57 /* FormRegistrationVC.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
@@ -397,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154B96B81FA3AC7700FF71E2 /* LogoCell.swift in Sources */,
 				1541F2A61F9B85290078B2FB /* FirebaseManager.swift in Sources */,
 				154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */,
 				156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */,

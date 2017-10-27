@@ -12,26 +12,35 @@ extension EmailRegistrationVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        switch indexPath.row {
-//        case 0: return UITableViewCell()
-//        case 1:
-//            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as EmailRegistrationCell
-//            return cell
-//        default:
-//            return UITableViewCell()
-//
-//        }
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as EmailRegistrationCell
-        return cell
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as LogoCell
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as EmailRegistrationCell
+            return cell
+        default:
+            return UITableViewCell()
+
+        }
+//        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as EmailRegistrationCell
+//        return cell
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        switch indexPath.row {
+        case 0: return 150
+        case 1:
+            return 200
+        default:
+            return 50
+            
+        }
     }
     
     

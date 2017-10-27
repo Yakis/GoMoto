@@ -23,6 +23,7 @@ class EmailRegistrationVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(EmailRegistrationCell.self)
+        tableView.register(LogoCell.self)
     }
     
 

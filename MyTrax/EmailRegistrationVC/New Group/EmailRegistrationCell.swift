@@ -30,6 +30,8 @@ class EmailRegistrationCell: UITableViewCell, NibLoadable, ReusableView {
     
     @IBAction func registerButtonAction(_ sender: Any) {
         print("Mother fucker!")
+        let emailRegistrationVC = EmailRegistrationVC()
+        emailRegistrationVC.removeFromParentViewController()
     }
     
     
