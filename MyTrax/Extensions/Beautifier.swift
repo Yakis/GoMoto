@@ -12,7 +12,7 @@ import UIKit
 extension UIView {
     
     func roundCorners () {
-        self.layer.borderColor = UIColor.darkGray.cgColor
+        self.layer.borderColor = UIColor.mediumGray.cgColor
         self.layer.borderWidth = 0.5
         self.layer.cornerRadius = 5.0
     }

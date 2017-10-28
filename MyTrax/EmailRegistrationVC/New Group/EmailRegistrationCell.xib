@@ -60,7 +60,7 @@
                         <rect key="frame" x="50" y="163" width="220" height="36"/>
                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                         <state key="normal" title="REGISTER">
-                            <color key="titleColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleColor" red="0.73333333333333328" green="0.76470588235294112" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
                             <action selector="registerButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6Ua-Kb-A1x"/>
