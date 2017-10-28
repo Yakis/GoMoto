@@ -8,7 +8,16 @@
 
 import UIKit
 
-class EmailRegistrationVC: UIViewController {
+class EmailRegistrationVC: UIViewController, EmailRegistrationDelegate {
+    
+    
+    
+    func registerButtonPressed(email: String, password: String) {
+        FirebaseManager.emailRegistration(email: email, password: password) { (token) in
+            print("Registered by Yakis with: \(token)")
+        }
+    }
+    
     
     @IBOutlet weak var tableView: UITableView!
     

@@ -22,6 +22,7 @@ extension EmailRegistrationVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as EmailRegistrationCell
+            cell.registerDelegate = self
             return cell
         default:
             return UITableViewCell()

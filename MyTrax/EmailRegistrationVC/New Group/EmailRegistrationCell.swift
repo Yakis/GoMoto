@@ -8,8 +8,15 @@
 
 import UIKit
 
-class EmailRegistrationCell: UITableViewCell, NibLoadable, ReusableView {
+protocol EmailRegistrationDelegate: class {
+    func registerButtonPressed(email: String, password: String)
+}
 
+extension EmailRegistrationCell: NibLoadable, ReusableView {}
+
+class EmailRegistrationCell: UITableViewCell {
+
+    weak var registerDelegate: EmailRegistrationDelegate?
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -29,9 +36,9 @@ class EmailRegistrationCell: UITableViewCell, NibLoadable, ReusableView {
     
     
     @IBAction func registerButtonAction(_ sender: Any) {
-        print("Mother fucker!")
-        let emailRegistrationVC = EmailRegistrationVC()
-        emailRegistrationVC.removeFromParentViewController()
+        guard let email = emailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        self.registerDelegate?.registerButtonPressed(email: email, password: password)
     }
     
     

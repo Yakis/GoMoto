@@ -11,14 +11,6 @@ import UIKit
 extension EmailRegistrationCell: UITextFieldDelegate {
     
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        // Execute Registration here
-        print("Registration action!!!")
-        return true
-    }
-    
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let placeholder = textField.placeholder {
         switch placeholder {
