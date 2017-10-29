@@ -10,11 +10,12 @@ import UIKit
 
 class EmailRegistrationVC: UIViewController, EmailRegistrationDelegate {
     
+    var userType: String!
     
     
     func registerButtonPressed(email: String, password: String) {
-        FirebaseManager.emailRegistration(email: email, password: password) { (token) in
-            print("Registered by Yakis with: \(token)")
+        FirebaseManager.emailRegistration(userType: userType, email: email, password: password) { (user) in
+            RegistrationPresenter.shared.showRegistrationForm(with: user, from: self)
         }
     }
     

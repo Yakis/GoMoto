@@ -63,24 +63,21 @@ class RegisterVC: UIViewController {
     @IBAction func facebookLogin(_ sender: Any) {
         FirebaseManager.facebookRegistration(userType: userType.rawValue, viewController: self) { (user) in
             guard let user = user else {return}
-            self.showRegistrationForm(with: user)
+            RegistrationPresenter.shared.showRegistrationForm(with: user, from: self)
         }
     }
     
     
     @IBAction func emailButtonAction(_ sender: Any) {
         let emailRegisterVC = EmailRegistrationVC(nibName: "EmailRegistrationVC", bundle: nil)
+        emailRegisterVC.userType = userType.rawValue
         self.present(emailRegisterVC, animated: true, completion: nil)
         
     }
     
     
     
-    func showRegistrationForm(with user: User) {
-        let formRegistrationVC = FormRegistrationVC(nibName: "FormRegistrationVC", bundle: nil)
-        formRegistrationVC.user = user
-        self.present(formRegistrationVC, animated: true, completion: nil)
-    }
+    
     
     
 }

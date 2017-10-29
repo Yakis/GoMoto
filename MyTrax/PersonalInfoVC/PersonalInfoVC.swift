@@ -1,5 +1,5 @@
 //
-//  OwnerFormRegistrationVC.swift
+//  PersonalInfoVC.swift
 //  MyTrax
 //
 //  Created by Mugurel Moscaliuc on 25/10/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormRegistrationVC: UIViewController {
+class PersonalInfoVC: UIViewController {
 
     
 
@@ -20,7 +20,7 @@ class FormRegistrationVC: UIViewController {
     
         
     
-    var user: User?
+    var user: TraxUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,7 @@ class FormRegistrationVC: UIViewController {
     
     func saveRegisteredUserToBackend (uid: String) {
         print(uid)
-        let user = User(id: nil, username: nil, email: nil, first_name: nil, last_name: nil, postcode: nil, contact_number: nil, user_type: "owner", avatar: nil, device_token: nil, firebase_uid: uid, created_at: nil, updated_at: nil)
+        let _ = TraxUser(id: nil, username: nil, email: nil, first_name: nil, last_name: nil, postcode: nil, contact_number: nil, user_type: "owner", avatar: nil, device_token: nil, firebase_uid: uid, created_at: nil, updated_at: nil)
         DispatchQueue.main.async {
         }
         //        RestAPIManager.shared.saveUser(user: user, completionHandler: { [weak self] (error) in

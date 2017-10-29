@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		152033E01FA0C6740069CB57 /* FormRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152033DE1FA0C6740069CB57 /* FormRegistrationVC.swift */; };
-		152033E11FA0C6740069CB57 /* FormRegistrationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152033DF1FA0C6740069CB57 /* FormRegistrationVC.xib */; };
+		152033E01FA0C6740069CB57 /* PersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152033DE1FA0C6740069CB57 /* PersonalInfoVC.swift */; };
+		152033E11FA0C6740069CB57 /* PersonalInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152033DF1FA0C6740069CB57 /* PersonalInfoVC.xib */; };
 		1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D89C1F8BF40A00105C17 /* AppDelegate.swift */; };
 		1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A31F8BF40A00105C17 /* Assets.xcassets */; };
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
@@ -38,12 +38,13 @@
 		15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */; };
 		15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D108BB1F8E7BC400043F02 /* RegisterVC.swift */; };
 		15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D108BC1F8E7BC400043F02 /* RegisterVC.xib */; };
+		15EEF3771FA615F200E75A4F /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */; };
 		5315066CE885F02197A6D372 /* Pods_MyTrax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8BFA37C4E2E2D1F335CE46 /* Pods_MyTrax.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		152033DE1FA0C6740069CB57 /* FormRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRegistrationVC.swift; sourceTree = "<group>"; };
-		152033DF1FA0C6740069CB57 /* FormRegistrationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormRegistrationVC.xib; sourceTree = "<group>"; };
+		152033DE1FA0C6740069CB57 /* PersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVC.swift; sourceTree = "<group>"; };
+		152033DF1FA0C6740069CB57 /* PersonalInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoVC.xib; sourceTree = "<group>"; };
 		1521D8991F8BF40A00105C17 /* MyTrax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521D89C1F8BF40A00105C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1521D8A31F8BF40A00105C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		15D108BB1F8E7BC400043F02 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		15D108BC1F8E7BC400043F02 /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		21EF99C86E5B2EE0F63B9D2B /* Pods-MyTrax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrax.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTrax/Pods-MyTrax.release.xcconfig"; sourceTree = "<group>"; };
 		39D1D933DE82DF1992B09A74 /* Pods-MyTrax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTrax/Pods-MyTrax.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8BFA37C4E2E2D1F335CE46 /* Pods_MyTrax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTrax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,13 +94,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		152033E21FA0C6780069CB57 /* FormRegistrationVC */ = {
+		152033E21FA0C6780069CB57 /* PersonalInfoVC */ = {
 			isa = PBXGroup;
 			children = (
-				152033DE1FA0C6740069CB57 /* FormRegistrationVC.swift */,
-				152033DF1FA0C6740069CB57 /* FormRegistrationVC.xib */,
+				152033DE1FA0C6740069CB57 /* PersonalInfoVC.swift */,
+				152033DF1FA0C6740069CB57 /* PersonalInfoVC.xib */,
 			);
-			path = FormRegistrationVC;
+			path = PersonalInfoVC;
 			sourceTree = "<group>";
 		};
 		1521D8901F8BF40A00105C17 = {
@@ -133,7 +135,7 @@
 				1541F2A01F9B828E0078B2FB /* RestAPIManager */,
 				154C71BE1F8E95BB00EBAFFF /* Models */,
 				1541F2A51F9B85290078B2FB /* FirebaseManager.swift */,
-				152033E21FA0C6780069CB57 /* FormRegistrationVC */,
+				152033E21FA0C6780069CB57 /* PersonalInfoVC */,
 				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,
 			);
 			path = MyTrax;
@@ -208,6 +210,7 @@
 			children = (
 				15D108BB1F8E7BC400043F02 /* RegisterVC.swift */,
 				15D108BC1F8E7BC400043F02 /* RegisterVC.xib */,
+				15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */,
 			);
 			path = RegisterVC;
 			sourceTree = "<group>";
@@ -327,7 +330,7 @@
 			files = (
 				1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */,
 				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
-				152033E11FA0C6740069CB57 /* FormRegistrationVC.xib in Resources */,
+				152033E11FA0C6740069CB57 /* PersonalInfoVC.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
@@ -415,6 +418,7 @@
 				154B96B81FA3AC7700FF71E2 /* LogoCell.swift in Sources */,
 				1541F2A61F9B85290078B2FB /* FirebaseManager.swift in Sources */,
 				154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */,
+				15EEF3771FA615F200E75A4F /* RegistrationPresenter.swift in Sources */,
 				156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */,
 				15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */,
 				154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */,
@@ -433,7 +437,7 @@
 				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,
 				15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */,
 				1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */,
-				152033E01FA0C6740069CB57 /* FormRegistrationVC.swift in Sources */,
+				152033E01FA0C6740069CB57 /* PersonalInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct TraxUser: Codable {
     
     var id: Int?
     var username: String?
