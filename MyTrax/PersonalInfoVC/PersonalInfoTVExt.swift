@@ -25,6 +25,7 @@ extension PersonalInfoVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as PersonalInfoCell
+            cell.delegate = self
             cell.setupCell(with: self.user)
             return cell
         }

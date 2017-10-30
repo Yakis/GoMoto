@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PersonalInfoDelegate: class {
-    func personalInfoReady(firstName: String, lastName: String, email: String, phoneNumber: String)
+    func personalInfoReady(with user: TraxUser)
 }
 
 
@@ -28,6 +28,7 @@ class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView {
     
     weak var delegate: PersonalInfoDelegate?
     
+    var user: TraxUser!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +37,7 @@ class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView {
     
     
     func setupCell(with user: TraxUser) {
+        self.user = user
         guard let email = user.email else {return}
         self.emailField.text = email
         guard let firstName = user.first_name else {return}
@@ -51,7 +53,10 @@ class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView {
         guard let lastName = self.lastNameField.text else {return}
         guard let email = emailField.text else {return}
         guard let phoneNumber = phoneNumberField.text else {return}
-        self.delegate?.personalInfoReady(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber)
+        guard let userType = self.user.user_type else {return}
+        guard let firebaseUID = self.user.firebase_uid else {return}
+        let user = TraxUser(id: nil, username: nil, email: email, first_name: firstName, last_name: lastName, postcode: nil, contact_number: phoneNumber, user_type: userType, avatar: nil, device_token: nil, firebase_uid: firebaseUID, created_at: nil, updated_at: nil)
+        self.delegate?.personalInfoReady(with: user)
     }
     
     
