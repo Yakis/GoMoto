@@ -39,6 +39,8 @@
 		15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */; };
 		15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */; };
 		15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */; };
+		15C7B3A91FA744FA001B1A8E /* InfoLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7B3A71FA744FA001B1A8E /* InfoLogoCell.swift */; };
+		15C7B3AA1FA744FA001B1A8E /* InfoLogoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C7B3A81FA744FA001B1A8E /* InfoLogoCell.xib */; };
 		15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D108BB1F8E7BC400043F02 /* RegisterVC.swift */; };
 		15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D108BC1F8E7BC400043F02 /* RegisterVC.xib */; };
 		15EEF3771FA615F200E75A4F /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */; };
@@ -80,6 +82,8 @@
 		15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationVC.swift; sourceTree = "<group>"; };
 		15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailRegistrationVC.xib; sourceTree = "<group>"; };
 		15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		15C7B3A71FA744FA001B1A8E /* InfoLogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLogoCell.swift; sourceTree = "<group>"; };
+		15C7B3A81FA744FA001B1A8E /* InfoLogoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoLogoCell.xib; sourceTree = "<group>"; };
 		15D108BB1F8E7BC400043F02 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		15D108BC1F8E7BC400043F02 /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
 		15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				15150A171FA735AA00448B3A /* PersonalInfoVC.xib */,
 				1565C0511FA7360B00A95B46 /* PersonalInfoTVExt.swift */,
 				1565C0571FA7366900A95B46 /* PersonalInfoCell */,
+				15C7B3AB1FA744FF001B1A8E /* InfoLogoCell */,
 			);
 			path = PersonalInfoVC;
 			sourceTree = "<group>";
@@ -266,6 +271,15 @@
 			path = EmailRegistrationVC;
 			sourceTree = "<group>";
 		};
+		15C7B3AB1FA744FF001B1A8E /* InfoLogoCell */ = {
+			isa = PBXGroup;
+			children = (
+				15C7B3A71FA744FA001B1A8E /* InfoLogoCell.swift */,
+				15C7B3A81FA744FA001B1A8E /* InfoLogoCell.xib */,
+			);
+			path = InfoLogoCell;
+			sourceTree = "<group>";
+		};
 		6DBCC0C8F3285FA51E106789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +363,7 @@
 				15150A191FA735AA00448B3A /* PersonalInfoVC.xib in Resources */,
 				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
 				1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */,
+				15C7B3AA1FA744FA001B1A8E /* InfoLogoCell.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
@@ -445,6 +460,7 @@
 				152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */,
 				15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */,
 				15150A181FA735AA00448B3A /* PersonalInfoVC.swift in Sources */,
+				15C7B3A91FA744FA001B1A8E /* InfoLogoCell.swift in Sources */,
 				1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */,
 				1565C0521FA7360B00A95B46 /* PersonalInfoTVExt.swift in Sources */,
 				152D232B1FA3727C0032F789 /* ReusableView.swift in Sources */,

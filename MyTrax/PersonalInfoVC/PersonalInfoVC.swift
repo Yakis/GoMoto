@@ -13,12 +13,16 @@ class PersonalInfoVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var user: TraxUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupTableView()
     }
 
 
+    
+    
+    
+    
 }

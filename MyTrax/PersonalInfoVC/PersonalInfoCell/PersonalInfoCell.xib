@@ -13,27 +13,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="PersonalInfoCell" customModule="MyTrax" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="PersonalInfoCell" customModule="MyTrax" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="PersonalInfoCell" customModule="MyTrax" customModuleProvider="target">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g9r-cE-oZP">
-                        <rect key="frame" x="10" y="10" width="300" height="110"/>
+                        <rect key="frame" x="28" y="13" width="264" height="128"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5RR-Ba-uGT">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBY-aN-pSE">
-                                        <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="I7O-Ea-3LK"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uec-c4-jSA">
-                                        <rect key="frame" x="155" y="0.0" width="145" height="30"/>
+                                        <rect key="frame" x="137" y="0.0" width="127" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="3SF-Qw-hKg"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -41,13 +47,19 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ym3-mW-hIX">
-                                <rect key="frame" x="0.0" y="40" width="300" height="30"/>
+                                <rect key="frame" x="0.0" y="46" width="264" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="teO-9y-8Cg"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone number format: 07xxx xxxxxx" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSy-4C-8DF">
-                                <rect key="frame" x="0.0" y="80" width="300" height="30"/>
+                                <rect key="frame" x="0.0" y="92" width="264" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="vZn-r8-yBA"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -55,22 +67,32 @@
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VG-6z-CVK">
-                        <rect key="frame" x="58" y="140" width="204" height="30"/>
+                        <rect key="frame" x="58" y="171" width="204" height="30"/>
                         <state key="normal" title="ONE MORE STEP">
                             <color key="titleColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="buttonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="G3d-lF-I3l"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="5VG-6z-CVK" secondAttribute="trailing" constant="50" id="3FO-ju-J7h"/>
-                    <constraint firstItem="g9r-cE-oZP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="A8X-ab-Uwt"/>
-                    <constraint firstItem="5VG-6z-CVK" firstAttribute="top" secondItem="g9r-cE-oZP" secondAttribute="bottom" constant="20" id="LTy-X9-A4M"/>
-                    <constraint firstAttribute="trailing" secondItem="g9r-cE-oZP" secondAttribute="trailing" constant="10" id="Ya7-g9-rm8"/>
-                    <constraint firstItem="g9r-cE-oZP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Yyu-Jb-bZp"/>
-                    <constraint firstItem="5VG-6z-CVK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="50" id="epO-3X-ySh"/>
+                    <constraint firstItem="5VG-6z-CVK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="50" id="Hw0-C9-VOB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5VG-6z-CVK" secondAttribute="trailing" constant="50" id="g6k-Xt-vmh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="g9r-cE-oZP" secondAttribute="trailing" constant="20" id="k2o-ky-fsi"/>
+                    <constraint firstItem="g9r-cE-oZP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="nF8-Kw-C8b"/>
+                    <constraint firstItem="g9r-cE-oZP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="rbz-lW-Gqc"/>
+                    <constraint firstItem="5VG-6z-CVK" firstAttribute="top" secondItem="lSy-4C-8DF" secondAttribute="bottom" constant="30" id="wrP-IQ-SLk"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buttonOutlet" destination="5VG-6z-CVK" id="T07-Aq-Vbq"/>
+                <outlet property="emailField" destination="Ym3-mW-hIX" id="2eP-tP-hWr"/>
+                <outlet property="firstNameField" destination="MBY-aN-pSE" id="EaJ-Uz-6pU"/>
+                <outlet property="lastNameField" destination="uec-c4-jSA" id="N8X-uL-oeq"/>
+                <outlet property="phoneNumberField" destination="lSy-4C-8DF" id="Utn-WK-JPu"/>
+            </connections>
             <point key="canvasLocation" x="33" y="142"/>
         </tableViewCell>
     </objects>
