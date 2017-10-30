@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		152033E01FA0C6740069CB57 /* PersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152033DE1FA0C6740069CB57 /* PersonalInfoVC.swift */; };
-		152033E11FA0C6740069CB57 /* PersonalInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152033DF1FA0C6740069CB57 /* PersonalInfoVC.xib */; };
+		15150A181FA735AA00448B3A /* PersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15150A161FA735AA00448B3A /* PersonalInfoVC.swift */; };
+		15150A191FA735AA00448B3A /* PersonalInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15150A171FA735AA00448B3A /* PersonalInfoVC.xib */; };
 		1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D89C1F8BF40A00105C17 /* AppDelegate.swift */; };
 		1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A31F8BF40A00105C17 /* Assets.xcassets */; };
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
@@ -27,6 +27,9 @@
 		154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */; };
 		154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */; };
 		154C71BD1F8E955200EBAFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BC1F8E955200EBAFFF /* User.swift */; };
+		1565C0521FA7360B00A95B46 /* PersonalInfoTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565C0511FA7360B00A95B46 /* PersonalInfoTVExt.swift */; };
+		1565C0551FA7366600A95B46 /* PersonalInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565C0531FA7366600A95B46 /* PersonalInfoCell.swift */; };
+		1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1565C0541FA7366600A95B46 /* PersonalInfoCell.xib */; };
 		1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C5151F8BF5610018D52B /* WelcomeVC.swift */; };
 		1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1568C5161F8BF5610018D52B /* WelcomeVC.xib */; };
 		156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F20D91F9B7D7B007FEE27 /* Beautifier.swift */; };
@@ -43,8 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		152033DE1FA0C6740069CB57 /* PersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVC.swift; sourceTree = "<group>"; };
-		152033DF1FA0C6740069CB57 /* PersonalInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoVC.xib; sourceTree = "<group>"; };
+		15150A161FA735AA00448B3A /* PersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVC.swift; sourceTree = "<group>"; };
+		15150A171FA735AA00448B3A /* PersonalInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoVC.xib; sourceTree = "<group>"; };
 		1521D8991F8BF40A00105C17 /* MyTrax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521D89C1F8BF40A00105C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1521D8A31F8BF40A00105C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +68,9 @@
 		154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		154C71BC1F8E955200EBAFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1565C0511FA7360B00A95B46 /* PersonalInfoTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTVExt.swift; sourceTree = "<group>"; };
+		1565C0531FA7366600A95B46 /* PersonalInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoCell.swift; sourceTree = "<group>"; };
+		1565C0541FA7366600A95B46 /* PersonalInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoCell.xib; sourceTree = "<group>"; };
 		1568C5151F8BF5610018D52B /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		1568C5161F8BF5610018D52B /* WelcomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
 		156F20D91F9B7D7B007FEE27 /* Beautifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautifier.swift; sourceTree = "<group>"; };
@@ -94,11 +100,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		152033E21FA0C6780069CB57 /* PersonalInfoVC */ = {
+		15150A1A1FA735B800448B3A /* PersonalInfoVC */ = {
 			isa = PBXGroup;
 			children = (
-				152033DE1FA0C6740069CB57 /* PersonalInfoVC.swift */,
-				152033DF1FA0C6740069CB57 /* PersonalInfoVC.xib */,
+				15150A161FA735AA00448B3A /* PersonalInfoVC.swift */,
+				15150A171FA735AA00448B3A /* PersonalInfoVC.xib */,
+				1565C0511FA7360B00A95B46 /* PersonalInfoTVExt.swift */,
+				1565C0571FA7366900A95B46 /* PersonalInfoCell */,
 			);
 			path = PersonalInfoVC;
 			sourceTree = "<group>";
@@ -135,8 +143,8 @@
 				1541F2A01F9B828E0078B2FB /* RestAPIManager */,
 				154C71BE1F8E95BB00EBAFFF /* Models */,
 				1541F2A51F9B85290078B2FB /* FirebaseManager.swift */,
-				152033E21FA0C6780069CB57 /* PersonalInfoVC */,
 				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,
+				15150A1A1FA735B800448B3A /* PersonalInfoVC */,
 			);
 			path = MyTrax;
 			sourceTree = "<group>";
@@ -213,6 +221,15 @@
 				15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */,
 			);
 			path = RegisterVC;
+			sourceTree = "<group>";
+		};
+		1565C0571FA7366900A95B46 /* PersonalInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				1565C0531FA7366600A95B46 /* PersonalInfoCell.swift */,
+				1565C0541FA7366600A95B46 /* PersonalInfoCell.xib */,
+			);
+			path = PersonalInfoCell;
 			sourceTree = "<group>";
 		};
 		1568C5191F8BF5640018D52B /* WelcomeVC */ = {
@@ -329,8 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */,
+				15150A191FA735AA00448B3A /* PersonalInfoVC.xib in Resources */,
 				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
-				152033E11FA0C6740069CB57 /* PersonalInfoVC.xib in Resources */,
+				1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
@@ -426,7 +444,9 @@
 				15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */,
 				152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */,
 				15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */,
+				15150A181FA735AA00448B3A /* PersonalInfoVC.swift in Sources */,
 				1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */,
+				1565C0521FA7360B00A95B46 /* PersonalInfoTVExt.swift in Sources */,
 				152D232B1FA3727C0032F789 /* ReusableView.swift in Sources */,
 				15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */,
 				152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */,
@@ -437,7 +457,7 @@
 				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,
 				15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */,
 				1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */,
-				152033E01FA0C6740069CB57 /* PersonalInfoVC.swift in Sources */,
+				1565C0551FA7366600A95B46 /* PersonalInfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
