@@ -59,6 +59,7 @@
 		1521D8A81F8BF40A00105C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1521D8AE1F8BF47900105C17 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		1521D8B01F8BF4A800105C17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		15242B5C1FA7787A0027E18F /* MyTrax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTrax.entitlements; sourceTree = "<group>"; };
 		152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationCell.swift; sourceTree = "<group>"; };
 		152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailRegistrationCell.xib; sourceTree = "<group>"; };
 		152D23281FA3722C0032F789 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		1521D89B1F8BF40A00105C17 /* MyTrax */ = {
 			isa = PBXGroup;
 			children = (
+				15242B5C1FA7787A0027E18F /* MyTrax.entitlements */,
 				152D23271FA3721A0032F789 /* Protocols */,
 				1541F2A21F9B82D10078B2FB /* SupportingFiles */,
 				1541F2A11F9B82C20078B2FB /* AppMain */,
@@ -347,6 +349,11 @@
 					1521D8981F8BF40A00105C17 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -619,6 +626,7 @@
 			baseConfigurationReference = 39D1D933DE82DF1992B09A74 /* Pods-MyTrax.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyTrax/MyTrax.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4WPNK427TB;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -640,6 +648,7 @@
 			baseConfigurationReference = 21EF99C86E5B2EE0F63B9D2B /* Pods-MyTrax.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyTrax/MyTrax.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4WPNK427TB;
 				FRAMEWORK_SEARCH_PATHS = (
