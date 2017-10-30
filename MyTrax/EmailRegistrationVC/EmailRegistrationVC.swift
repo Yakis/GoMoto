@@ -15,7 +15,7 @@ class EmailRegistrationVC: UIViewController, EmailRegistrationDelegate {
     
     func registerButtonPressed(email: String, password: String) {
         FirebaseManager.emailRegistration(userType: userType, email: email, password: password) { (user) in
-            RegistrationPresenter.shared.showRegistrationForm(with: user, from: self)
+            RegistrationPresenter.shared.showPersonalInfoVC(with: user, from: self)
         }
     }
     

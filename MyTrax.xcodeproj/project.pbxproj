@@ -41,6 +41,8 @@
 		15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */; };
 		15C7B3A91FA744FA001B1A8E /* InfoLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7B3A71FA744FA001B1A8E /* InfoLogoCell.swift */; };
 		15C7B3AA1FA744FA001B1A8E /* InfoLogoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C7B3A81FA744FA001B1A8E /* InfoLogoCell.xib */; };
+		15C7B3AE1FA75000001B1A8E /* AditionalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7B3AC1FA75000001B1A8E /* AditionalInfoVC.swift */; };
+		15C7B3AF1FA75000001B1A8E /* AditionalInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C7B3AD1FA75000001B1A8E /* AditionalInfoVC.xib */; };
 		15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D108BB1F8E7BC400043F02 /* RegisterVC.swift */; };
 		15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D108BC1F8E7BC400043F02 /* RegisterVC.xib */; };
 		15EEF3771FA615F200E75A4F /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */; };
@@ -84,6 +86,8 @@
 		15BDBE921FA0F1D900298E51 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		15C7B3A71FA744FA001B1A8E /* InfoLogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLogoCell.swift; sourceTree = "<group>"; };
 		15C7B3A81FA744FA001B1A8E /* InfoLogoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoLogoCell.xib; sourceTree = "<group>"; };
+		15C7B3AC1FA75000001B1A8E /* AditionalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AditionalInfoVC.swift; sourceTree = "<group>"; };
+		15C7B3AD1FA75000001B1A8E /* AditionalInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AditionalInfoVC.xib; sourceTree = "<group>"; };
 		15D108BB1F8E7BC400043F02 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		15D108BC1F8E7BC400043F02 /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
 		15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 				1541F2A51F9B85290078B2FB /* FirebaseManager.swift */,
 				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,
 				15150A1A1FA735B800448B3A /* PersonalInfoVC */,
+				15C7B3B01FA75005001B1A8E /* AditionalInfoVC */,
 			);
 			path = MyTrax;
 			sourceTree = "<group>";
@@ -280,6 +285,15 @@
 			path = InfoLogoCell;
 			sourceTree = "<group>";
 		};
+		15C7B3B01FA75005001B1A8E /* AditionalInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				15C7B3AC1FA75000001B1A8E /* AditionalInfoVC.swift */,
+				15C7B3AD1FA75000001B1A8E /* AditionalInfoVC.xib */,
+			);
+			path = AditionalInfoVC;
+			sourceTree = "<group>";
+		};
 		6DBCC0C8F3285FA51E106789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +383,7 @@
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
 				152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */,
 				1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */,
+				15C7B3AF1FA75000001B1A8E /* AditionalInfoVC.xib in Resources */,
 				1541F2A41F9B83090078B2FB /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +479,7 @@
 				1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */,
 				1565C0521FA7360B00A95B46 /* PersonalInfoTVExt.swift in Sources */,
 				152D232B1FA3727C0032F789 /* ReusableView.swift in Sources */,
+				15C7B3AE1FA75000001B1A8E /* AditionalInfoVC.swift in Sources */,
 				15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */,
 				152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */,
 				152D232D1FA372E50032F789 /* TableViewExt.swift in Sources */,

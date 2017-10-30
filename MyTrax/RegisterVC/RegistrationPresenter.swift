@@ -15,11 +15,17 @@ class RegistrationPresenter {
     
     private init() {}
     
-    func showRegistrationForm(with user: TraxUser, from viewController: UIViewController) {
+    func showPersonalInfoVC(with user: TraxUser, from viewController: UIViewController) {
         let personalInfoVC = PersonalInfoVC(nibName: "PersonalInfoVC", bundle: nil)
         personalInfoVC.user = user
-        print("\(String(describing: user.user_type))\n\n\(String(describing: user.firebase_uid))\n\n\(String(describing: user.email))\n\n")
         viewController.present(personalInfoVC, animated: true, completion: nil)
+    }
+    
+    
+    func showAditionalInfoVC(with user: TraxUser, from viewController: UIViewController) {
+        let aditionalInfoVC = AditionalInfoVC(nibName: "AditionalInfoVC", bundle: nil)
+        aditionalInfoVC.user = user
+        viewController.present(aditionalInfoVC, animated: true, completion: nil)
     }
     
     

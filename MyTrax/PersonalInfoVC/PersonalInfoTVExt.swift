@@ -39,7 +39,6 @@ extension PersonalInfoVC: UITableViewDelegate, UITableViewDataSource {
         default:
             return 200
         }
-        return 200
     }
     
     
