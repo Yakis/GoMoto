@@ -15,6 +15,7 @@ extension UIView {
         self.layer.borderColor = UIColor.mediumGray.cgColor
         self.layer.borderWidth = 1.5
         self.layer.cornerRadius = 5.0
+        self.frame.size.height = 40
     }
     
     
