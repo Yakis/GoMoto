@@ -28,5 +28,5 @@ struct TraxUser: Codable {
 
 enum UserType: String {
     case owner = "owner"
-    case biker = "biker"
+    case biker = "rider"
 }
