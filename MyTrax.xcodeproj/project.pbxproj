@@ -155,13 +155,29 @@
 				154C71BF1F8E95CB00EBAFFF /* RegisterVC */,
 				1541F2A01F9B828E0078B2FB /* RestAPIManager */,
 				154C71BE1F8E95BB00EBAFFF /* Models */,
-				1541F2A51F9B85290078B2FB /* FirebaseManager.swift */,
+				15242B5F1FA8D0320027E18F /* Network */,
 				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,
 				15150A1A1FA735B800448B3A /* PersonalInfoVC */,
 				15C7B3B01FA75005001B1A8E /* AditionalInfoVC */,
-				15242B5D1FA8C9110027E18F /* UserAlert.swift */,
+				15242B601FA8D0550027E18F /* UserAlert */,
 			);
 			path = MyTrax;
+			sourceTree = "<group>";
+		};
+		15242B5F1FA8D0320027E18F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1541F2A51F9B85290078B2FB /* FirebaseManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		15242B601FA8D0550027E18F /* UserAlert */ = {
+			isa = PBXGroup;
+			children = (
+				15242B5D1FA8C9110027E18F /* UserAlert.swift */,
+			);
+			path = UserAlert;
 			sourceTree = "<group>";
 		};
 		152D23261FA370150032F789 /* EmailRegistrationCell */ = {
