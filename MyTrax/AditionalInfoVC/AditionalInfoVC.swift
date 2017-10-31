@@ -91,7 +91,6 @@ class AditionalInfoVC: UIViewController, CLLocationManagerDelegate {
 
     
     func displayLocationInfo(placemark: CLPlacemark) {
-        if placemark != nil {
             //stop updating location to save battery life
             locationManager.stopUpdatingLocation()
             guard let locality = placemark.locality else {return}
@@ -99,7 +98,6 @@ class AditionalInfoVC: UIViewController, CLLocationManagerDelegate {
             guard let administrativeArea = placemark.administrativeArea else {return}
             guard let country = placemark.country else {return}
             self.adress.text = "Adress: \(locality), \(postcode), \(administrativeArea), \(country)"
-        }
     }
     
 

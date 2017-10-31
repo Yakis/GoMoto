@@ -32,6 +32,7 @@ class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        buttonOutlet.roundCorners()
         // Initialization code
     }
     
@@ -44,7 +45,7 @@ class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView {
         self.firstNameField.text = firstName
         guard let lastName = user.last_name else {return}
         self.lastNameField.text = lastName
-        buttonOutlet.roundCorners()
+        
     }
 
     
