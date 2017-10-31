@@ -39,9 +39,9 @@ class RegisterVC: UIViewController {
         self.userLogoImageView.image = UIImage(named: userType.rawValue)
         
         if let accessToken = AccessToken.current {
-            print("User is already logged in until: \(accessToken.expirationDate)")
+            UserAlert.showMessage(from: self, title: "Info", message: "User is already logged in until: \(accessToken.expirationDate)")
         } else {
-            print("You need to press that f button :]")
+            
         }
     }
 

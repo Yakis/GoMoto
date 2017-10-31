@@ -14,6 +14,7 @@
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
 		1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8AE1F8BF47900105C17 /* AppController.swift */; };
 		1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B01F8BF4A800105C17 /* Constants.swift */; };
+		15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15242B5D1FA8C9110027E18F /* UserAlert.swift */; };
 		152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */; };
 		152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */; };
 		152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D23281FA3722C0032F789 /* NibLoadable.swift */; };
@@ -60,6 +61,7 @@
 		1521D8AE1F8BF47900105C17 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		1521D8B01F8BF4A800105C17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15242B5C1FA7787A0027E18F /* MyTrax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTrax.entitlements; sourceTree = "<group>"; };
+		15242B5D1FA8C9110027E18F /* UserAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlert.swift; sourceTree = "<group>"; };
 		152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationCell.swift; sourceTree = "<group>"; };
 		152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailRegistrationCell.xib; sourceTree = "<group>"; };
 		152D23281FA3722C0032F789 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,
 				15150A1A1FA735B800448B3A /* PersonalInfoVC */,
 				15C7B3B01FA75005001B1A8E /* AditionalInfoVC */,
+				15242B5D1FA8C9110027E18F /* UserAlert.swift */,
 			);
 			path = MyTrax;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				1565C0521FA7360B00A95B46 /* PersonalInfoTVExt.swift in Sources */,
 				152D232B1FA3727C0032F789 /* ReusableView.swift in Sources */,
 				15C7B3AE1FA75000001B1A8E /* AditionalInfoVC.swift in Sources */,
+				15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */,
 				15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */,
 				152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */,
 				152D232D1FA372E50032F789 /* TableViewExt.swift in Sources */,

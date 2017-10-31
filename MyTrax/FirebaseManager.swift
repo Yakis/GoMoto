@@ -22,15 +22,15 @@ class FirebaseManager {
         facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: viewController) { (result) in
             switch result {
             case .failed(let error):
-                print(error.localizedDescription)
+                UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
             case .cancelled:
-                print("User cancelled login")
+                UserAlert.showMessage(from: viewController, title: "Error", message: "User cancelled login")
             case .success(_, _, let accessToken):
                 let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
                 Auth.auth().signIn(with: credential, completion: { (user, error) in
                     guard let user = user else {
                         guard let error = error else {return}
-                        print(error.localizedDescription)
+                        UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
                         return
                     }
                        self.saveAccessToken(for: user)
@@ -50,11 +50,11 @@ class FirebaseManager {
     }
     
     
-    static func emailRegistration(userType: String, email: String, password: String, completion: @escaping (TraxUser) -> ()) {
+    static func emailRegistration(userType: String, email: String, password: String, viewController: UIViewController, completion: @escaping (TraxUser) -> ()) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             guard let user = user else {
                 guard let error = error else {return}
-                print(error.localizedDescription)
+                UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
                 return
             }
             self.saveAccessToken(for: user)
