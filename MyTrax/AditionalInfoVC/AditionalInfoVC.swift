@@ -31,12 +31,12 @@ class AditionalInfoVC: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.firstName.text = "First Name: \(user.first_name!)"
-        self.lastName.text = "Last Name: \(user.last_name!)"
-        self.email.text = "Email: \(user.email!)"
-        self.phoneNumber.text = "Contact number: \(user.contact_number!)"
-        self.userType.text = "User type: \(user.user_type!)"
-        self.firebaseUID.text = "Firebase UID: \(user.firebase_uid!)"
+//        self.firstName.text = "First Name: \(user.first_name!)"
+//        self.lastName.text = "Last Name: \(user.last_name!)"
+//        self.email.text = "Email: \(user.email!)"
+//        self.phoneNumber.text = "Contact number: \(user.contact_number!)"
+//        self.userType.text = "User type: \(user.user_type!)"
+//        self.firebaseUID.text = "Firebase UID: \(user.firebase_uid!)"
         
     }
 
