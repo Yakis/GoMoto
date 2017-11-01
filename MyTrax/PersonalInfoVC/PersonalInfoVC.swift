@@ -15,7 +15,6 @@ class PersonalInfoVC: UIViewController, PersonalInfoDelegate {
     func personalInfoReady(with user: TraxUser) {
        RegistrationPresenter.shared.showAditionalInfoVC(with: user, from: self)
     }
-    
 
     
     @IBOutlet weak var tableView: UITableView!

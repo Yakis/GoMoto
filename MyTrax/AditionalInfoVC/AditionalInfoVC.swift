@@ -20,8 +20,6 @@ class AditionalInfoVC: UIViewController {
     @IBOutlet weak var finishButtonOutlet: UIButton!
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         finishButtonOutlet.roundCorners()
@@ -37,15 +35,16 @@ class AditionalInfoVC: UIViewController {
     @IBAction func finishButtonAction(_ sender: Any) {
         guard let username = usernameTextField.text else {return}
         user.username = username
-        user.avatar = ""
-        user.device_token = ""
-        user.id = 0
-        user.postcode = ""
         RestAPIManager.shared.saveUser(user: user) { (user, error)  in
             guard let user = user else {return}
             DispatchQueue.main.async {
-                self.finishButtonOutlet.setTitle(user.first_name, for: .normal)
-                self.dismiss(animated: true, completion: nil)
+                switch user.user_type {
+                case "owner":
+                let addTracksVC = AddTracksVC(nibName: "AddTracksVC", bundle: nil)
+                self.present(addTracksVC, animated: true, completion: nil)
+                default:
+                    print("Show Dashboard here")
+            }
             }
             guard let error = error else {return}
             UserAlert.showMessage(from: self, title: "Error", message: error.localizedDescription)
