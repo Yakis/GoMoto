@@ -56,6 +56,8 @@
 		15F78EB01FAA4AE800241AB0 /* AddTrackFieldsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F78EAE1FAA4AE800241AB0 /* AddTrackFieldsCell.xib */; };
 		15F78EB31FAA4C5800241AB0 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F78EB21FAA4C5800241AB0 /* Track.swift */; };
 		15F78EB51FAA513500241AB0 /* AddTracksTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F78EB41FAA513500241AB0 /* AddTracksTVExt.swift */; };
+		15F78EB81FAA570800241AB0 /* LocateTrackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F78EB61FAA570800241AB0 /* LocateTrackVC.swift */; };
+		15F78EB91FAA570800241AB0 /* LocateTrackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F78EB71FAA570800241AB0 /* LocateTrackVC.xib */; };
 		5315066CE885F02197A6D372 /* Pods_MyTrax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8BFA37C4E2E2D1F335CE46 /* Pods_MyTrax.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		15F78EAE1FAA4AE800241AB0 /* AddTrackFieldsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTrackFieldsCell.xib; sourceTree = "<group>"; };
 		15F78EB21FAA4C5800241AB0 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		15F78EB41FAA513500241AB0 /* AddTracksTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTracksTVExt.swift; sourceTree = "<group>"; };
+		15F78EB61FAA570800241AB0 /* LocateTrackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateTrackVC.swift; sourceTree = "<group>"; };
+		15F78EB71FAA570800241AB0 /* LocateTrackVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocateTrackVC.xib; sourceTree = "<group>"; };
 		21EF99C86E5B2EE0F63B9D2B /* Pods-MyTrax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrax.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTrax/Pods-MyTrax.release.xcconfig"; sourceTree = "<group>"; };
 		39D1D933DE82DF1992B09A74 /* Pods-MyTrax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTrax/Pods-MyTrax.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8BFA37C4E2E2D1F335CE46 /* Pods_MyTrax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTrax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -344,6 +348,7 @@
 				15F78EAC1FAA4A6C00241AB0 /* AddTrackTitleCell */,
 				15F78EB11FAA4AEB00241AB0 /* AddTrackFieldsCell */,
 				15F78EB41FAA513500241AB0 /* AddTracksTVExt.swift */,
+				15F78EBA1FAA571100241AB0 /* LocateTrackVC */,
 			);
 			path = AddTracksVC;
 			sourceTree = "<group>";
@@ -364,6 +369,15 @@
 				15F78EAE1FAA4AE800241AB0 /* AddTrackFieldsCell.xib */,
 			);
 			path = AddTrackFieldsCell;
+			sourceTree = "<group>";
+		};
+		15F78EBA1FAA571100241AB0 /* LocateTrackVC */ = {
+			isa = PBXGroup;
+			children = (
+				15F78EB61FAA570800241AB0 /* LocateTrackVC.swift */,
+				15F78EB71FAA570800241AB0 /* LocateTrackVC.xib */,
+			);
+			path = LocateTrackVC;
 			sourceTree = "<group>";
 		};
 		6DBCC0C8F3285FA51E106789 /* Frameworks */ = {
@@ -458,6 +472,7 @@
 				15F78EB01FAA4AE800241AB0 /* AddTrackFieldsCell.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
+				15F78EB91FAA570800241AB0 /* LocateTrackVC.xib in Resources */,
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
 				152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */,
 				1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */,
@@ -570,6 +585,7 @@
 				15F78EB31FAA4C5800241AB0 /* Track.swift in Sources */,
 				152D232D1FA372E50032F789 /* TableViewExt.swift in Sources */,
 				1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */,
+				15F78EB81FAA570800241AB0 /* LocateTrackVC.swift in Sources */,
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
 				152D232F1FA374F60032F789 /* EmailRegTVExtension.swift in Sources */,
 				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,

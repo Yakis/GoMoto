@@ -8,7 +8,9 @@
 
 import UIKit
 
-class AddTracksVC: UIViewController {
+class AddTracksVC: UIViewController, LocateTrackDelegate {
+    
+    
 
     
     
@@ -24,6 +26,12 @@ class AddTracksVC: UIViewController {
         
     }
 
+    
+    
+    func showMapView() {
+        let locateTrackVC = LocateTrackVC(nibName: "LocateTrackVC", bundle: nil)
+        self.present(locateTrackVC, animated: true, completion: nil)
+    }
     
 
 }

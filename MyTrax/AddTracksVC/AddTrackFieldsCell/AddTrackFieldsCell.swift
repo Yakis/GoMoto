@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import MapKit
+
+
+protocol LocateTrackDelegate: class {
+    func showMapView()
+}
 
 class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
 
@@ -26,6 +32,7 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     @IBOutlet weak var createButtonOutlet: UIButton!
     
     
+    weak var delegate: LocateTrackDelegate?
   
     
     override func awakeFromNib() {
@@ -41,7 +48,8 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     
     
     @IBAction func localizationButtonAction(_ sender: Any) {
-        print("Show the map")
+        delegate?.showMapView()
+        
     }
     
     

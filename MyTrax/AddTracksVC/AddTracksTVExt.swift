@@ -23,6 +23,7 @@ extension AddTracksVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as AddTrackFieldsCell
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()
