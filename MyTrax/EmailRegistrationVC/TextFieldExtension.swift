@@ -41,7 +41,7 @@ extension EmailRegistrationCell: UITextFieldDelegate {
     func validatePasswordTextField(textField: UITextField, character: String) {
         guard let text = textField.text else {return}
         let string = text + character
-        if string.characters.count >= 6 {
+        if string.count >= 6 {
             textField.validate()
         } else {
             textField.invalidate()

@@ -46,9 +46,10 @@ class RestAPIManager {
     
     
     
-    func saveUser(user: TraxUser, completionHandler: @escaping (Error?) -> Void) {
+    func saveUser(user: TraxUser, completionHandler: @escaping (TraxUser?, Error?) -> Void) {
         let usersEndpoint = "\(Endpoints.Users.baseUrl)\(Endpoints.createNew)"
         guard let usersUrl = URL(string: usersEndpoint) else {return}
+        print(usersUrl)
         var request = URLRequest(url: usersUrl)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -58,12 +59,18 @@ class RestAPIManager {
             request.httpBody = newUserAsJSON
         } catch {
             print(error)
-            completionHandler(error)
+            completionHandler(nil, error)
         }
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
-            completionHandler(error)
+            let decoder = JSONDecoder()
+            do {
+                let newUser = try decoder.decode(TraxUser.self, from: data!)
+                completionHandler(newUser, nil)
+            } catch {
+                
+            }
             print("\(String(describing: response)) Account created!")
         })
         task.resume()

@@ -28,14 +28,29 @@ class AditionalInfoVC: UIViewController {
         finishButtonOutlet.roundCorners()
         switch userType {
         case "rider":
-            messageLabel.text = "People want to know who you are when you posting something. Just enter your username and you're in! We recomend your name and  bike No. i.e. <Ben672>"
+            messageLabel.text = "People want to know who you are when you posting something. Just enter your username and you're in! We recomend your name and bike No. i.e. <Ben672>"
         default:
-            messageLabel.text = "People want to know who you are when you posting something. Just enter your username and you're in! We recomend your track name ie. <Wild Tracks>"
+            messageLabel.text = "People want to know who you are when you posting something. Just enter your username and you're in! We recomend your track name i.e. <Wild Tracks>"
         }
     }
 
     
     @IBAction func finishButtonAction(_ sender: Any) {
+        guard let username = usernameTextField.text else {return}
+        user.username = username
+        user.avatar = ""
+        user.device_token = ""
+        user.id = 0
+        user.postcode = ""
+        RestAPIManager.shared.saveUser(user: user) { (user, error)  in
+            guard let user = user else {return}
+            DispatchQueue.main.async {
+                self.finishButtonOutlet.setTitle(user.first_name, for: .normal)
+                self.dismiss(animated: true, completion: nil)
+            }
+            guard let error = error else {return}
+            UserAlert.showMessage(from: self, title: "Error", message: error.localizedDescription)
+        }
     }
     
     
