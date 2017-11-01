@@ -24,9 +24,8 @@ class AditionalInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let userType = user.user_type else {return}
         finishButtonOutlet.roundCorners()
-        switch userType {
+        switch user.user_type {
         case "rider":
             messageLabel.text = "People want to know who you are when you posting something. Just enter your username and you're in! We recomend your name and bike No. i.e. <Ben672>"
         default:

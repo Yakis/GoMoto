@@ -34,7 +34,10 @@ class FirebaseManager {
                         return
                     }
                        self.saveAccessToken(for: user)
-                    let traxUser = TraxUser(id: nil, username: nil, email: user.email, first_name: user.displayName?.splitName().first, last_name: user.displayName?.splitName().last, postcode: nil, contact_number: nil, user_type: userType, avatar: nil, device_token: nil, firebase_uid: user.uid, created_at: nil, updated_at: nil)
+                    let firstName = user.displayName?.splitName().first ?? ""
+                    let lastName = user.displayName?.splitName().last ?? ""
+                    let email = user.email ?? ""
+                    let traxUser = TraxUser(id: 0, username: "", email: email, first_name: firstName, last_name: lastName, postcode: "", contact_number: "", user_type: userType, avatar: "", device_token: "", firebase_uid: user.uid, created_at: nil, updated_at: nil)
                         completion(traxUser)
                 })
             }
@@ -63,7 +66,8 @@ class FirebaseManager {
                 guard let tokenString = tokenString else {return}
                 print(tokenString)
             })
-            let traxUser = TraxUser(id: nil, username: nil, email: user.email, first_name: nil, last_name: nil, postcode: nil, contact_number: nil, user_type: userType, avatar: nil, device_token: nil, firebase_uid: user.uid, created_at: nil, updated_at: nil)
+            guard let email = user.email else {return}
+            let traxUser = TraxUser(id: 0, username: "", email: email, first_name: "", last_name: "", postcode: "", contact_number: "", user_type: userType, avatar: "", device_token: "", firebase_uid: user.uid, created_at: nil, updated_at: nil)
             completion(traxUser)
         }
     }
