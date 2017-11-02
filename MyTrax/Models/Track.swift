@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct Track {
+struct Track: Codable {
 
     var name: String
     var adress: String
@@ -23,7 +23,7 @@ struct Track {
     var rating: Double
     var user_id: Int
     var featured: Int
-    
+    var images: [String] = []
     
     
 }

@@ -8,15 +8,14 @@
 
 import UIKit
 
-class AddTracksVC: UIViewController, LocateTrackDelegate {
+class AddTracksVC: UIViewController, LocateTrackDelegate, AdminVCDelegate {
     
     
-
     
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var user: TraxUser!
     
     
     
@@ -33,5 +32,12 @@ class AddTracksVC: UIViewController, LocateTrackDelegate {
         self.present(locateTrackVC, animated: true, completion: nil)
     }
     
+    
+    func showAdminVC(for user: TraxUser, with track: Track) {
+        let adminVC = AdminVC(nibName: "AdminVC", bundle: nil)
+        adminVC.user = user
+        adminVC.track = track
+        self.present(adminVC, animated: true, completion: nil)
+    }
 
 }

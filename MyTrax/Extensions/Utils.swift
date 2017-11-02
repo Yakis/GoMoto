@@ -14,7 +14,10 @@ extension String {
     
     func splitName() -> [String] {
         return self.components(separatedBy: " ")
-
+    }
+    
+    func toDouble() -> Double? {
+        return NumberFormatter().number(from: self)?.doubleValue
     }
     
 }

@@ -16,6 +16,8 @@
 		1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B01F8BF4A800105C17 /* Constants.swift */; };
 		15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15242B5D1FA8C9110027E18F /* UserAlert.swift */; };
 		1526A3051FAA615E00346F4F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1526A3041FAA615E00346F4F /* MapKit.framework */; };
+		1526A3081FAB971600346F4F /* AdminVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526A3061FAB971500346F4F /* AdminVC.swift */; };
+		1526A3091FAB971600346F4F /* AdminVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526A3071FAB971500346F4F /* AdminVC.xib */; };
 		152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */; };
 		152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */; };
 		152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D23281FA3722C0032F789 /* NibLoadable.swift */; };
@@ -75,6 +77,8 @@
 		15242B5C1FA7787A0027E18F /* MyTrax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTrax.entitlements; sourceTree = "<group>"; };
 		15242B5D1FA8C9110027E18F /* UserAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlert.swift; sourceTree = "<group>"; };
 		1526A3041FAA615E00346F4F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1526A3061FAB971500346F4F /* AdminVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminVC.swift; sourceTree = "<group>"; };
+		1526A3071FAB971500346F4F /* AdminVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminVC.xib; sourceTree = "<group>"; };
 		152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationCell.swift; sourceTree = "<group>"; };
 		152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailRegistrationCell.xib; sourceTree = "<group>"; };
 		152D23281FA3722C0032F789 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				15242B601FA8D0550027E18F /* UserAlert */,
 				15F4951B1FA8F1FB0021340E /* LocationManager.swift */,
 				15F78EA71FAA3E0400241AB0 /* AddTracksVC */,
+				1526A30A1FAB971900346F4F /* AdminVC */,
 			);
 			path = MyTrax;
 			sourceTree = "<group>";
@@ -205,6 +210,15 @@
 				15242B5D1FA8C9110027E18F /* UserAlert.swift */,
 			);
 			path = UserAlert;
+			sourceTree = "<group>";
+		};
+		1526A30A1FAB971900346F4F /* AdminVC */ = {
+			isa = PBXGroup;
+			children = (
+				1526A3061FAB971500346F4F /* AdminVC.swift */,
+				1526A3071FAB971500346F4F /* AdminVC.xib */,
+			);
+			path = AdminVC;
 			sourceTree = "<group>";
 		};
 		152D23261FA370150032F789 /* EmailRegistrationCell */ = {
@@ -481,6 +495,7 @@
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				15F78EB91FAA570800241AB0 /* LocateTrackVC.xib in Resources */,
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
+				1526A3091FAB971600346F4F /* AdminVC.xib in Resources */,
 				152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */,
 				1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */,
 				15F78EAB1FAA4A6900241AB0 /* AddTrackTitleCell.xib in Resources */,
@@ -599,6 +614,7 @@
 				15F78EA51FAA3E0000241AB0 /* AddTracksVC.swift in Sources */,
 				15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */,
 				1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */,
+				1526A3081FAB971600346F4F /* AdminVC.swift in Sources */,
 				1565C0551FA7366600A95B46 /* PersonalInfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

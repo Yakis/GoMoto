@@ -48,7 +48,8 @@ class FirebaseManager {
     static func saveAccessToken(for user: User) {
         user.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
              guard let tokenString = tokenString else {return}
-            print(tokenString)
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(tokenString, forKey: "accessToken")
         })
     }
     

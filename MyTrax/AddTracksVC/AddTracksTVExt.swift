@@ -23,7 +23,9 @@ extension AddTracksVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as AddTrackFieldsCell
+            cell.user = user
             cell.delegate = self
+            cell.adminDelegate = self
             return cell
         default:
             return UITableViewCell()

@@ -8,10 +8,14 @@
 
 import UIKit
 import MapKit
-
+import Firebase
 
 protocol LocateTrackDelegate: class {
     func showMapView()
+}
+
+protocol AdminVCDelegate: class {
+    func showAdminVC(for user: TraxUser, with track: Track)
 }
 
 class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
@@ -31,9 +35,17 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     
     @IBOutlet weak var createButtonOutlet: UIButton!
     
+    @IBOutlet weak var childFriendlySwitch: UISwitch!
+    
     
     weak var delegate: LocateTrackDelegate?
-  
+    weak var adminDelegate: AdminVCDelegate?
+    
+    var latitude: String?
+    var longitude: String?
+    var childFriendly: Bool?
+    var user: TraxUser!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,8 +54,36 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     }
 
     
+    
+    @IBAction func childFriendlyAction(_ sender: UISwitch) {
+        self.childFriendly = sender.isOn
+    }
+    
+    
+    
     @IBAction func createButtonAction(_ sender: Any) {
-        print("Create!")
+        guard let name = self.trackNameField.text else {return}
+        guard let adress = self.trackAdressField.text else {return}
+        guard let postcode = self.trackPostcodeField.text else {return}
+        guard let latitude = self.latitude?.toDouble() else {return}
+        guard let longitude = self.longitude?.toDouble() else {return}
+        guard let soil_type = self.trackSoilField.text else {return}
+        guard let opening_times = self.trackOpeningField.text else {return}
+        guard let prices = self.trackPricesField.text else {return}
+        guard let child_friendly = self.childFriendly else {return}
+        let user_id = 174
+        let track = Track(name: name, adress: adress, postcode: postcode, latitude: latitude, longitude: longitude, soil_type: soil_type, opening_times: opening_times, prices: prices, child_friendly: child_friendly, rating: 0.0, user_id: user_id, featured: 0, images: [])
+        RestAPIManager.shared.saveTrack(track: track) { [weak self] (track, error) in
+            guard let track = track else {return}
+            guard let user = self?.user else {return}
+            self?.showAdminVC(for: user, with: track)
+        }
+    }
+    
+    
+    func showAdminVC(for user: TraxUser, with track: Track) {
+        adminDelegate?.showAdminVC(for: user, with: track)
+        
     }
     
     
@@ -57,6 +97,8 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
         guard let userInfo = notification.userInfo else {return}
         self.trackAdressField.text = userInfo["adress"] as? String
         self.trackPostcodeField.text = userInfo["postcode"] as? String
+        self.latitude = userInfo["latitude"] as? String
+        self.longitude = userInfo["longitude"] as? String
         let notificationCenter = NotificationCenter.default
         notificationCenter.removeObserver(self, name: Notification.Name.adressIsReady, object: nil)
     }

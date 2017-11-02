@@ -60,7 +60,6 @@ class LocateTrackVC: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
     @objc func handleTap(gestureReconizer: UILongPressGestureRecognizer) {
         let location = gestureReconizer.location(in: mapView)
         let coordinate = mapView.convert(location,toCoordinateFrom: mapView)
-        print(coordinate.latitude)
         // Must get location information here to fill the fields
         // Add annotation:
         annotation.coordinate = coordinate
@@ -74,7 +73,7 @@ class LocateTrackVC: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
             guard let street = dictionary["Street"] else {return}
             guard let city = dictionary["City"] else {return}
             let notificationCenter = NotificationCenter.default
-            let dict = ["adress": "\(street), \(city)", "postcode": "\(postcode)"]
+            let dict = ["adress": "\(street), \(city)", "postcode": "\(postcode)", "latitude": "\(coordinate.latitude)", "longitude": "\(coordinate.longitude)"]
             notificationCenter.post(name: .adressIsReady, object: nil, userInfo: dict)
         }
         mapView.addAnnotation(annotation)

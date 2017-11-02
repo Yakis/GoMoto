@@ -25,7 +25,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mHg-vp-g8P">
-                        <rect key="frame" x="5" y="5" width="310" height="241"/>
+                        <rect key="frame" x="5" y="5" width="310" height="282"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="track name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QUr-Yw-zxi">
                                 <rect key="frame" x="0.0" y="0.0" width="310" height="36"/>
@@ -97,10 +97,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Sd-fT-g9n">
+                                <rect key="frame" x="0.0" y="246" width="310" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child friendly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqK-1c-A37">
+                                        <rect key="frame" x="0.0" y="0.0" width="261" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fF5-s6-Cyc">
+                                        <rect key="frame" x="261" y="0.0" width="51" height="36"/>
+                                        <connections>
+                                            <action selector="childFriendlyAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="DHh-d0-3eg"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDS-eA-XIw">
-                        <rect key="frame" x="50" y="276" width="220" height="36"/>
+                        <rect key="frame" x="50" y="286" width="220" height="36"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="36" id="uPW-vC-Zsn"/>
                         </constraints>
@@ -117,13 +134,14 @@
                     <constraint firstAttribute="trailing" secondItem="mHg-vp-g8P" secondAttribute="trailing" constant="5" id="6Y2-ym-MHd"/>
                     <constraint firstItem="mHg-vp-g8P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="APf-FW-5X5"/>
                     <constraint firstItem="xDS-eA-XIw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="AW5-iX-jTl"/>
-                    <constraint firstItem="xDS-eA-XIw" firstAttribute="top" secondItem="zlL-OQ-bf7" secondAttribute="bottom" constant="30" id="Jb9-Co-6Gs"/>
+                    <constraint firstItem="xDS-eA-XIw" firstAttribute="top" secondItem="zlL-OQ-bf7" secondAttribute="bottom" constant="40" id="Jb9-Co-6Gs"/>
                     <constraint firstItem="mHg-vp-g8P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="eD0-08-eMT"/>
                     <constraint firstAttribute="trailing" secondItem="xDS-eA-XIw" secondAttribute="trailing" constant="50" id="pPk-jK-sIk"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="childFriendlySwitch" destination="fF5-s6-Cyc" id="nAn-Jh-uEb"/>
                 <outlet property="createButtonOutlet" destination="xDS-eA-XIw" id="z2X-XQ-LBR"/>
                 <outlet property="trackAdressField" destination="t4k-Mo-giK" id="3Re-w3-s4l"/>
                 <outlet property="trackNameField" destination="QUr-Yw-zxi" id="AnG-td-BdE"/>
