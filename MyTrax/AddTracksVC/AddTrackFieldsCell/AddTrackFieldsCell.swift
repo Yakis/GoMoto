@@ -15,7 +15,7 @@ protocol LocateTrackDelegate: class {
 }
 
 class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
-
+    
     
     @IBOutlet weak var trackNameField: UITextField!
     
@@ -49,9 +49,17 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     
     @IBAction func localizationButtonAction(_ sender: Any) {
         delegate?.showMapView()
-        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(AddTrackFieldsCell.getAdress(notification:)), name: Notification.Name.adressIsReady, object: nil)
     }
     
+    @objc func getAdress(notification: Notification) {
+        guard let userInfo = notification.userInfo else {return}
+        self.trackAdressField.text = userInfo["adress"] as? String
+        self.trackPostcodeField.text = userInfo["postcode"] as? String
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self, name: Notification.Name.adressIsReady, object: nil)
+    }
     
     
     

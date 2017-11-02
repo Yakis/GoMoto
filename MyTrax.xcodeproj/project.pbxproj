@@ -15,6 +15,7 @@
 		1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8AE1F8BF47900105C17 /* AppController.swift */; };
 		1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B01F8BF4A800105C17 /* Constants.swift */; };
 		15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15242B5D1FA8C9110027E18F /* UserAlert.swift */; };
+		1526A3051FAA615E00346F4F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1526A3041FAA615E00346F4F /* MapKit.framework */; };
 		152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */; };
 		152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */; };
 		152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152D23281FA3722C0032F789 /* NibLoadable.swift */; };
@@ -73,6 +74,7 @@
 		1521D8B01F8BF4A800105C17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15242B5C1FA7787A0027E18F /* MyTrax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTrax.entitlements; sourceTree = "<group>"; };
 		15242B5D1FA8C9110027E18F /* UserAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlert.swift; sourceTree = "<group>"; };
+		1526A3041FAA615E00346F4F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		152D23221FA3700C0032F789 /* EmailRegistrationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationCell.swift; sourceTree = "<group>"; };
 		152D23231FA3700C0032F789 /* EmailRegistrationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailRegistrationCell.xib; sourceTree = "<group>"; };
 		152D23281FA3722C0032F789 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1526A3051FAA615E00346F4F /* MapKit.framework in Frameworks */,
 				5315066CE885F02197A6D372 /* Pods_MyTrax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +386,7 @@
 		6DBCC0C8F3285FA51E106789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1526A3041FAA615E00346F4F /* MapKit.framework */,
 				9F8BFA37C4E2E2D1F335CE46 /* Pods_MyTrax.framework */,
 			);
 			name = Frameworks;
@@ -434,6 +438,9 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -735,7 +742,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.MyTrax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -757,7 +764,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.MyTrax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

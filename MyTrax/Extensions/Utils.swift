@@ -18,3 +18,9 @@ extension String {
     }
     
 }
+
+
+
+extension Notification.Name {
+    static let adressIsReady = Notification.Name(rawValue: "AdressIsReady")
+}
