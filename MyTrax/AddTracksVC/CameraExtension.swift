@@ -38,7 +38,7 @@ extension AddTracksVC: UIImagePickerControllerDelegate, UINavigationControllerDe
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {return}
-        self.delegate?.imageIsReady(image: image)
+        self.delegate?.imageIsReady(image: image, trackName: self.user.username)
         dismiss(animated:true, completion: nil)
     }
     

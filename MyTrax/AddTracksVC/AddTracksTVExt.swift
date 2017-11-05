@@ -41,7 +41,7 @@ extension AddTracksVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 135
+            return 200
         case 1:
             return 50
         case 2:

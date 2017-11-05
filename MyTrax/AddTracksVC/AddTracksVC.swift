@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol TrackImagePickerDelegate: class {
-    func imageIsReady(image: UIImage)
+    func imageIsReady(image: UIImage, trackName: String)
 }
 
 

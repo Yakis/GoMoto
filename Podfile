@@ -9,6 +9,7 @@ pod 'Firebase/Storage'
 pod 'Firebase/Auth'
 pod 'FacebookCore'
 pod 'FacebookLogin'
+pod 'Kingfisher', '~> 4.0'
   # Pods for MyTrax
 
 end
