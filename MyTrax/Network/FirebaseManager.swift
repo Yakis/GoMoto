@@ -10,12 +10,15 @@ import Foundation
 import FirebaseAuth
 import FacebookCore
 import FacebookLogin
+import Firebase
 
 
 class FirebaseManager {
     
     
     var firebaseUser: User!
+    let storage = Storage.storage()
+    
     
     static func facebookRegistration(userType: String, viewController: UIViewController, completion: @escaping (TraxUser?) -> ()) {
         let facebookLogin = LoginManager()
@@ -79,4 +82,12 @@ class FirebaseManager {
             
         }
     }
+    
+    
+    static func uploadPhoto() {
+        let storageRef = storage.reference()
+    }
+    
+    
+    
 }

@@ -97,7 +97,8 @@ class RestAPIManager {
             (data, response, error) in
             let decoder = JSONDecoder()
             do {
-                let newUser = try decoder.decode(TraxUser.self, from: data!)
+                guard let data = data else {return}
+                let newUser = try decoder.decode(TraxUser.self, from: data)
                 completionHandler(newUser, nil)
             } catch {
                 
@@ -113,8 +114,8 @@ class RestAPIManager {
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
         var request = URLRequest(url: tracksUrl)
         request.httpMethod = "POST"
-        guard let accessToken = UserDefaults.standard.value(forKey: "accessToken") as? String else {return}
-        request.setValue(accessToken, forHTTPHeaderField: "Authorization")
+       // guard let accessToken = UserDefaults.standard.value(forKey: "accessToken") as? String else {return}
+       // request.setValue(accessToken, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let encoder = JSONEncoder()
         let decoder = JSONDecoder()
@@ -122,20 +123,19 @@ class RestAPIManager {
             let newTrackAsJSON = try encoder.encode(track)
             request.httpBody = newTrackAsJSON
         } catch {
-            print(error)
+            print(error.localizedDescription)
             completionHandler(nil, error)
         }
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
+            guard let data = data else {return}
             do {
-                let newTrack = try decoder.decode(Track.self, from: data!)
+                let newTrack = try decoder.decode(Track.self, from: data)
                 completionHandler(newTrack, nil)
-                print("\(String(describing: response)) Track \(newTrack.name) created!")
             } catch {
                 
             }
-            
         })
         task.resume()
     }

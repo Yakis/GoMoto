@@ -40,6 +40,7 @@ struct Endpoints {
     
     struct Users {
         static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/users"
+       // static let baseUrl = "http://0.0.0.0:8080/api/v1/users"
         
     }
     

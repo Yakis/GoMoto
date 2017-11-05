@@ -71,8 +71,8 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
         guard let opening_times = self.trackOpeningField.text else {return}
         guard let prices = self.trackPricesField.text else {return}
         guard let child_friendly = self.childFriendly else {return}
-        let user_id = 174
-        let track = Track(name: name, adress: adress, postcode: postcode, latitude: latitude, longitude: longitude, soil_type: soil_type, opening_times: opening_times, prices: prices, child_friendly: child_friendly, rating: 0.0, user_id: user_id, featured: 0, images: [])
+        let user_id = user.id
+        let track = Track(name: name, adress: adress, postcode: postcode, latitude: latitude, longitude: longitude, soil_type: soil_type, opening_times: opening_times, prices: prices, child_friendly: child_friendly, rating: 0.0, user_id: user_id, featured: 0, image: "www.saptamanalul.ro")
         RestAPIManager.shared.saveTrack(track: track) { [weak self] (track, error) in
             guard let track = track else {return}
             guard let user = self?.user else {return}
@@ -82,7 +82,9 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     
     
     func showAdminVC(for user: TraxUser, with track: Track) {
-        adminDelegate?.showAdminVC(for: user, with: track)
+        DispatchQueue.main.async {
+            self.adminDelegate?.showAdminVC(for: user, with: track)
+        }
         
     }
     

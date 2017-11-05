@@ -23,7 +23,7 @@ struct Track: Codable {
     var rating: Double
     var user_id: Int
     var featured: Int
-    var images: [String] = []
+    var image: String
     
     
 }

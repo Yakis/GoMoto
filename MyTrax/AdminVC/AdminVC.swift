@@ -37,20 +37,26 @@ class AdminVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupLabels()
     }
 
     
     
     func setupLabels() {
         self.welcomeLabel.text = "Welcome, \(user.first_name)!"
-        self.trackName.text = track.name
-        self.trackAdress.text = track.adress
-        self.trackPostcode.text = track.postcode
-        self.trackSoil.text = track.soil_type
-        self.trackOpening.text = track.opening_times
-        self.trackChild.text = "\(track.child_friendly)"
-        self.trackPrices.text = track.prices
+        self.trackName.text = "Track name: \(track.name)"
+        self.trackAdress.text = "Adress: \(track.adress)"
+        self.trackPostcode.text = "Postcode: \(track.postcode)"
+        self.trackSoil.text = "Soil type: \(track.soil_type)"
+        self.trackOpening.text = "Opening times: \(track.opening_times)"
+        switch track.child_friendly {
+        case true:
+            self.trackChild.text = "Child friendly: Yes"
+        default:
+            self.trackChild.text = "Child friendly: No"
+        }
+        
+        self.trackPrices.text = "Prices: \(track.prices)"
     }
     
     
