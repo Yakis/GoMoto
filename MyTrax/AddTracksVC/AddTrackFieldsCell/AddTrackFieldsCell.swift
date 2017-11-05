@@ -43,7 +43,7 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     
     var latitude: String?
     var longitude: String?
-    var childFriendly: Bool?
+    var childFriendly: Bool = false
     var user: TraxUser!
     
     

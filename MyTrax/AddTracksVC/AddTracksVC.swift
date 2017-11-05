@@ -8,12 +8,24 @@
 
 import UIKit
 
-class AddTracksVC: UIViewController, LocateTrackDelegate, AdminVCDelegate {
+
+protocol TrackImagePickerDelegate: class {
+    func imageIsReady(image: UIImage)
+}
+
+
+class AddTracksVC: UIViewController, LocateTrackDelegate, AdminVCDelegate, AddImageDelegate {
+    
+    
     
     
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var trackProfileImageView: UIImageView!
+    
+    weak var delegate: TrackImagePickerDelegate?
+    
     
     var user: TraxUser!
     
@@ -25,6 +37,10 @@ class AddTracksVC: UIViewController, LocateTrackDelegate, AdminVCDelegate {
         
     }
 
+    
+    func addTrackImage() {
+        openPhotoLibrary()
+    }
     
     
     func showMapView() {

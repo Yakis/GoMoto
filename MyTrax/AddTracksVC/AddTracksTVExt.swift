@@ -12,16 +12,21 @@ extension AddTracksVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 6
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as AddTrackTitleCell
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TrackImageCell
+            cell.delegate = self
+            cell.setImageReadyDelegate(addTracksVC: self)
             return cell
         case 1:
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as AddTrackTitleCell
+            return cell
+        case 2:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as AddTrackFieldsCell
             cell.user = user
             cell.delegate = self
@@ -36,11 +41,13 @@ extension AddTracksVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 50
+            return 135
         case 1:
-            return 350
+            return 50
+        case 2:
+            return 370
         default:
-            return 40
+            return 100
         }
     }
     
@@ -50,6 +57,7 @@ extension AddTracksVC: UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.register(AddTrackTitleCell.self)
         tableView.register(AddTrackFieldsCell.self)
+        tableView.register(TrackImageCell.self)
     }
     
     

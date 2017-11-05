@@ -17,7 +17,6 @@ class FirebaseManager {
     
     
     var firebaseUser: User!
-    let storage = Storage.storage()
     
     
     static func facebookRegistration(userType: String, viewController: UIViewController, completion: @escaping (TraxUser?) -> ()) {
@@ -81,11 +80,6 @@ class FirebaseManager {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             
         }
-    }
-    
-    
-    static func uploadPhoto() {
-        let storageRef = storage.reference()
     }
     
     

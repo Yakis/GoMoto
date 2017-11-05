@@ -36,6 +36,9 @@
 		1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1565C0541FA7366600A95B46 /* PersonalInfoCell.xib */; };
 		1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C5151F8BF5610018D52B /* WelcomeVC.swift */; };
 		1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1568C5161F8BF5610018D52B /* WelcomeVC.xib */; };
+		156E10321FAF3CEE008F2C40 /* CameraExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E10311FAF3CEE008F2C40 /* CameraExtension.swift */; };
+		156E10351FAF43F8008F2C40 /* TrackImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E10331FAF43F8008F2C40 /* TrackImageCell.swift */; };
+		156E10361FAF43F8008F2C40 /* TrackImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156E10341FAF43F8008F2C40 /* TrackImageCell.xib */; };
 		156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F20D91F9B7D7B007FEE27 /* Beautifier.swift */; };
 		15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */; };
 		15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */; };
@@ -97,6 +100,9 @@
 		1565C0541FA7366600A95B46 /* PersonalInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoCell.xib; sourceTree = "<group>"; };
 		1568C5151F8BF5610018D52B /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		1568C5161F8BF5610018D52B /* WelcomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
+		156E10311FAF3CEE008F2C40 /* CameraExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraExtension.swift; sourceTree = "<group>"; };
+		156E10331FAF43F8008F2C40 /* TrackImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackImageCell.swift; sourceTree = "<group>"; };
+		156E10341FAF43F8008F2C40 /* TrackImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackImageCell.xib; sourceTree = "<group>"; };
 		156F20D91F9B7D7B007FEE27 /* Beautifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautifier.swift; sourceTree = "<group>"; };
 		15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shackable.swift; sourceTree = "<group>"; };
 		15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
@@ -314,6 +320,15 @@
 			path = WelcomeVC;
 			sourceTree = "<group>";
 		};
+		156E10371FAF43FC008F2C40 /* TrackImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				156E10331FAF43F8008F2C40 /* TrackImageCell.swift */,
+				156E10341FAF43F8008F2C40 /* TrackImageCell.xib */,
+			);
+			path = TrackImageCell;
+			sourceTree = "<group>";
+		};
 		15A7AECE1F8E650000ABBFA6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +381,8 @@
 				15F78EB11FAA4AEB00241AB0 /* AddTrackFieldsCell */,
 				15F78EB41FAA513500241AB0 /* AddTracksTVExt.swift */,
 				15F78EBA1FAA571100241AB0 /* LocateTrackVC */,
+				156E10311FAF3CEE008F2C40 /* CameraExtension.swift */,
+				156E10371FAF43FC008F2C40 /* TrackImageCell */,
 			);
 			path = AddTracksVC;
 			sourceTree = "<group>";
@@ -490,6 +507,7 @@
 				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
 				1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */,
 				15C7B3AA1FA744FA001B1A8E /* InfoLogoCell.xib in Resources */,
+				156E10361FAF43F8008F2C40 /* TrackImageCell.xib in Resources */,
 				15F78EB01FAA4AE800241AB0 /* AddTrackFieldsCell.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
@@ -593,6 +611,7 @@
 				15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */,
 				15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */,
 				152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */,
+				156E10351FAF43F8008F2C40 /* TrackImageCell.swift in Sources */,
 				15F78EAA1FAA4A6900241AB0 /* AddTrackTitleCell.swift in Sources */,
 				15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */,
 				15150A181FA735AA00448B3A /* PersonalInfoVC.swift in Sources */,
@@ -611,6 +630,7 @@
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
 				152D232F1FA374F60032F789 /* EmailRegTVExtension.swift in Sources */,
 				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,
+				156E10321FAF3CEE008F2C40 /* CameraExtension.swift in Sources */,
 				15F78EA51FAA3E0000241AB0 /* AddTracksVC.swift in Sources */,
 				15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */,
 				1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */,
