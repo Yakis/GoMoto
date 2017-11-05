@@ -21,6 +21,7 @@ protocol AdminVCDelegate: class {
 class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     
     
+    
     @IBOutlet weak var trackNameField: UITextField!
     
     @IBOutlet weak var trackAdressField: UITextField!
@@ -45,14 +46,19 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     var longitude: String?
     var childFriendly: Bool = false
     var user: TraxUser!
-    
+    var trackProfileImageUrl: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         createButtonOutlet.roundCorners()
-        // Initialization code
+        addObserverForImageUrl()
     }
 
+    
+    func imageUrlIsReady(imageUrl: String) {
+        self.trackProfileImageUrl = imageUrl
+    }
+    
     
     
     @IBAction func childFriendlyAction(_ sender: UISwitch) {
@@ -72,7 +78,7 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
         guard let prices = self.trackPricesField.text else {return}
         let child_friendly = self.childFriendly
         let user_id = user.id
-        let track = Track(name: name, adress: adress, postcode: postcode, latitude: latitude, longitude: longitude, soil_type: soil_type, opening_times: opening_times, prices: prices, child_friendly: child_friendly, rating: 0.0, user_id: user_id, featured: 0, image: "www.saptamanalul.ro")
+        let track = Track(name: name, adress: adress, postcode: postcode, latitude: latitude, longitude: longitude, soil_type: soil_type, opening_times: opening_times, prices: prices, child_friendly: child_friendly, rating: 0.0, user_id: user_id, featured: 0, image: trackProfileImageUrl)
         RestAPIManager.shared.saveTrack(track: track) { [weak self] (track, error) in
             guard let track = track else {return}
             guard let user = self?.user else {return}
@@ -91,9 +97,19 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     
     @IBAction func localizationButtonAction(_ sender: Any) {
         delegate?.showMapView()
+        addObserverForAdress()
+    }
+    
+    func addObserverForAdress() {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(AddTrackFieldsCell.getAdress(notification:)), name: Notification.Name.adressIsReady, object: nil)
     }
+    
+    func addObserverForImageUrl() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(AddTrackFieldsCell.getImageUrl(notification:)), name: Notification.Name.imageUrlIsReady, object: nil)
+    }
+    
     
     @objc func getAdress(notification: Notification) {
         guard let userInfo = notification.userInfo else {return}
@@ -106,5 +122,11 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     }
     
     
+    @objc func getImageUrl(notification: Notification) {
+    guard let userInfo = notification.userInfo else {return}
+        self.trackProfileImageUrl = userInfo["imageUrl"] as? String
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self, name: Notification.Name.imageUrlIsReady, object: nil)
+    }
     
 }

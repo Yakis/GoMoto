@@ -19,15 +19,10 @@ protocol AddImageDelegate: class {
 class TrackImageCell: UITableViewCell, ReusableView, NibLoadable, TrackImagePickerDelegate {
     
     
-
-    
-    
     @IBOutlet weak var trackProfileImageView: UIImageView!
     @IBOutlet weak var progresView: UIProgressView!
     
-    
-    
-    weak var delegate: AddImageDelegate?
+    weak var addImageDelegate: AddImageDelegate?
     let storage = Storage.storage()
     
     override func awakeFromNib() {
@@ -56,14 +51,16 @@ class TrackImageCell: UITableViewCell, ReusableView, NibLoadable, TrackImagePick
                 self?.progresView.progress = Float(percentComplete)
             }
         }
-        uploadTask.observe(.success) { (snapshot) in
+        uploadTask.observe(.success) { [ weak self ] (snapshot) in
             guard let metadata = snapshot.metadata else {return}
             guard let url = metadata.downloadURL() else {return}
+            self?.postNotificationWhenImageUrlIsReady(imageUrl: url.absoluteString)
             uploadTask.removeAllObservers(for: .progress)
             DispatchQueue.main.async {
-                self.trackProfileImageView.kf.setImage(with: url)
-                self.trackProfileImageView.contentMode = .scaleAspectFill
-                self.trackProfileImageView.clipsToBounds = true
+                self?.trackProfileImageView.kf.setImage(with: url)
+                self?.trackProfileImageView.contentMode = .scaleAspectFill
+                self?.trackProfileImageView.clipsToBounds = true
+                self?.progresView.progress = 0.0
             }
             
         }
@@ -71,6 +68,12 @@ class TrackImageCell: UITableViewCell, ReusableView, NibLoadable, TrackImagePick
         
     }
     
+    
+    func postNotificationWhenImageUrlIsReady (imageUrl: String) {
+        let notificationCenter = NotificationCenter.default
+        let dict = ["imageUrl": "\(imageUrl)"]
+        notificationCenter.post(name: .imageUrlIsReady, object: nil, userInfo: dict)
+    }
     
     func getData(from image: UIImage) -> Data? {
         guard let data = UIImageJPEGRepresentation(image, 0.7) else {return nil}
@@ -85,7 +88,7 @@ class TrackImageCell: UITableViewCell, ReusableView, NibLoadable, TrackImagePick
     }
     
     @objc func addImageAction(_ sender: Any) {
-        self.delegate?.addTrackImage()
+        self.addImageDelegate?.addTrackImage()
     }
     
     

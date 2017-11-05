@@ -13,7 +13,7 @@ extension PersonalInfoVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     
@@ -23,11 +23,12 @@ extension PersonalInfoVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as InfoLogoCell
             return cell
-        default:
+        case 1:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as PersonalInfoCell
             cell.delegate = self
             cell.setupCell(with: self.user)
             return cell
+        default: return UITableViewCell()
         }
     }
     
@@ -36,8 +37,10 @@ extension PersonalInfoVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             return 150
-        default:
+        case 1:
             return 200
+        default:
+            return 300
         }
     }
     

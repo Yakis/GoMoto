@@ -50,7 +50,9 @@ class AditionalInfoVC: UIViewController {
                 addTracksVC.user = savedUser
                 self.present(addTracksVC, animated: true, completion: nil)
                 default:
-                    print("Show Dashboard here")
+                    let userDashboardVC = UserDashboardVC(nibName: "UserDashboardVC", bundle: nil)
+                    userDashboardVC.user = savedUser
+                    self.present(userDashboardVC, animated: true, completion: nil)
             }
             }
             guard let error = error else {return}

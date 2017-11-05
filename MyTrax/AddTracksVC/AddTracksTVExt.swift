@@ -20,7 +20,7 @@ extension AddTracksVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TrackImageCell
-            cell.delegate = self
+            cell.addImageDelegate = self
             cell.setImageReadyDelegate(addTracksVC: self)
             return cell
         case 1:

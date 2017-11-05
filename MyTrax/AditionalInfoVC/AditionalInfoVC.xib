@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaZ-wk-4tW">
-                    <rect key="frame" x="16" y="116" width="343" height="100"/>
+                    <rect key="frame" x="16" y="96" width="343" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="h8j-25-KVA"/>
                     </constraints>
@@ -39,7 +39,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUK-ci-7Nw">
-                    <rect key="frame" x="16" y="265" width="343" height="36"/>
+                    <rect key="frame" x="16" y="226" width="343" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="2VZ-4Y-URT"/>
                     </constraints>
@@ -48,7 +48,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsk-fc-Tuy">
-                    <rect key="frame" x="50" y="322" width="275" height="36"/>
+                    <rect key="frame" x="50" y="283" width="275" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="AxC-9g-efU"/>
                     </constraints>
@@ -60,7 +60,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ONE MORE STEP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66r-VP-JaQ">
-                    <rect key="frame" x="20" y="50" width="335" height="36"/>
+                    <rect key="frame" x="20" y="40" width="335" height="36"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
                     <color key="textColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -70,15 +70,15 @@
             <constraints>
                 <constraint firstItem="LUK-ci-7Nw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5kb-ZX-lVQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="66r-VP-JaQ" secondAttribute="trailing" constant="20" id="8QE-G5-oJV"/>
-                <constraint firstItem="66r-VP-JaQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="C6l-0e-hsu"/>
+                <constraint firstItem="66r-VP-JaQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="C6l-0e-hsu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vaZ-wk-4tW" secondAttribute="trailing" constant="16" id="PW2-ik-VxC"/>
                 <constraint firstItem="xsk-fc-Tuy" firstAttribute="top" secondItem="LUK-ci-7Nw" secondAttribute="bottom" constant="21" id="TBy-xf-Yjj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LUK-ci-7Nw" secondAttribute="trailing" constant="16" id="a9d-Dk-XOb"/>
-                <constraint firstItem="vaZ-wk-4tW" firstAttribute="top" secondItem="66r-VP-JaQ" secondAttribute="bottom" constant="30" id="ccR-ye-8nr"/>
+                <constraint firstItem="vaZ-wk-4tW" firstAttribute="top" secondItem="66r-VP-JaQ" secondAttribute="bottom" constant="20" id="ccR-ye-8nr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xsk-fc-Tuy" secondAttribute="trailing" constant="50" id="llV-MO-HSh"/>
                 <constraint firstItem="66r-VP-JaQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="r6B-WV-ZJM"/>
                 <constraint firstItem="vaZ-wk-4tW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="rre-Lw-PV8"/>
-                <constraint firstItem="LUK-ci-7Nw" firstAttribute="top" secondItem="vaZ-wk-4tW" secondAttribute="bottom" constant="49" id="x3d-Bp-tip"/>
+                <constraint firstItem="LUK-ci-7Nw" firstAttribute="top" secondItem="vaZ-wk-4tW" secondAttribute="bottom" constant="30" id="x3d-Bp-tip"/>
                 <constraint firstItem="xsk-fc-Tuy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="zEU-Yf-nH4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
