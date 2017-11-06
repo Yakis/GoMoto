@@ -6,7 +6,7 @@
 //  Copyright © 2017 yakis. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 
@@ -22,6 +22,12 @@ extension String {
     
 }
 
+
+extension UIColor {
+    static let mediumGray = UIColor(red: 187/255, green: 195/255, blue: 198/255, alpha: 1.0)
+    static let brickRed = UIColor(red: 150/255, green: 39/255, blue: 21/255, alpha: 1.0)
+    static let matteBlack = UIColor(red: 30/255, green: 30/255, blue: 32/255, alpha: 1.0)
+}
 
 
 extension Notification.Name {

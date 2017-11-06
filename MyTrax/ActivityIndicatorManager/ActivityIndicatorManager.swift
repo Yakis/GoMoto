@@ -26,6 +26,7 @@ class ActivityIndicatorManager {
             activityIndicator.isUserInteractionEnabled = interactionEnabled
             activityIndicator.hidesWhenStopped = true
             activityIndicator.startAnimating()
+            activityIndicator.color = UIColor.mediumGray
             view.addSubview(activityIndicator)
         }
     }
