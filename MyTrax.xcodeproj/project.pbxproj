@@ -16,6 +16,9 @@
 		1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B01F8BF4A800105C17 /* Constants.swift */; };
 		15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15242B5D1FA8C9110027E18F /* UserAlert.swift */; };
 		15248ED71FB06CC700EA0DD5 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15248ED61FB06CC700EA0DD5 /* ActivityIndicatorManager.swift */; };
+		15248EDA1FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15248ED91FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift */; };
+		15248EDD1FB0C72100EA0DD5 /* AditionalInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15248EDB1FB0C72100EA0DD5 /* AditionalInfoCell.swift */; };
+		15248EDE1FB0C72100EA0DD5 /* AditionalInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15248EDC1FB0C72100EA0DD5 /* AditionalInfoCell.xib */; };
 		1526A3051FAA615E00346F4F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1526A3041FAA615E00346F4F /* MapKit.framework */; };
 		1526A3081FAB971600346F4F /* AdminVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526A3061FAB971500346F4F /* AdminVC.swift */; };
 		1526A3091FAB971600346F4F /* AdminVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526A3071FAB971500346F4F /* AdminVC.xib */; };
@@ -83,6 +86,9 @@
 		15242B5C1FA7787A0027E18F /* MyTrax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTrax.entitlements; sourceTree = "<group>"; };
 		15242B5D1FA8C9110027E18F /* UserAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlert.swift; sourceTree = "<group>"; };
 		15248ED61FB06CC700EA0DD5 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
+		15248ED91FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AditionalInfoTVExt.swift; sourceTree = "<group>"; };
+		15248EDB1FB0C72100EA0DD5 /* AditionalInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AditionalInfoCell.swift; sourceTree = "<group>"; };
+		15248EDC1FB0C72100EA0DD5 /* AditionalInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AditionalInfoCell.xib; sourceTree = "<group>"; };
 		1526A3041FAA615E00346F4F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1526A3061FAB971500346F4F /* AdminVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminVC.swift; sourceTree = "<group>"; };
 		1526A3071FAB971500346F4F /* AdminVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminVC.xib; sourceTree = "<group>"; };
@@ -232,6 +238,15 @@
 				15248ED61FB06CC700EA0DD5 /* ActivityIndicatorManager.swift */,
 			);
 			path = ActivityIndicatorManager;
+			sourceTree = "<group>";
+		};
+		15248EDF1FB0C72500EA0DD5 /* AditionalInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				15248EDB1FB0C72100EA0DD5 /* AditionalInfoCell.swift */,
+				15248EDC1FB0C72100EA0DD5 /* AditionalInfoCell.xib */,
+			);
+			path = AditionalInfoCell;
 			sourceTree = "<group>";
 		};
 		1526A30A1FAB971900346F4F /* AdminVC */ = {
@@ -393,6 +408,8 @@
 			children = (
 				15C7B3AC1FA75000001B1A8E /* AditionalInfoVC.swift */,
 				15C7B3AD1FA75000001B1A8E /* AditionalInfoVC.xib */,
+				15248ED91FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift */,
+				15248EDF1FB0C72500EA0DD5 /* AditionalInfoCell */,
 			);
 			path = AditionalInfoVC;
 			sourceTree = "<group>";
@@ -542,6 +559,7 @@
 				1526A3091FAB971600346F4F /* AdminVC.xib in Resources */,
 				152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */,
 				1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */,
+				15248EDE1FB0C72100EA0DD5 /* AditionalInfoCell.xib in Resources */,
 				15F78EAB1FAA4A6900241AB0 /* AddTrackTitleCell.xib in Resources */,
 				15C7B3AF1FA75000001B1A8E /* AditionalInfoVC.xib in Resources */,
 				1541F2A41F9B83090078B2FB /* Default-568h@2x.png in Resources */,
@@ -630,6 +648,7 @@
 				1541F2A61F9B85290078B2FB /* FirebaseManager.swift in Sources */,
 				154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */,
 				15F78EB51FAA513500241AB0 /* AddTracksTVExt.swift in Sources */,
+				15248EDA1FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift in Sources */,
 				15EEF3771FA615F200E75A4F /* RegistrationPresenter.swift in Sources */,
 				156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */,
 				15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */,
@@ -664,6 +683,7 @@
 				15F78EA51FAA3E0000241AB0 /* AddTracksVC.swift in Sources */,
 				15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */,
 				1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */,
+				15248EDD1FB0C72100EA0DD5 /* AditionalInfoCell.swift in Sources */,
 				1526A3081FAB971600346F4F /* AdminVC.swift in Sources */,
 				1565C0551FA7366600A95B46 /* PersonalInfoCell.swift in Sources */,
 			);

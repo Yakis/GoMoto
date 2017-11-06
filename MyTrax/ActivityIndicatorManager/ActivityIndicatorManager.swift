@@ -22,20 +22,17 @@ class ActivityIndicatorManager {
     
     func showActivityIndicator(on view: UIView, interactionEnabled: Bool) {
         if !activityIndicator.isAnimating {
-        activityIndicator.center = view.center
-        activityIndicator.isUserInteractionEnabled = interactionEnabled
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.startAnimating()
-        view.addSubview(activityIndicator)
-        print(activityIndicator.isAnimating)
+            activityIndicator.center = view.center
+            activityIndicator.isUserInteractionEnabled = interactionEnabled
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.startAnimating()
+            view.addSubview(activityIndicator)
         }
     }
     
     
     func stopActivityIndicator() {
         activityIndicator.stopAnimating()
-        print(Thread.current)
-        print(activityIndicator.isAnimating)
     }
     
     
