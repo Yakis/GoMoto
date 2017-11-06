@@ -22,6 +22,7 @@ class FirebaseManager {
     static func facebookRegistration(userType: String, viewController: UIViewController, completion: @escaping (TraxUser?) -> ()) {
         let facebookLogin = LoginManager()
         facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: viewController) { (result) in
+            ActivityIndicatorManager.shared.showActivityIndicator(on: viewController.view, interactionEnabled: false)
             switch result {
             case .failed(let error):
                 UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
@@ -40,6 +41,7 @@ class FirebaseManager {
                     let lastName = user.displayName?.splitName().last ?? ""
                     let email = user.email ?? ""
                     let traxUser = TraxUser(id: 0, username: "", email: email, first_name: firstName, last_name: lastName, postcode: "", contact_number: "", user_type: userType, avatar: "", device_token: "", firebase_uid: user.uid, created_at: nil, updated_at: nil)
+                    ActivityIndicatorManager.shared.stopActivityIndicator()
                         completion(traxUser)
                 })
             }

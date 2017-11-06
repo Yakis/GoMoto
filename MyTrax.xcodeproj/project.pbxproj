@@ -15,6 +15,7 @@
 		1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8AE1F8BF47900105C17 /* AppController.swift */; };
 		1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B01F8BF4A800105C17 /* Constants.swift */; };
 		15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15242B5D1FA8C9110027E18F /* UserAlert.swift */; };
+		15248ED71FB06CC700EA0DD5 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15248ED61FB06CC700EA0DD5 /* ActivityIndicatorManager.swift */; };
 		1526A3051FAA615E00346F4F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1526A3041FAA615E00346F4F /* MapKit.framework */; };
 		1526A3081FAB971600346F4F /* AdminVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526A3061FAB971500346F4F /* AdminVC.swift */; };
 		1526A3091FAB971600346F4F /* AdminVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526A3071FAB971500346F4F /* AdminVC.xib */; };
@@ -81,6 +82,7 @@
 		1521D8B01F8BF4A800105C17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15242B5C1FA7787A0027E18F /* MyTrax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTrax.entitlements; sourceTree = "<group>"; };
 		15242B5D1FA8C9110027E18F /* UserAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlert.swift; sourceTree = "<group>"; };
+		15248ED61FB06CC700EA0DD5 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		1526A3041FAA615E00346F4F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1526A3061FAB971500346F4F /* AdminVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminVC.swift; sourceTree = "<group>"; };
 		1526A3071FAB971500346F4F /* AdminVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminVC.xib; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				15F78EA71FAA3E0400241AB0 /* AddTracksVC */,
 				1526A30A1FAB971900346F4F /* AdminVC */,
 				156E103C1FAF60AF008F2C40 /* UserDashboardVC */,
+				15248ED81FB06EFD00EA0DD5 /* ActivityIndicatorManager */,
 			);
 			path = MyTrax;
 			sourceTree = "<group>";
@@ -221,6 +224,14 @@
 				15242B5D1FA8C9110027E18F /* UserAlert.swift */,
 			);
 			path = UserAlert;
+			sourceTree = "<group>";
+		};
+		15248ED81FB06EFD00EA0DD5 /* ActivityIndicatorManager */ = {
+			isa = PBXGroup;
+			children = (
+				15248ED61FB06CC700EA0DD5 /* ActivityIndicatorManager.swift */,
+			);
+			path = ActivityIndicatorManager;
 			sourceTree = "<group>";
 		};
 		1526A30A1FAB971900346F4F /* AdminVC */ = {
@@ -629,6 +640,7 @@
 				15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */,
 				152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */,
 				156E10351FAF43F8008F2C40 /* TrackImageCell.swift in Sources */,
+				15248ED71FB06CC700EA0DD5 /* ActivityIndicatorManager.swift in Sources */,
 				15F78EAA1FAA4A6900241AB0 /* AddTrackTitleCell.swift in Sources */,
 				15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */,
 				15150A181FA735AA00448B3A /* PersonalInfoVC.swift in Sources */,

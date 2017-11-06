@@ -26,7 +26,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var userTypeLabel: UILabel!
     
     var userType: UserType!
-    
+    var activityIndicator: UIActivityIndicatorView!
     var handle: AuthStateDidChangeListenerHandle?
     
     
@@ -61,9 +61,9 @@ class RegisterVC: UIViewController {
     
     
     @IBAction func facebookLogin(_ sender: Any) {
-        FirebaseManager.facebookRegistration(userType: userType.rawValue, viewController: self) { (user) in
+        FirebaseManager.facebookRegistration(userType: userType.rawValue, viewController: self) { [weak self] (user) in
             guard let user = user else {return}
-            RegistrationPresenter.shared.showPersonalInfoVC(with: user, from: self)
+            RegistrationPresenter.shared.showPersonalInfoVC(with: user, from: self!)
         }
     }
     
@@ -74,6 +74,7 @@ class RegisterVC: UIViewController {
         self.present(emailRegisterVC, animated: true, completion: nil)
         
     }
+    
     
     
     

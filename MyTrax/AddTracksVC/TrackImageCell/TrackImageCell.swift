@@ -44,6 +44,8 @@ class TrackImageCell: UITableViewCell, ReusableView, NibLoadable, TrackImagePick
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"
         let uploadTask = storageRef.putData(imageData, metadata: metadata)
+        self.trackProfileImageView.image = nil
+        ActivityIndicatorManager.shared.showActivityIndicator(on: self, interactionEnabled: true)
         uploadTask.observe(.progress) { [weak self] snapshot in
             let percentComplete = 100.0 * Double(snapshot.progress!.completedUnitCount)
                 / Double(snapshot.progress!.totalUnitCount)
@@ -58,6 +60,7 @@ class TrackImageCell: UITableViewCell, ReusableView, NibLoadable, TrackImagePick
             uploadTask.removeAllObservers(for: .progress)
             DispatchQueue.main.async {
                 self?.trackProfileImageView.kf.setImage(with: url)
+                ActivityIndicatorManager.shared.stopActivityIndicator()
                 self?.trackProfileImageView.contentMode = .scaleAspectFill
                 self?.trackProfileImageView.clipsToBounds = true
                 self?.progresView.progress = 0.0
