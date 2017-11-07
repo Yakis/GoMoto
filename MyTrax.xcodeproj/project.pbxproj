@@ -46,6 +46,8 @@
 		156E103A1FAF60A9008F2C40 /* UserDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E10381FAF60A9008F2C40 /* UserDashboardVC.swift */; };
 		156E103B1FAF60A9008F2C40 /* UserDashboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156E10391FAF60A9008F2C40 /* UserDashboardVC.xib */; };
 		156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F20D91F9B7D7B007FEE27 /* Beautifier.swift */; };
+		1584F92C1FB22CB400FD78B5 /* AllTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584F92A1FB22CB400FD78B5 /* AllTracksVC.swift */; };
+		1584F92D1FB22CB400FD78B5 /* AllTracksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584F92B1FB22CB400FD78B5 /* AllTracksVC.xib */; };
 		15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */; };
 		15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */; };
 		15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE891FA0DC6600298E51 /* Utils.swift */; };
@@ -116,6 +118,8 @@
 		156E10381FAF60A9008F2C40 /* UserDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboardVC.swift; sourceTree = "<group>"; };
 		156E10391FAF60A9008F2C40 /* UserDashboardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDashboardVC.xib; sourceTree = "<group>"; };
 		156F20D91F9B7D7B007FEE27 /* Beautifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautifier.swift; sourceTree = "<group>"; };
+		1584F92A1FB22CB400FD78B5 /* AllTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTracksVC.swift; sourceTree = "<group>"; };
+		1584F92B1FB22CB400FD78B5 /* AllTracksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllTracksVC.xib; sourceTree = "<group>"; };
 		15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shackable.swift; sourceTree = "<group>"; };
 		15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		15BDBE891FA0DC6600298E51 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -198,20 +202,15 @@
 				1541F2A21F9B82D10078B2FB /* SupportingFiles */,
 				1541F2A11F9B82C20078B2FB /* AppMain */,
 				1521D8B01F8BF4A800105C17 /* Constants.swift */,
-				1568C5191F8BF5640018D52B /* WelcomeVC */,
+				1584F9291FB22C1000FD78B5 /* RegisterLogin */,
 				15A7AECE1F8E650000ABBFA6 /* Extensions */,
-				154C71BF1F8E95CB00EBAFFF /* RegisterVC */,
 				154C71BE1F8E95BB00EBAFFF /* Models */,
 				15242B5F1FA8D0320027E18F /* Network */,
-				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,
-				15150A1A1FA735B800448B3A /* PersonalInfoVC */,
-				15C7B3B01FA75005001B1A8E /* AditionalInfoVC */,
 				15242B601FA8D0550027E18F /* UserAlert */,
 				15F4951B1FA8F1FB0021340E /* LocationManager.swift */,
-				15F78EA71FAA3E0400241AB0 /* AddTracksVC */,
-				1526A30A1FAB971900346F4F /* AdminVC */,
 				156E103C1FAF60AF008F2C40 /* UserDashboardVC */,
 				15248ED81FB06EFD00EA0DD5 /* ActivityIndicatorManager */,
+				1584F92E1FB22CB700FD78B5 /* AllTracksVC */,
 			);
 			path = MyTrax;
 			sourceTree = "<group>";
@@ -367,6 +366,29 @@
 				156E10391FAF60A9008F2C40 /* UserDashboardVC.xib */,
 			);
 			path = UserDashboardVC;
+			sourceTree = "<group>";
+		};
+		1584F9291FB22C1000FD78B5 /* RegisterLogin */ = {
+			isa = PBXGroup;
+			children = (
+				1568C5191F8BF5640018D52B /* WelcomeVC */,
+				154C71BF1F8E95CB00EBAFFF /* RegisterVC */,
+				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,
+				15150A1A1FA735B800448B3A /* PersonalInfoVC */,
+				15C7B3B01FA75005001B1A8E /* AditionalInfoVC */,
+				15F78EA71FAA3E0400241AB0 /* AddTracksVC */,
+				1526A30A1FAB971900346F4F /* AdminVC */,
+			);
+			path = RegisterLogin;
+			sourceTree = "<group>";
+		};
+		1584F92E1FB22CB700FD78B5 /* AllTracksVC */ = {
+			isa = PBXGroup;
+			children = (
+				1584F92A1FB22CB400FD78B5 /* AllTracksVC.swift */,
+				1584F92B1FB22CB400FD78B5 /* AllTracksVC.xib */,
+			);
+			path = AllTracksVC;
 			sourceTree = "<group>";
 		};
 		15A7AECE1F8E650000ABBFA6 /* Extensions */ = {
@@ -550,6 +572,7 @@
 				1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */,
 				15C7B3AA1FA744FA001B1A8E /* InfoLogoCell.xib in Resources */,
 				156E10361FAF43F8008F2C40 /* TrackImageCell.xib in Resources */,
+				1584F92D1FB22CB400FD78B5 /* AllTracksVC.xib in Resources */,
 				15F78EB01FAA4AE800241AB0 /* AddTrackFieldsCell.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
@@ -678,6 +701,7 @@
 				156E103A1FAF60A9008F2C40 /* UserDashboardVC.swift in Sources */,
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
 				152D232F1FA374F60032F789 /* EmailRegTVExtension.swift in Sources */,
+				1584F92C1FB22CB400FD78B5 /* AllTracksVC.swift in Sources */,
 				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,
 				156E10321FAF3CEE008F2C40 /* CameraExtension.swift in Sources */,
 				15F78EA51FAA3E0000241AB0 /* AddTracksVC.swift in Sources */,
