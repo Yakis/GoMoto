@@ -48,6 +48,9 @@
 		156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F20D91F9B7D7B007FEE27 /* Beautifier.swift */; };
 		1584F92C1FB22CB400FD78B5 /* AllTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584F92A1FB22CB400FD78B5 /* AllTracksVC.swift */; };
 		1584F92D1FB22CB400FD78B5 /* AllTracksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584F92B1FB22CB400FD78B5 /* AllTracksVC.xib */; };
+		1584F9311FB2474A00FD78B5 /* TrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584F92F1FB2474A00FD78B5 /* TrackListCell.swift */; };
+		1584F9321FB2474A00FD78B5 /* TrackListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584F9301FB2474A00FD78B5 /* TrackListCell.xib */; };
+		1584F9351FB24A2A00FD78B5 /* AllTracksTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584F9341FB24A2A00FD78B5 /* AllTracksTVExt.swift */; };
 		15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */; };
 		15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */; };
 		15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE891FA0DC6600298E51 /* Utils.swift */; };
@@ -120,6 +123,9 @@
 		156F20D91F9B7D7B007FEE27 /* Beautifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautifier.swift; sourceTree = "<group>"; };
 		1584F92A1FB22CB400FD78B5 /* AllTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTracksVC.swift; sourceTree = "<group>"; };
 		1584F92B1FB22CB400FD78B5 /* AllTracksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllTracksVC.xib; sourceTree = "<group>"; };
+		1584F92F1FB2474A00FD78B5 /* TrackListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListCell.swift; sourceTree = "<group>"; };
+		1584F9301FB2474A00FD78B5 /* TrackListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackListCell.xib; sourceTree = "<group>"; };
+		1584F9341FB24A2A00FD78B5 /* AllTracksTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTracksTVExt.swift; sourceTree = "<group>"; };
 		15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shackable.swift; sourceTree = "<group>"; };
 		15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		15BDBE891FA0DC6600298E51 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -387,8 +393,19 @@
 			children = (
 				1584F92A1FB22CB400FD78B5 /* AllTracksVC.swift */,
 				1584F92B1FB22CB400FD78B5 /* AllTracksVC.xib */,
+				1584F9331FB2474D00FD78B5 /* TrackListCell */,
+				1584F9341FB24A2A00FD78B5 /* AllTracksTVExt.swift */,
 			);
 			path = AllTracksVC;
+			sourceTree = "<group>";
+		};
+		1584F9331FB2474D00FD78B5 /* TrackListCell */ = {
+			isa = PBXGroup;
+			children = (
+				1584F92F1FB2474A00FD78B5 /* TrackListCell.swift */,
+				1584F9301FB2474A00FD78B5 /* TrackListCell.xib */,
+			);
+			path = TrackListCell;
 			sourceTree = "<group>";
 		};
 		15A7AECE1F8E650000ABBFA6 /* Extensions */ = {
@@ -571,6 +588,7 @@
 				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
 				1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */,
 				15C7B3AA1FA744FA001B1A8E /* InfoLogoCell.xib in Resources */,
+				1584F9321FB2474A00FD78B5 /* TrackListCell.xib in Resources */,
 				156E10361FAF43F8008F2C40 /* TrackImageCell.xib in Resources */,
 				1584F92D1FB22CB400FD78B5 /* AllTracksVC.xib in Resources */,
 				15F78EB01FAA4AE800241AB0 /* AddTrackFieldsCell.xib in Resources */,
@@ -679,6 +697,7 @@
 				154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */,
 				15F78EAF1FAA4AE800241AB0 /* AddTrackFieldsCell.swift in Sources */,
 				15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */,
+				1584F9351FB24A2A00FD78B5 /* AllTracksTVExt.swift in Sources */,
 				15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */,
 				152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */,
 				156E10351FAF43F8008F2C40 /* TrackImageCell.swift in Sources */,
@@ -694,6 +713,7 @@
 				15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */,
 				15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */,
 				152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */,
+				1584F9311FB2474A00FD78B5 /* TrackListCell.swift in Sources */,
 				15F78EB31FAA4C5800241AB0 /* Track.swift in Sources */,
 				152D232D1FA372E50032F789 /* TableViewExt.swift in Sources */,
 				1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */,
