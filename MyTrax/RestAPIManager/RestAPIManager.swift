@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Firebase
 
 class RestAPIManager {
     
@@ -83,10 +83,13 @@ class RestAPIManager {
             print(tracksUrl)
             var request = URLRequest(url: tracksUrl)
             request.httpMethod = "GET"
+            guard let uid = Auth.auth().currentUser?.uid else {return}
+            request.setValue(uid, forHTTPHeaderField: "Authorization")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             let session = URLSession.shared
             let task = session.dataTask(with: request, completionHandler: {
                 (data, response, error) in
+                print(response?.description)
                 let decoder = JSONDecoder()
                 do {
                     guard let data = data else {return}
@@ -138,8 +141,10 @@ class RestAPIManager {
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
         var request = URLRequest(url: tracksUrl)
         request.httpMethod = "POST"
-       // guard let accessToken = UserDefaults.standard.value(forKey: "accessToken") as? String else {return}
-       // request.setValue(accessToken, forHTTPHeaderField: "Authorization")
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        request.setValue(uid, forHTTPHeaderField: "Authorization")
+//        guard let accessToken = UserDefaults.standard.value(forKey: "accessToken") as? String else {return}
+//        request.setValue(accessToken, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let encoder = JSONEncoder()
         let decoder = JSONDecoder()

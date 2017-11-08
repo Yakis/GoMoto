@@ -51,6 +51,8 @@
 		1584F9311FB2474A00FD78B5 /* TrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584F92F1FB2474A00FD78B5 /* TrackListCell.swift */; };
 		1584F9321FB2474A00FD78B5 /* TrackListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584F9301FB2474A00FD78B5 /* TrackListCell.xib */; };
 		1584F9351FB24A2A00FD78B5 /* AllTracksTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584F9341FB24A2A00FD78B5 /* AllTracksTVExt.swift */; };
+		1584F9381FB30E5C00FD78B5 /* RiderProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584F9361FB30E5C00FD78B5 /* RiderProfileVC.swift */; };
+		1584F9391FB30E5C00FD78B5 /* RiderProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584F9371FB30E5C00FD78B5 /* RiderProfileVC.xib */; };
 		15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */; };
 		15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */; };
 		15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE891FA0DC6600298E51 /* Utils.swift */; };
@@ -126,6 +128,8 @@
 		1584F92F1FB2474A00FD78B5 /* TrackListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListCell.swift; sourceTree = "<group>"; };
 		1584F9301FB2474A00FD78B5 /* TrackListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackListCell.xib; sourceTree = "<group>"; };
 		1584F9341FB24A2A00FD78B5 /* AllTracksTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTracksTVExt.swift; sourceTree = "<group>"; };
+		1584F9361FB30E5C00FD78B5 /* RiderProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderProfileVC.swift; sourceTree = "<group>"; };
+		1584F9371FB30E5C00FD78B5 /* RiderProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiderProfileVC.xib; sourceTree = "<group>"; };
 		15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shackable.swift; sourceTree = "<group>"; };
 		15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		15BDBE891FA0DC6600298E51 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				156E103C1FAF60AF008F2C40 /* UserDashboardVC */,
 				15248ED81FB06EFD00EA0DD5 /* ActivityIndicatorManager */,
 				1584F92E1FB22CB700FD78B5 /* AllTracksVC */,
+				1584F93A1FB30E6300FD78B5 /* RiderProfileVC */,
 			);
 			path = MyTrax;
 			sourceTree = "<group>";
@@ -408,6 +413,15 @@
 			path = TrackListCell;
 			sourceTree = "<group>";
 		};
+		1584F93A1FB30E6300FD78B5 /* RiderProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				1584F9361FB30E5C00FD78B5 /* RiderProfileVC.swift */,
+				1584F9371FB30E5C00FD78B5 /* RiderProfileVC.xib */,
+			);
+			path = RiderProfileVC;
+			sourceTree = "<group>";
+		};
 		15A7AECE1F8E650000ABBFA6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +598,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */,
+				1584F9391FB30E5C00FD78B5 /* RiderProfileVC.xib in Resources */,
 				15150A191FA735AA00448B3A /* PersonalInfoVC.xib in Resources */,
 				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
 				1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */,
@@ -706,6 +721,7 @@
 				15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */,
 				15150A181FA735AA00448B3A /* PersonalInfoVC.swift in Sources */,
 				15C7B3A91FA744FA001B1A8E /* InfoLogoCell.swift in Sources */,
+				1584F9381FB30E5C00FD78B5 /* RiderProfileVC.swift in Sources */,
 				1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */,
 				1565C0521FA7360B00A95B46 /* PersonalInfoTVExt.swift in Sources */,
 				152D232B1FA3727C0032F789 /* ReusableView.swift in Sources */,

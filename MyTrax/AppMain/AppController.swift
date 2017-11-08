@@ -42,9 +42,8 @@ class AppController: NSObject {
         navFavorites.navigationBar.topItem?.title = "Favorite"
         favoritesVC.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favoriteTabBarEmpty"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
         
-        let riderProfileVC = UIViewController()
+        let riderProfileVC = RiderProfileVC(nibName: "RiderProfileVC", bundle: nil)
         let navRiderVC = UINavigationController(rootViewController: riderProfileVC)
-        riderProfileVC.view.backgroundColor = UIColor.yellow.withAlphaComponent(0.3)
         riderProfileVC.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "riderProfileTabBar"), selectedImage: #imageLiteral(resourceName: "riderProfileTabBar"))
         
         let notificationsVC = UIViewController()
