@@ -31,7 +31,7 @@ class AllTracksVC: UIViewController {
 
     
     func getAllTracks() {
-        RestAPIManager.shared.getAllTracks { (tracks, error) in
+        Track.getAllTracks { (tracks, error) in
             guard let tracks = tracks else {return}
             self.tracks = tracks
         }

@@ -338,7 +338,6 @@
 			children = (
 				15D108BB1F8E7BC400043F02 /* RegisterVC.swift */,
 				15D108BC1F8E7BC400043F02 /* RegisterVC.xib */,
-				15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */,
 			);
 			path = RegisterVC;
 			sourceTree = "<group>";
@@ -382,6 +381,7 @@
 		1584F9291FB22C1000FD78B5 /* RegisterLogin */ = {
 			isa = PBXGroup;
 			children = (
+				15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */,
 				1568C5191F8BF5640018D52B /* WelcomeVC */,
 				154C71BF1F8E95CB00EBAFFF /* RegisterVC */,
 				15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */,

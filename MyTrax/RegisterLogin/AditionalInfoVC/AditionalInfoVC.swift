@@ -16,8 +16,6 @@ class AditionalInfoVC: UIViewController, UsernameDelegate {
     var user: TraxUser!
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableVIew()
@@ -29,18 +27,14 @@ class AditionalInfoVC: UIViewController, UsernameDelegate {
     
     func saveUser(with username: String) {
         user.username = username
-        RestAPIManager.shared.saveUser(user: user) { (savedUser, error)  in
+        TraxUser.save(user: user) { [weak self] (savedUser, error)  in
             guard let savedUser = savedUser else {return}
             DispatchQueue.main.async {
                 switch savedUser.user_type {
                 case "owner":
-                    let addTracksVC = AddTracksVC(nibName: "AddTracksVC", bundle: nil)
-                    addTracksVC.user = savedUser
-                    self.present(addTracksVC, animated: true, completion: nil)
+                    RegistrationPresenter.shared.showAddTracksVC(with: savedUser, from: self)
                 default:
-                    let userDashboardVC = UserDashboardVC(nibName: "UserDashboardVC", bundle: nil)
-                    userDashboardVC.user = savedUser
-                    self.present(userDashboardVC, animated: true, completion: nil)
+                    RegistrationPresenter.shared.showDashboardVC(with: savedUser, from: self)
                 }
             }
             guard let error = error else {return}

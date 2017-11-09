@@ -33,12 +33,10 @@ class AppController: NSObject {
         let allTracksVC = AllTracksVC(nibName: "AllTracksVC", bundle: nil)
         let navAllTracks = UINavigationController(rootViewController: allTracksVC)
         navAllTracks.navigationBar.topItem?.title = "Tracks"
-        allTracksVC.view.backgroundColor = UIColor.green.withAlphaComponent(0.3)
         allTracksVC.tabBarItem = UITabBarItem(title: "Tracks", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
         
         let favoritesVC = UIViewController()
         let navFavorites = UINavigationController(rootViewController: favoritesVC)
-        favoritesVC.view.backgroundColor = UIColor.red.withAlphaComponent(0.3)
         navFavorites.navigationBar.topItem?.title = "Favorite"
         favoritesVC.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favoriteTabBarEmpty"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
         
@@ -48,7 +46,6 @@ class AppController: NSObject {
         
         let notificationsVC = UIViewController()
         let navNotifications = UINavigationController(rootViewController: notificationsVC)
-        notificationsVC.view.backgroundColor = UIColor.brickRed.withAlphaComponent(0.3)
         notificationsVC.tabBarItem = UITabBarItem(title: "Notifications", image: #imageLiteral(resourceName: "notificationTabBar"), selectedImage: #imageLiteral(resourceName: "notificationTabBar"))
         
         let sellingVC = UIViewController()

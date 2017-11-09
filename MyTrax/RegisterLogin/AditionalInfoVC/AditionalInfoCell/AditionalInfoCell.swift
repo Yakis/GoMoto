@@ -25,7 +25,15 @@ class AditionalInfoCell: UITableViewCell, NibLoadable, ReusableView {
     var user: TraxUser!
     weak var usernameDelegate: UsernameDelegate?
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    print("Init here===")
+    }
     
+    
+    deinit {
+       print("Deinit here===")
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
