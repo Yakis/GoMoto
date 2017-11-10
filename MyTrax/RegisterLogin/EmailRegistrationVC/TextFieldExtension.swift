@@ -31,9 +31,9 @@ extension EmailRegistrationCell: UITextFieldDelegate {
     func validateEmailTextField(textField: UITextField, character: String) {
         guard let text = textField.text else {return}
         let string = text + character
-        if string.contains("@") && string.contains(".") {
+        if string.isValidEmail() {
             textField.validate()
-        } else if !text.contains("@") || !text.contains(".") {
+        } else {
             textField.invalidate()
         }
     }
@@ -58,6 +58,8 @@ extension EmailRegistrationCell: UITextFieldDelegate {
             textField.invalidate()
         }
     }
+    
+    
     
     
 }
