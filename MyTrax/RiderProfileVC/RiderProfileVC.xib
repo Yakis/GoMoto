@@ -34,7 +34,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hs-bL-4I8">
-                    <rect key="frame" x="164" y="356" width="48" height="30"/>
+                    <rect key="frame" x="50" y="356" width="275" height="30"/>
                     <state key="normal" title="Logout">
                         <color key="titleColor" red="0.73333333329999995" green="0.76470588240000004" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
@@ -46,12 +46,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BnX-yy-rgc" secondAttribute="trailing" constant="20" id="D0u-6r-Z8V"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Hs-bL-4I8" secondAttribute="trailing" constant="163" id="FSx-qx-eL4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Hs-bL-4I8" secondAttribute="trailing" constant="50" id="FSx-qx-eL4"/>
                 <constraint firstItem="1Hs-bL-4I8" firstAttribute="top" secondItem="BnX-yy-rgc" secondAttribute="bottom" constant="8" id="JG8-NZ-s4m"/>
                 <constraint firstItem="BnX-yy-rgc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P0I-XD-A50"/>
                 <constraint firstItem="BnX-yy-rgc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eAB-ze-7fR"/>
                 <constraint firstItem="BnX-yy-rgc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hpN-9K-g1m"/>
-                <constraint firstItem="1Hs-bL-4I8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="164" id="qjw-nt-dpj"/>
+                <constraint firstItem="1Hs-bL-4I8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="qjw-nt-dpj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
