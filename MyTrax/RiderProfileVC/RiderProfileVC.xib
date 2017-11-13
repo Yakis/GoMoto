@@ -11,6 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
             <string>AvenirNext-UltraLight</string>
         </array>
     </customFonts>
@@ -18,6 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RiderProfileVC" customModule="MyTrax" customModuleProvider="target">
             <connections>
                 <outlet property="logoutButtonOutlet" destination="1Hs-bL-4I8" id="zfk-PZ-fye"/>
+                <outlet property="notificationsEnabledSwitch" destination="5zQ-Ph-iI5" id="4ei-PT-g40"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeLabel" destination="BnX-yy-rgc" id="4Ea-rP-sUS"/>
             </connections>
@@ -42,15 +44,35 @@
                         <action selector="logoutButtonAction:" destination="-1" eventType="touchUpInside" id="NBA-Wg-xJI"/>
                     </connections>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxg-fW-ni8">
+                    <rect key="frame" x="20" y="120" width="335" height="31"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mV-g5-n6g">
+                            <rect key="frame" x="0.0" y="0.0" width="286" height="31"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5zQ-Ph-iI5">
+                            <rect key="frame" x="286" y="0.0" width="51" height="31"/>
+                            <connections>
+                                <action selector="enableNotificationsAction:" destination="-1" eventType="valueChanged" id="oPe-lb-Wld"/>
+                            </connections>
+                        </switch>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BnX-yy-rgc" secondAttribute="trailing" constant="20" id="D0u-6r-Z8V"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bxg-fW-ni8" secondAttribute="trailing" constant="20" id="EFi-F8-9ti"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Hs-bL-4I8" secondAttribute="trailing" constant="50" id="FSx-qx-eL4"/>
                 <constraint firstItem="1Hs-bL-4I8" firstAttribute="top" secondItem="BnX-yy-rgc" secondAttribute="bottom" constant="8" id="JG8-NZ-s4m"/>
                 <constraint firstItem="BnX-yy-rgc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P0I-XD-A50"/>
                 <constraint firstItem="BnX-yy-rgc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eAB-ze-7fR"/>
                 <constraint firstItem="BnX-yy-rgc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hpN-9K-g1m"/>
+                <constraint firstItem="bxg-fW-ni8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nT6-kJ-ooh"/>
+                <constraint firstItem="bxg-fW-ni8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="qJ2-QY-e9g"/>
                 <constraint firstItem="1Hs-bL-4I8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="qjw-nt-dpj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Foundation
 
 
 extension String {
@@ -40,3 +40,6 @@ extension Notification.Name {
     static let adressIsReady = Notification.Name(rawValue: "AdressIsReady")
     static let imageUrlIsReady = Notification.Name(rawValue: "imageUrlIsReady")
 }
+
+
+

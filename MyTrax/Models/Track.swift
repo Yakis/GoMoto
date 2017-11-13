@@ -71,6 +71,7 @@ struct Track: Codable {
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
+            print(error?.localizedDescription)
             let decoder = JSONDecoder()
             do {
                 guard let data = data else {return}
