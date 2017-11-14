@@ -85,6 +85,8 @@ class RiderProfileVC: UIViewController {
     @IBAction func logoutButtonAction(_ sender: Any) {
         do {
        try Auth.auth().signOut()
+            let userDefaults = UserDefaults.standard
+            userDefaults.removeObject(forKey: "userType")
         self.present(AppController.createAndReturnRoot(), animated: true, completion: nil)
         } catch {
             print(error.localizedDescription)
