@@ -19,7 +19,7 @@ class FirebaseManager {
     var firebaseUser: User!
     
     
-    static func facebookRegistration(userType: String, viewController: UIViewController, completion: @escaping (TraxUser?) -> ()) {
+    static func facebookLogin(userType: String, viewController: UIViewController, completion: @escaping (TraxUser?) -> ()) {
         let facebookLogin = LoginManager()
         facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: viewController) { (result) in
             ActivityIndicatorManager.shared.showActivityIndicator(on: viewController.view, interactionEnabled: false)
@@ -27,7 +27,7 @@ class FirebaseManager {
             case .failed(let error):
                 UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
             case .cancelled:
-                UserAlert.showMessage(from: viewController, title: "Error", message: "User cancelled login")
+                UserAlert.showMessage(from: viewController, title: "Error", message: "User canceled login")
             case .success(_, _, let accessToken):
                 let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
                 Auth.auth().signIn(with: credential, completion: { (user, error) in
@@ -50,11 +50,11 @@ class FirebaseManager {
     
     
     static func saveAccessToken(for user: User) {
-        user.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
-             guard let tokenString = tokenString else {return}
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(tokenString, forKey: "accessToken")
-        })
+//        user.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
+//             guard let tokenString = tokenString else {return}
+//            let userDefaults = UserDefaults.standard
+//            userDefaults.set(tokenString, forKey: "accessToken")
+//        })
     }
     
     

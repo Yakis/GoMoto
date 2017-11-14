@@ -38,7 +38,7 @@ class AppController: NSObject {
         let favoritesVC = UIViewController()
         let navFavorites = UINavigationController(rootViewController: favoritesVC)
         navFavorites.navigationBar.topItem?.title = "Favorite"
-        favoritesVC.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favoriteTabBarEmpty"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
+        favoritesVC.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favoriteTabBarFull"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
         
         let riderProfileVC = RiderProfileVC(nibName: "RiderProfileVC", bundle: nil)
         let navRiderVC = UINavigationController(rootViewController: riderProfileVC)

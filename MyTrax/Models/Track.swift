@@ -71,7 +71,7 @@ struct Track: Codable {
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
-            print(error?.localizedDescription)
+            print(error?.localizedDescription ?? "Unknown error")
             let decoder = JSONDecoder()
             do {
                 guard let data = data else {return}

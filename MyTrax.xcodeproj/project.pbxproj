@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		15150A181FA735AA00448B3A /* PersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15150A161FA735AA00448B3A /* PersonalInfoVC.swift */; };
 		15150A191FA735AA00448B3A /* PersonalInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15150A171FA735AA00448B3A /* PersonalInfoVC.xib */; };
+		1517E15F1FB9BE1E008DA5B8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1517E15D1FB9BE1E008DA5B8 /* LoginVC.swift */; };
+		1517E1601FB9BE1E008DA5B8 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1517E15E1FB9BE1E008DA5B8 /* LoginVC.xib */; };
 		1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D89C1F8BF40A00105C17 /* AppDelegate.swift */; };
 		1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A31F8BF40A00105C17 /* Assets.xcassets */; };
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
@@ -111,6 +113,8 @@
 		027145BEC1BBF8B3984037AB /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		15150A161FA735AA00448B3A /* PersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVC.swift; sourceTree = "<group>"; };
 		15150A171FA735AA00448B3A /* PersonalInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoVC.xib; sourceTree = "<group>"; };
+		1517E15D1FB9BE1E008DA5B8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1517E15E1FB9BE1E008DA5B8 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		1521D8991F8BF40A00105C17 /* MyTrax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521D89C1F8BF40A00105C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1521D8A31F8BF40A00105C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,6 +227,15 @@
 				15C7B3AB1FA744FF001B1A8E /* InfoLogoCell */,
 			);
 			path = PersonalInfoVC;
+			sourceTree = "<group>";
+		};
+		1517E1611FB9BE22008DA5B8 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				1517E15D1FB9BE1E008DA5B8 /* LoginVC.swift */,
+				1517E15E1FB9BE1E008DA5B8 /* LoginVC.xib */,
+			);
+			path = LoginVC;
 			sourceTree = "<group>";
 		};
 		1521D8901F8BF40A00105C17 = {
@@ -432,6 +445,7 @@
 				15C7B3B01FA75005001B1A8E /* AditionalInfoVC */,
 				15F78EA71FAA3E0400241AB0 /* AddTracksVC */,
 				1526A30A1FAB971900346F4F /* AdminVC */,
+				1517E1611FB9BE22008DA5B8 /* LoginVC */,
 			);
 			path = RegisterLogin;
 			sourceTree = "<group>";
@@ -684,6 +698,7 @@
 				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
 				1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */,
 				15C7B3AA1FA744FA001B1A8E /* InfoLogoCell.xib in Resources */,
+				1517E1601FB9BE1E008DA5B8 /* LoginVC.xib in Resources */,
 				1584F9321FB2474A00FD78B5 /* TrackListCell.xib in Resources */,
 				156E10361FAF43F8008F2C40 /* TrackImageCell.xib in Resources */,
 				1584F92D1FB22CB400FD78B5 /* AllTracksVC.xib in Resources */,
@@ -856,6 +871,7 @@
 				1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */,
 				15F78EB81FAA570800241AB0 /* LocateTrackVC.swift in Sources */,
 				156E103A1FAF60A9008F2C40 /* UserDashboardVC.swift in Sources */,
+				1517E15F1FB9BE1E008DA5B8 /* LoginVC.swift in Sources */,
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
 				152D232F1FA374F60032F789 /* EmailRegTVExtension.swift in Sources */,
 				1584F92C1FB22CB400FD78B5 /* AllTracksVC.swift in Sources */,

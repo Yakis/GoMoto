@@ -61,7 +61,7 @@ class RegisterVC: UIViewController {
     
     
     @IBAction func facebookLogin(_ sender: Any) {
-        FirebaseManager.facebookRegistration(userType: userType.rawValue, viewController: self) { [weak self] (user) in
+        FirebaseManager.facebookLogin(userType: userType.rawValue, viewController: self) { [weak self] (user) in
             guard let user = user else {return}
             RegistrationPresenter.shared.showPersonalInfoVC(with: user, from: self!)
         }
