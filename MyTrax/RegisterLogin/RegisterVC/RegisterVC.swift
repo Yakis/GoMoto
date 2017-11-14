@@ -75,9 +75,11 @@ class RegisterVC: UIViewController {
         
     }
     
-    
-    
-    
+    @IBAction func signInButtonAction(_ sender: Any) {
+        let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
+        loginVC.userType = self.userType
+        self.present(loginVC, animated: true, completion: nil)
+    }
     
     
     

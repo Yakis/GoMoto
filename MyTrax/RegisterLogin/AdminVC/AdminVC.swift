@@ -37,7 +37,7 @@ class AdminVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabels()
+       // setupLabels()
     }
 
     

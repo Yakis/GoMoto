@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoginCell" rowHeight="203" id="KGk-i7-Jjw" customClass="LoginCell" customModule="MyTrax" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="202.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KRh-P0-cJF">
+                        <rect key="frame" x="20" y="5" width="280" height="70"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUG-eR-zIt">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Se4-f7-B5a">
+                                <rect key="frame" x="0.0" y="40" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqv-fg-JZh">
+                        <rect key="frame" x="50" y="86" width="220" height="36"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                        <state key="normal" title="EMAIL">
+                            <color key="titleColor" red="0.73725490196078436" green="0.76470588235294112" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                        <connections>
+                            <action selector="loginButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vi9-i0-nIw"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgK-bn-L3E">
+                        <rect key="frame" x="50" y="158.5" width="220" height="36"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                        <state key="normal" title="FACEBOOK">
+                            <color key="titleColor" red="0.73725490196078436" green="0.76470588235294112" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                        <connections>
+                            <action selector="facebookButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CD8-oZ-Oej"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coq-6A-dCq">
+                        <rect key="frame" x="50" y="130" width="220" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="coq-6A-dCq" firstAttribute="top" secondItem="mqv-fg-JZh" secondAttribute="bottom" constant="8" id="4CS-C5-Z4S"/>
+                    <constraint firstItem="coq-6A-dCq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="7NT-CA-UA3"/>
+                    <constraint firstItem="pgK-bn-L3E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="Cua-7g-CEV"/>
+                    <constraint firstAttribute="trailing" secondItem="KRh-P0-cJF" secondAttribute="trailing" constant="20" id="Osn-7w-l7p"/>
+                    <constraint firstAttribute="trailing" secondItem="coq-6A-dCq" secondAttribute="trailing" constant="50" id="R0X-T5-Bww"/>
+                    <constraint firstItem="KRh-P0-cJF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="aAm-7j-ngU"/>
+                    <constraint firstAttribute="trailing" secondItem="mqv-fg-JZh" secondAttribute="trailing" constant="50" id="bpe-Zv-PKA"/>
+                    <constraint firstAttribute="trailing" secondItem="pgK-bn-L3E" secondAttribute="trailing" constant="50" id="cCX-hM-3m3"/>
+                    <constraint firstItem="mqv-fg-JZh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="gsw-BJ-P2H"/>
+                    <constraint firstItem="mqv-fg-JZh" firstAttribute="top" secondItem="KRh-P0-cJF" secondAttribute="bottom" constant="11" id="gyz-Ar-1Dt"/>
+                    <constraint firstItem="pgK-bn-L3E" firstAttribute="top" secondItem="coq-6A-dCq" secondAttribute="bottom" constant="8" id="iLE-DP-7j1"/>
+                    <constraint firstItem="KRh-P0-cJF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="z1S-Ie-D0a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="emailField" destination="uUG-eR-zIt" id="zAs-s4-aic"/>
+                <outlet property="facebookButtonOutlet" destination="pgK-bn-L3E" id="oNu-fI-soH"/>
+                <outlet property="loginButtonOutlet" destination="mqv-fg-JZh" id="VTh-JV-CRD"/>
+                <outlet property="passwordField" destination="Se4-f7-B5a" id="hyf-WV-uvd"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="133.5"/>
+        </tableViewCell>
+    </objects>
+</document>

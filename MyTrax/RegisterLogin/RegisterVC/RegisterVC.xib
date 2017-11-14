@@ -59,6 +59,9 @@
                     <state key="normal" title="SIGN IN">
                         <color key="titleColor" red="0.73333333333333328" green="0.76470588235294112" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="signInButtonAction:" destination="-1" eventType="touchUpInside" id="twZ-27-mtR"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNY-fl-Z85">
                     <rect key="frame" x="100.5" y="540" width="173" height="21"/>

@@ -57,6 +57,29 @@ struct TraxUser: Codable {
     }
     
     
+        static func getUser(for uid: String, completionHandler: @escaping (TraxUser?, Error?) -> Void) {
+            let usersEndpoint = "\(Endpoints.Users.baseUrl)\(Endpoints.Users.getByUid)\(uid)"
+            guard let usersUrl = URL(string: usersEndpoint) else {return}
+            print(usersUrl)
+            let request = URLRequest(url: usersUrl)
+            let session = URLSession.shared
+            let task = session.dataTask(with: request, completionHandler: {
+                (data, response, error) in
+                let decoder = JSONDecoder()
+                do {
+                    let user = try decoder.decode(TraxUser.self, from: data!)
+                    completionHandler(user, nil)
+                    print("User by UID=== \(user.first_name)")
+                } catch {
+                    completionHandler(nil, error)
+                }
+            })
+            task.resume()
+        }
+    
+    
+    
+    
 }
 
 

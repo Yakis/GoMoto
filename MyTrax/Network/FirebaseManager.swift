@@ -78,9 +78,13 @@ class FirebaseManager {
     }
     
     
-    static func signInWithEmail(email: String, password: String) {
+    static func signInWithEmail(email: String, password: String, completion: @escaping (User?, Error?) -> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            
+            if let user = user {
+                completion(user, nil)
+            } else {
+                completion(nil, error)
+            }
         }
     }
     
