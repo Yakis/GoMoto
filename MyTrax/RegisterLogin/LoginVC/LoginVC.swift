@@ -23,23 +23,24 @@ class LoginVC: UIViewController, LoginDelegate {
         setupTableView()
     }
 
-
     
     func emailLogin(user: TraxUser?, error: Error?) {
-        
+        guard let traxUser = user else {return}
+        DispatchQueue.main.async {
+            self.showVCForUser(user: traxUser)
+        }
     }
     
     func facebookLogin() {
         FirebaseManager.facebookLogin(userType: userType.rawValue, viewController: self) { [weak self] (user) in
             guard let uid = user?.firebase_uid else {return}
-            TraxUser.getUser(for: uid, completionHandler: { [weak self] (user, error) in
-                guard let user = user else {
-                    guard let error = error else {return}
-                    UserAlert.showMessage(from: self, title: "Error", message: error.localizedDescription)
+            TraxUser.getUser(for: uid, completionHandler: { [weak self] (traxUser, error) in
+                guard let traxUser = traxUser else {
+                    UserAlert.showMessage(from: self, title: "Error", message: error!.localizedDescription)
                     return
                 }
                 DispatchQueue.main.async {
-                    self?.showVCForUser(user: user)
+                    self?.showVCForUser(user: traxUser)
                 }
                 
             })
@@ -49,12 +50,10 @@ class LoginVC: UIViewController, LoginDelegate {
     
     
     func showVCForUser(user: TraxUser) {
-        switch userType.rawValue {
+        switch user.user_type {
         case "owner":
-            let adminVC = AdminVC(nibName: "AdminVC", bundle: nil)
-            adminVC.user = user
-            self.present(adminVC, animated: true, completion: nil)
-         // Must build OwnerVC
+            let ownerDashboard = AppController.createAndReturnOwnerTabBarController()
+            self.present(ownerDashboard, animated: true, completion: nil)
         default:
             RegistrationPresenter.shared.showDashboardVC(with: user, from: self)
         }

@@ -48,6 +48,8 @@ struct TraxUser: Codable {
                 guard let data = data else {return}
                 let newUser = try decoder.decode(TraxUser.self, from: data)
                 completionHandler(newUser, nil)
+                let userDefaults = UserDefaults.standard
+                userDefaults.set(newUser.user_type, forKey: "userType")
             } catch {
                 
             }
@@ -69,7 +71,8 @@ struct TraxUser: Codable {
                 do {
                     let user = try decoder.decode(TraxUser.self, from: data!)
                     completionHandler(user, nil)
-                    print("User by UID=== \(user.first_name)")
+                    let userDefaults = UserDefaults.standard
+                    userDefaults.set(user.user_type, forKey: "userType")
                 } catch {
                     completionHandler(nil, error)
                 }

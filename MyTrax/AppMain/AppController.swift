@@ -17,17 +17,23 @@ class AppController: NSObject {
     }
     
     class func createAndReturnRoot() -> UIViewController {
+        let welcomeViewController = WelcomeVC(nibName: WelcomeNibs.welcomeVC, bundle: nil)
         switch Auth.auth().currentUser {
         case nil:
-            let welcomeViewController = WelcomeVC(nibName: WelcomeNibs.welcomeVC, bundle: nil)
             return welcomeViewController
         default:
-            return self.createAndReturnTabBarController()
+            guard let userType = UserDefaults.standard.value(forKey: "userType") as? String else {return welcomeViewController}
+            switch userType {
+            case "owner":
+                return AppController.createAndReturnOwnerTabBarController()
+            default:
+                return AppController.createAndReturnRiderTabBarController()
+            }
         }
     }
     
     
-    class func createAndReturnTabBarController() -> UITabBarController {
+     class func createAndReturnRiderTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
         
         let allTracksVC = AllTracksVC(nibName: "AllTracksVC", bundle: nil)
@@ -53,6 +59,40 @@ class AppController: NSObject {
         sellingVC.view.backgroundColor = UIColor.mediumGray
         sellingVC.tabBarItem = UITabBarItem(title: "Selling", image: #imageLiteral(resourceName: "sellTabBar"), selectedImage: #imageLiteral(resourceName: "sellTabBar"))
         
+        let viewControllers = [navAllTracks, navFavorites, navRiderVC, navNotifications, navSelling]
+        tabBarController.viewControllers = viewControllers
+        return tabBarController
+    }
+    
+    
+    
+     class func createAndReturnOwnerTabBarController() -> UITabBarController {
+        let tabBarController = UITabBarController()
+        
+        let allTracksVC = AllTracksVC(nibName: "AllTracksVC", bundle: nil)
+        let navAllTracks = UINavigationController(rootViewController: allTracksVC)
+        navAllTracks.navigationBar.topItem?.title = "Tracks"
+        allTracksVC.tabBarItem = UITabBarItem(title: "Tracks", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
+
+        let favoritesVC = UIViewController()
+        let navFavorites = UINavigationController(rootViewController: favoritesVC)
+        navFavorites.navigationBar.topItem?.title = "Favorite"
+        favoritesVC.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favoriteTabBarFull"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
+
+        let riderProfileVC = RiderProfileVC(nibName: "RiderProfileVC", bundle: nil)
+        let navRiderVC = UINavigationController(rootViewController: riderProfileVC)
+        navRiderVC.navigationBar.topItem?.title = "Owner Profile"
+        riderProfileVC.tabBarItem = UITabBarItem(title: "Owner Profile", image: #imageLiteral(resourceName: "riderProfileTabBar"), selectedImage: #imageLiteral(resourceName: "riderProfileTabBar"))
+
+        let notificationsVC = UIViewController()
+        let navNotifications = UINavigationController(rootViewController: notificationsVC)
+        notificationsVC.tabBarItem = UITabBarItem(title: "Notifications", image: #imageLiteral(resourceName: "notificationTabBar"), selectedImage: #imageLiteral(resourceName: "notificationTabBar"))
+
+        let sellingVC = UIViewController()
+        let navSelling = UINavigationController(rootViewController: sellingVC)
+        sellingVC.view.backgroundColor = UIColor.mediumGray
+        sellingVC.tabBarItem = UITabBarItem(title: "Selling", image: #imageLiteral(resourceName: "sellTabBar"), selectedImage: #imageLiteral(resourceName: "sellTabBar"))
+
         let viewControllers = [navAllTracks, navFavorites, navRiderVC, navNotifications, navSelling]
         tabBarController.viewControllers = viewControllers
         return tabBarController
