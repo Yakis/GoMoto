@@ -23,12 +23,21 @@ class RiderProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         logoutButtonOutlet.roundCorners()
-        guard let username = Auth.auth().currentUser?.displayName else {return}
-        welcomeLabel.text = "Welcome, \(username)"
-        
-        
+        setupNameLabel()
     }
 
+    
+    func setupNameLabel() {
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        TraxUser.getUser(for: uid) { [weak self] (user, error) in
+            guard let firstName = user?.first_name else {return}
+            guard let lastName = user?.last_name else {return}
+            DispatchQueue.main.async {
+                self?.welcomeLabel.text = "Welcome, \(firstName) \(lastName)"
+            }
+        }
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

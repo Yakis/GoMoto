@@ -18,6 +18,7 @@ class WelcomeVC: UIViewController {
     
     @IBOutlet weak var traxLogoImageView: UIImageView!
     
+    @IBOutlet weak var loginButtonOutlet: UIButton!
     
     
     override func viewDidLoad() {
@@ -28,6 +29,7 @@ class WelcomeVC: UIViewController {
     func setupViews() {
         ownerButton.roundCorners()
         bikerButton.roundCorners()
+        loginButtonOutlet.roundCorners()
         traxLogoImageView.addShadow()
     }
     
@@ -46,6 +48,12 @@ class WelcomeVC: UIViewController {
         let registerVC = RegisterVC(nibName: "RegisterVC", bundle: nil)
         registerVC.userType = userType
        self.present(registerVC, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func signInButtonAction(_ sender: Any) {
+        let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
+        self.present(loginVC, animated: true, completion: nil)
     }
     
 

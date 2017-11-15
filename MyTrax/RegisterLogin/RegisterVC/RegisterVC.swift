@@ -61,9 +61,13 @@ class RegisterVC: UIViewController {
     
     
     @IBAction func facebookLogin(_ sender: Any) {
-        FirebaseManager.facebookLogin(userType: userType.rawValue, viewController: self) { [weak self] (user) in
+        FirebaseManager.facebookRegistration(viewController: self) { [weak self] (user) in
             guard let user = user else {return}
-            RegistrationPresenter.shared.showPersonalInfoVC(with: user, from: self!)
+            let firstName = user.displayName?.splitName().first ?? ""
+            let lastName = user.displayName?.splitName().last ?? ""
+            let email = user.email ?? ""
+            let traxUser = TraxUser(id: 0, username: "", email: email, first_name: firstName, last_name: lastName, postcode: "", contact_number: "", user_type: (self?.userType.rawValue)!, avatar: "", device_token: "", firebase_uid: user.uid, created_at: nil, updated_at: nil)
+            RegistrationPresenter.shared.showPersonalInfoVC(with: traxUser, from: self)
         }
     }
     
@@ -75,11 +79,7 @@ class RegisterVC: UIViewController {
         
     }
     
-    @IBAction func signInButtonAction(_ sender: Any) {
-        let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
-        loginVC.userType = self.userType
-        self.present(loginVC, animated: true, completion: nil)
-    }
+    
     
     
     

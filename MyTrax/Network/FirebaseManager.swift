@@ -19,7 +19,7 @@ class FirebaseManager {
     var firebaseUser: User!
     
     
-    static func facebookLogin(userType: String, viewController: UIViewController, completion: @escaping (TraxUser?) -> ()) {
+    static func facebookRegistration(viewController: UIViewController, completion: @escaping (User?) -> ()) {
         let facebookLogin = LoginManager()
         facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: viewController) { (result) in
             ActivityIndicatorManager.shared.showActivityIndicator(on: viewController.view, interactionEnabled: false)
@@ -37,16 +37,40 @@ class FirebaseManager {
                         return
                     }
                        self.saveAccessToken(for: user)
-                    let firstName = user.displayName?.splitName().first ?? ""
-                    let lastName = user.displayName?.splitName().last ?? ""
-                    let email = user.email ?? ""
-                    let traxUser = TraxUser(id: 0, username: "", email: email, first_name: firstName, last_name: lastName, postcode: "", contact_number: "", user_type: userType, avatar: "", device_token: "", firebase_uid: user.uid, created_at: nil, updated_at: nil)
                     ActivityIndicatorManager.shared.stopActivityIndicator()
-                        completion(traxUser)
+                        completion(user)
                 })
             }
         }
     }
+    
+    
+    
+    static func facebookSignIn(viewController: UIViewController, completion: @escaping (User?) -> ()) {
+        let facebookLogin = LoginManager()
+        facebookLogin.logIn(readPermissions: [.email, .publicProfile], viewController: viewController) { (result) in
+            ActivityIndicatorManager.shared.showActivityIndicator(on: viewController.view, interactionEnabled: false)
+            switch result {
+            case .failed(let error):
+                UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
+            case .cancelled:
+                UserAlert.showMessage(from: viewController, title: "Error", message: "User canceled login")
+            case .success(_, _, let accessToken):
+                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
+                Auth.auth().signIn(with: credential, completion: { (user, error) in
+                    guard let user = user else {
+                        guard let error = error else {return}
+                        UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
+                        return
+                    }
+                    ActivityIndicatorManager.shared.stopActivityIndicator()
+                    completion(user)
+                })
+            }
+        }
+    }
+    
+    
     
     
     static func saveAccessToken(for user: User) {

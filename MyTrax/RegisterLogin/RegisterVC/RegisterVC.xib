@@ -20,7 +20,6 @@
             <connections>
                 <outlet property="emailButtonOutlet" destination="bSy-B6-VWI" id="SWf-yH-0EV"/>
                 <outlet property="facebookButtonOutlet" destination="E45-AG-oVo" id="eoD-nL-0UY"/>
-                <outlet property="signInButtonOutlet" destination="Fhx-oo-7Im" id="Esg-B6-eHh"/>
                 <outlet property="userLogoImageView" destination="Xdr-YR-XzB" id="A6d-6g-uyt"/>
                 <outlet property="userTypeLabel" destination="xU6-Ap-Pe3" id="2uv-2t-QFq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -32,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSy-B6-VWI">
-                    <rect key="frame" x="50" y="442" width="275" height="36"/>
+                    <rect key="frame" x="50" y="385" width="275" height="36"/>
                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="EMAIL">
@@ -43,7 +42,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E45-AG-oVo">
-                    <rect key="frame" x="50" y="494" width="275" height="36"/>
+                    <rect key="frame" x="50" y="437" width="275" height="36"/>
                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="FACEBOOK">
@@ -53,22 +52,6 @@
                         <action selector="facebookLogin:" destination="-1" eventType="touchUpInside" id="DFM-cm-gU7"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhx-oo-7Im">
-                    <rect key="frame" x="156.5" y="561" width="62" height="36"/>
-                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                    <state key="normal" title="SIGN IN">
-                        <color key="titleColor" red="0.73333333333333328" green="0.76470588235294112" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="signInButtonAction:" destination="-1" eventType="touchUpInside" id="twZ-27-mtR"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNY-fl-Z85">
-                    <rect key="frame" x="100.5" y="540" width="173" height="21"/>
-                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xdr-YR-XzB">
                     <rect key="frame" x="112" y="70" width="150" height="150"/>
                     <constraints>
@@ -92,11 +75,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="E45-AG-oVo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="5FW-Fd-dax"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fhx-oo-7Im" secondAttribute="bottom" constant="70" id="8K7-93-chw"/>
-                <constraint firstItem="Fhx-oo-7Im" firstAttribute="top" secondItem="GNY-fl-Z85" secondAttribute="bottom" id="BFD-hN-As5"/>
                 <constraint firstItem="E45-AG-oVo" firstAttribute="top" secondItem="bSy-B6-VWI" secondAttribute="bottom" constant="16" id="C15-Vv-QSY"/>
-                <constraint firstItem="GNY-fl-Z85" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CLT-Ks-nB7"/>
-                <constraint firstItem="GNY-fl-Z85" firstAttribute="top" secondItem="E45-AG-oVo" secondAttribute="bottom" constant="10" id="EOJ-5b-Yvk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cmr-J4-G6X" secondAttribute="trailing" constant="20" id="K9f-QU-oMa"/>
                 <constraint firstItem="Xdr-YR-XzB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="LuR-IB-M5o"/>
                 <constraint firstItem="cmr-J4-G6X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="MVN-vF-G2u"/>
@@ -106,8 +85,8 @@
                 <constraint firstItem="bSy-B6-VWI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="csK-uw-pwg"/>
                 <constraint firstItem="xU6-Ap-Pe3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lV7-c7-1pR"/>
                 <constraint firstItem="cmr-J4-G6X" firstAttribute="top" secondItem="xU6-Ap-Pe3" secondAttribute="bottom" constant="10" id="lZl-nc-4lC"/>
+                <constraint firstItem="bSy-B6-VWI" firstAttribute="top" secondItem="cmr-J4-G6X" secondAttribute="bottom" constant="50" id="nlS-Zn-UZU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E45-AG-oVo" secondAttribute="trailing" constant="50" id="pet-y9-VJ2"/>
-                <constraint firstItem="Fhx-oo-7Im" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rZ6-bH-2XJ"/>
                 <constraint firstItem="Xdr-YR-XzB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tak-ea-yOs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
