@@ -27,13 +27,9 @@ class AditionalInfoCell: UITableViewCell, NibLoadable, ReusableView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    print("Init here===")
     }
     
-    
-    deinit {
-       print("Deinit here===")
-    }
+ 
     
     override func awakeFromNib() {
         super.awakeFromNib()

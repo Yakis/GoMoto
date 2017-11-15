@@ -37,7 +37,7 @@ struct TraxUser: Codable {
             let newUserAsJSON = try encoder.encode(user)
             request.httpBody = newUserAsJSON
         } catch {
-            print(error)
+            print(error.localizedDescription)
             completionHandler(nil, error)
         }
         let session = URLSession.shared

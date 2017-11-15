@@ -31,12 +31,10 @@ class LoginCell: UITableViewCell, ReusableView, NibLoadable {
     }
     
     @IBAction func loginButtonAction(_ sender: UIButton) {
-        print("Login Pressed")
         guard let email = emailField.text else {return}
         guard let password = passwordField.text else {return}
         FirebaseManager.signInWithEmail(email: email, password: password) { [weak self] (firebaseUser, error) in
             guard let firebaseUser = firebaseUser else {
-                print(error?.localizedDescription)
                 return
             }
             TraxUser.getUser(for: firebaseUser.uid, completionHandler: { [weak self] (traxUser, error) in
