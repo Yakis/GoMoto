@@ -29,7 +29,7 @@ class WelcomeVC: UIViewController {
     func setupViews() {
         ownerButton.roundCorners()
         bikerButton.roundCorners()
-        loginButtonOutlet.roundCorners()
+       // loginButtonOutlet.roundCorners()
         traxLogoImageView.addShadow()
     }
     

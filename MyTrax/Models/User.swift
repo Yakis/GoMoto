@@ -50,10 +50,10 @@ struct TraxUser: Codable {
                 completionHandler(newUser, nil)
                 let userDefaults = UserDefaults.standard
                 userDefaults.set(newUser.user_type, forKey: "userType")
+                print(newUser.first_name)
             } catch {
                 
             }
-            print("\(String(describing: response)) Account created!")
         })
         task.resume()
     }
