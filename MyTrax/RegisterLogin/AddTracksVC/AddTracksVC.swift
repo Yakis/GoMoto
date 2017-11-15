@@ -53,7 +53,8 @@ class AddTracksVC: UIViewController, LocateTrackDelegate, AdminVCDelegate, AddIm
         let adminVC = AdminVC(nibName: "AdminVC", bundle: nil)
         adminVC.user = user
         adminVC.track = track
-        self.present(adminVC, animated: true, completion: nil)
+        let ownerDashboard = AppController.createAndReturnOwnerTabBarController()
+        self.present(ownerDashboard, animated: true, completion: nil)
     }
 
 }
