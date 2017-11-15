@@ -60,6 +60,8 @@
 		159EF6A71FB610E500B1C0EE /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 159EF6A01FB610E500B1C0EE /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */; };
 		15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */; };
+		15A934A61FBC56C00020F05C /* LoginHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A934A41FBC56C00020F05C /* LoginHeaderCell.swift */; };
+		15A934A71FBC56C00020F05C /* LoginHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A934A51FBC56C00020F05C /* LoginHeaderCell.xib */; };
 		15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE891FA0DC6600298E51 /* Utils.swift */; };
 		15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */; };
 		15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */; };
@@ -169,6 +171,8 @@
 		159EF6A41FB610E500B1C0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shackable.swift; sourceTree = "<group>"; };
 		15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
+		15A934A41FBC56C00020F05C /* LoginHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeaderCell.swift; sourceTree = "<group>"; };
+		15A934A51FBC56C00020F05C /* LoginHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHeaderCell.xib; sourceTree = "<group>"; };
 		15BDBE891FA0DC6600298E51 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationVC.swift; sourceTree = "<group>"; };
 		15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailRegistrationVC.xib; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 				1517E15E1FB9BE1E008DA5B8 /* LoginVC.xib */,
 				156C48A11FBAE77C00D8B666 /* LoginCell */,
 				156C48A21FBAF9EF00D8B666 /* LoginTVExt.swift */,
+				15A934A81FBC56C50020F05C /* LoginHeaderCell */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -503,6 +508,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		15A934A81FBC56C50020F05C /* LoginHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				15A934A41FBC56C00020F05C /* LoginHeaderCell.swift */,
+				15A934A51FBC56C00020F05C /* LoginHeaderCell.xib */,
+			);
+			path = LoginHeaderCell;
+			sourceTree = "<group>";
+		};
 		15BDBE911FA0EF1600298E51 /* EmailRegistrationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,6 +721,7 @@
 				1584F92D1FB22CB400FD78B5 /* AllTracksVC.xib in Resources */,
 				15F78EB01FAA4AE800241AB0 /* AddTrackFieldsCell.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
+				15A934A71FBC56C00020F05C /* LoginHeaderCell.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				15F78EB91FAA570800241AB0 /* LocateTrackVC.xib in Resources */,
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
@@ -873,6 +888,7 @@
 				15F78EB31FAA4C5800241AB0 /* Track.swift in Sources */,
 				152D232D1FA372E50032F789 /* TableViewExt.swift in Sources */,
 				1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */,
+				15A934A61FBC56C00020F05C /* LoginHeaderCell.swift in Sources */,
 				15F78EB81FAA570800241AB0 /* LocateTrackVC.swift in Sources */,
 				15110BC31FBB0646005411BE /* LoginCell.swift in Sources */,
 				1517E15F1FB9BE1E008DA5B8 /* LoginVC.swift in Sources */,

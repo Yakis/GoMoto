@@ -19,10 +19,13 @@ extension LoginVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
+        case 0:
+            let headerCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as LoginHeaderCell
+            return headerCell
         case 1:
-            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as LoginCell
-            cell.loginDelegate = self
-            return cell
+            let loginCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as LoginCell
+            loginCell.loginDelegate = self
+            return loginCell
         default:
             return UITableViewCell()
         }
@@ -32,10 +35,12 @@ extension LoginVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
+        case 0:
+            return 240
         case 1:
             return 180
         default:
-            return 50
+            return 240
         }
     }
     
@@ -45,6 +50,7 @@ extension LoginVC: UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(LoginCell.self)
+        tableView.register(LoginHeaderCell.self)
     }
     
     
