@@ -26,7 +26,6 @@ class AditionalInfoVC: UIViewController, UsernameDelegate {
     
     
     func saveUser(with username: String) {
-        print("AditionalInfoVC: \(Auth.auth().currentUser?.description)")
         user.username = username
         TraxUser.save(user: user) { [weak self] (savedUser, error)  in
             guard let savedUser = savedUser else {return}

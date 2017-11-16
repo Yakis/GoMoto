@@ -69,5 +69,11 @@ class LoginVC: UIViewController, LoginDelegate {
     }
     
     
+    
+    @IBAction func cancelLogoinButtonAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 
 }
