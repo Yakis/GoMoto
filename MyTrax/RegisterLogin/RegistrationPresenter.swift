@@ -41,9 +41,9 @@ class RegistrationPresenter {
     }
     
     
-    func showDashboardVC(with user: TraxUser, from viewController: UIViewController?) {
+    func showRiderDashboardVC(from viewController: UIViewController?) {
         guard let viewController = viewController else {return}
-    viewController.present(AppController.createAndReturnRoot(), animated: true, completion: nil)
+    viewController.present(AppController.createAndReturnRiderTabBarController(), animated: true, completion: nil)
     }
     
     

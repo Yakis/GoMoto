@@ -9,7 +9,7 @@
 import UIKit
 
 protocol LoginDelegate: class {
-    func emailLogin(user: TraxUser?, error: Error?)
+    func emailLogin(email: String, password: String)
     func facebookLogin()
 }
 
@@ -33,20 +33,12 @@ class LoginCell: UITableViewCell, ReusableView, NibLoadable {
     @IBAction func loginButtonAction(_ sender: UIButton) {
         guard let email = emailField.text else {return}
         guard let password = passwordField.text else {return}
-        FirebaseManager.signInWithEmail(email: email, password: password) { [weak self] (firebaseUser, error) in
-            guard let firebaseUser = firebaseUser else {
-                return
-            }
-            TraxUser.getUser(for: firebaseUser.uid, completionHandler: { [weak self] (traxUser, error) in
-                self?.loginDelegate?.emailLogin(user: traxUser, error: error)
-            })
-        }
+        self.loginDelegate?.emailLogin(email: email, password: password)
     }
     
     
     
     @IBAction func facebookButtonAction(_ sender: Any) {
-        print("Facebook Login pressed")
         loginDelegate?.facebookLogin()
     }
     

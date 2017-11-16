@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 class AditionalInfoVC: UIViewController, UsernameDelegate {
 
@@ -26,6 +26,7 @@ class AditionalInfoVC: UIViewController, UsernameDelegate {
     
     
     func saveUser(with username: String) {
+        print("AditionalInfoVC: \(Auth.auth().currentUser?.description)")
         user.username = username
         TraxUser.save(user: user) { [weak self] (savedUser, error)  in
             guard let savedUser = savedUser else {return}
@@ -34,7 +35,7 @@ class AditionalInfoVC: UIViewController, UsernameDelegate {
                 case "owner":
                     RegistrationPresenter.shared.showAddTracksVC(with: savedUser, from: self)
                 default:
-                    RegistrationPresenter.shared.showDashboardVC(with: savedUser, from: self)
+                    RegistrationPresenter.shared.showRiderDashboardVC(from: self)
                 }
             }
             guard let error = error else {return}

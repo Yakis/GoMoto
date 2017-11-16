@@ -24,11 +24,20 @@ class LoginVC: UIViewController, LoginDelegate {
     }
 
     
-    func emailLogin(user: TraxUser?, error: Error?) {
-        guard let traxUser = user else {return}
-        DispatchQueue.main.async {
-            self.showVCForUser(user: traxUser)
+    func emailLogin(email: String, password: String) {
+        FirebaseManager.signInWithEmail(email: email, password: password) { [weak self] (firebaseUser, error) in
+            guard let firebaseUser = firebaseUser else {
+                UserAlert.showMessage(from: self, title: "Error", message: (error?.localizedDescription)!)
+                return
+            }
+            TraxUser.getUser(for: firebaseUser.uid, completionHandler: { [weak self] (traxUser, error) in
+                        guard let traxUser = traxUser else {return}
+                        DispatchQueue.main.async {
+                            self?.showVCForUser(user: traxUser)
+                        }
+            })
         }
+
     }
     
     func facebookLogin() {
