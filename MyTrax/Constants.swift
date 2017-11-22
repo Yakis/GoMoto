@@ -28,15 +28,30 @@ struct Endpoints {
     
     struct Users {
         static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/users"
-       // static let baseUrl = "http://192.168.0.27:8080/api/v1/users"
         static let getByUid = "?uid="
     }
-    
+
     struct Tracks {
         static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/tracks"
     }
-    
+
     struct Images {
         static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/images"
     }
+    
+    
+//    struct Users {
+//        static let baseUrl = "http://192.168.0.27:8080/api/v1/users"
+//        static let getByUid = "?uid="
+//    }
+//
+//    struct Tracks {
+//        static let baseUrl = "http://192.168.0.27:8080/api/v1/tracks"
+//    }
+//
+//    struct Images {
+//        static let baseUrl = "http://192.168.0.27:8080/api/v1/images"
+//    }
+    
+    
 }
