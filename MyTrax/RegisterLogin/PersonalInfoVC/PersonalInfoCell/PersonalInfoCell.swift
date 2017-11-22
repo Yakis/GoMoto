@@ -13,7 +13,7 @@ protocol PersonalInfoDelegate: class {
 }
 
 
-class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView {
+class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView, UITextFieldDelegate {
 
     
     @IBOutlet weak var firstNameField: UITextField!
@@ -42,9 +42,35 @@ class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView {
         self.emailField.text = user.email
         self.firstNameField.text = user.first_name
         self.lastNameField.text = user.last_name
+        firstNameField.delegate = self
+        lastNameField.delegate = self
+        emailField.delegate = self
+        phoneNumberField.delegate = self
         
     }
 
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        validatePhoneTextField(textField: textField, character: string)
+        return true
+    }
+    
+    
+    func validatePhoneTextField(textField: UITextField, character: String) {
+        guard let text = textField.text else {return}
+        let string = text + character
+        if string.isValidPhone() {
+            textField.validate()
+        } else {
+            textField.invalidate()
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     @IBAction func buttonAction(_ sender: Any) {
         guard let firstName = self.firstNameField.text else {return}

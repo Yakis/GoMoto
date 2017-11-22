@@ -26,6 +26,13 @@ extension String {
         return emailTest.evaluate(with: self)
     }
     
+    func isValidPhone() -> Bool {
+        let phoneRegEx = "^07([\\d]{3})[(\\D\\s)]?[\\d]{3}[(\\D\\s)]?[\\d]{3}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
+        let result = phoneTest.evaluate(with: self)
+        return result
+    }
+    
 }
 
 
