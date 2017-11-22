@@ -46,7 +46,7 @@ class WelcomeVC: UIViewController {
     func showRegistrationVC(userType: UserType) {
         let registerVC = RegisterVC(nibName: "RegisterVC", bundle: nil)
         registerVC.userType = userType
-       self.present(registerVC, animated: true, completion: nil)
+       self.navigationController?.pushViewController(registerVC, animated: true)
     }
     
     

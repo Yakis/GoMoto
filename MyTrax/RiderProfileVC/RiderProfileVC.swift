@@ -96,6 +96,7 @@ class RiderProfileVC: UIViewController {
        try Auth.auth().signOut()
             let userDefaults = UserDefaults.standard
             userDefaults.removeObject(forKey: "userType")
+            userDefaults.removeObject(forKey: "uid")
         self.present(AppController.createAndReturnRoot(), animated: true, completion: nil)
         } catch {
             print(error.localizedDescription)

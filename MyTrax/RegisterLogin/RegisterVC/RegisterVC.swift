@@ -37,26 +37,6 @@ class RegisterVC: UIViewController {
         facebookButtonOutlet.roundCorners()
         self.userTypeLabel.text = userType.rawValue
         self.userLogoImageView.image = UIImage(named: userType.rawValue)
-        
-        if let accessToken = AccessToken.current {
-            UserAlert.showMessage(from: self, title: "Info", message: "User is already logged in until: \(accessToken.expirationDate)")
-        } else {
-            
-        }
-    }
-
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            
-        }
-    }
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        Auth.auth().removeStateDidChangeListener(handle!)
     }
     
     
@@ -75,7 +55,7 @@ class RegisterVC: UIViewController {
     @IBAction func emailButtonAction(_ sender: Any) {
         let emailRegisterVC = EmailRegistrationVC(nibName: "EmailRegistrationVC", bundle: nil)
         emailRegisterVC.userType = userType.rawValue
-        self.present(emailRegisterVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(emailRegisterVC, animated: true)
         
     }
     

@@ -17,11 +17,9 @@ class RegistrationPresenter {
     
     func showPersonalInfoVC(with user: TraxUser, from viewController: UIViewController?) {
         let personalInfoVC = PersonalInfoVC(nibName: "PersonalInfoVC", bundle: nil)
-        let pers = UINavigationController(rootViewController: personalInfoVC)
         personalInfoVC.user = user
-        pers.navigationController?.title = "Info"
         guard let viewController = viewController else {return}
-        viewController.present(pers, animated: true, completion: nil)
+        viewController.navigationController?.pushViewController(personalInfoVC, animated: true)
     }
     
     

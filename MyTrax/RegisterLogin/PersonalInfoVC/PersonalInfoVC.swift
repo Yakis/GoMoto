@@ -26,9 +26,21 @@ class PersonalInfoVC: UIViewController, PersonalInfoDelegate {
         setupTableView()
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.isUserInteractionEnabled = false
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
     
     
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.hidesBackButton = false
+        navigationController?.navigationBar.isUserInteractionEnabled = true
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
     
     
 }

@@ -27,7 +27,8 @@ class FirebaseManager {
             case .failed(let error):
                 UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
             case .cancelled:
-                UserAlert.showMessage(from: viewController, title: "Error", message: "User canceled login")
+                UserAlert.showMessage(from: viewController, title: "Error", message: "Login canceled")
+                ActivityIndicatorManager.shared.stopActivityIndicator()
             case .success(_, _, let accessToken):
                 let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
                 Auth.auth().signIn(with: credential, completion: { (user, error) in
@@ -36,8 +37,8 @@ class FirebaseManager {
                         UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
                         return
                     }
-                       self.saveAccessToken(for: user)
                     ActivityIndicatorManager.shared.stopActivityIndicator()
+                    save(uid: user.uid)
                         completion(user)
                 })
             }
@@ -64,21 +65,11 @@ class FirebaseManager {
                         return
                     }
                     ActivityIndicatorManager.shared.stopActivityIndicator()
+                    save(uid: user.uid)
                     completion(user)
                 })
             }
         }
-    }
-    
-    
-    
-    
-    static func saveAccessToken(for user: User) {
-//        user.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
-//             guard let tokenString = tokenString else {return}
-//            let userDefaults = UserDefaults.standard
-//            userDefaults.set(tokenString, forKey: "accessToken")
-//        })
     }
     
     
@@ -89,14 +80,9 @@ class FirebaseManager {
                 UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
                 return
             }
-            self.saveAccessToken(for: user)
-            
-            user.getIDTokenForcingRefresh(true, completion: { (tokenString, error) in
-                guard let tokenString = tokenString else {return}
-                print(tokenString)
-            })
             guard let email = user.email else {return}
             let traxUser = TraxUser(id: 0, username: "", email: email, first_name: "", last_name: "", postcode: "", contact_number: "", user_type: userType, avatar: "", device_token: "", firebase_uid: user.uid, created_at: nil, updated_at: nil)
+            save(uid: user.uid)
             completion(traxUser)
         }
     }
@@ -105,11 +91,19 @@ class FirebaseManager {
     static func signInWithEmail(email: String, password: String, completion: @escaping (User?, Error?) -> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if let user = user {
+                save(uid: user.uid)
                 completion(user, nil)
             } else {
                 completion(nil, error)
             }
         }
+    }
+    
+    
+   fileprivate static func save(uid string: String?) {
+    guard let uid = string else {return}
+    print(uid)
+        UserDefaults.standard.setValue(uid, forKey: "uid")
     }
     
     

@@ -11,6 +11,7 @@ import Firebase
 
 class AppController: NSObject {
     
+    
     class func launchDashboardIn(window: UIWindow) {
         window.rootViewController = self.createAndReturnRoot()
         window.makeKeyAndVisible()
@@ -18,11 +19,16 @@ class AppController: NSObject {
     
     class func createAndReturnRoot() -> UIViewController {
         let welcomeViewController = WelcomeVC(nibName: WelcomeNibs.welcomeVC, bundle: nil)
-        switch Auth.auth().currentUser {
+        let navController = UINavigationController(rootViewController: welcomeViewController)
+        navController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navController.navigationBar.shadowImage = UIImage()
+        let uid = UserDefaults.standard.value(forKey: "uid")
+        switch uid {
         case nil:
-            return welcomeViewController
+            return navController
         default:
-            guard let userType = UserDefaults.standard.value(forKey: "userType") as? String else {return welcomeViewController}
+            guard let userType = UserDefaults.standard.value(forKey: "userType") as? String else {return navController}
+            print(userType)
             switch userType {
             case "owner":
                 return AppController.createAndReturnOwnerTabBarController()
