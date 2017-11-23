@@ -55,6 +55,12 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
     }
 
     
+    func setupCell(with user: TraxUser) {
+        self.user = user
+        trackNameField.text = user.username
+    }
+    
+    
     func imageUrlIsReady(imageUrl: String) {
         self.trackProfileImageUrl = imageUrl
     }
