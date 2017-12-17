@@ -24,6 +24,7 @@ class WelcomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        UserAlert.askUserToAcceptPushNotifications()
     }
 
     func setupViews() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OneSignal
 
 class UserAlert {
     
@@ -19,4 +20,35 @@ class UserAlert {
         guard let viewController = viewController else {return}
         viewController.present(alert, animated: true)
     }
+    
+    
+    
+    static func askUserToAcceptPushNotifications() {
+        let current = UNUserNotificationCenter.current()
+        current.getNotificationSettings(completionHandler: {(settings) in
+            if settings.authorizationStatus == .notDetermined {
+                // Notification permission has not been asked yet, go for it!
+                OneSignal.promptForPushNotifications(userResponse: {accepted in
+                    print("Push notifcations accepted = \(accepted)")
+                })
+            }
+            
+            if settings.authorizationStatus == .denied {
+                DispatchQueue.main.async {
+                    // Notification permission was previously denied, go to settings & privacy to re-enable
+                    UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: {(isOn) in
+                        print("Push notifcations accepted = \(isOn)")
+                    })
+                }
+            }
+            if settings.authorizationStatus == .authorized {
+                // Notification permission was already granted
+                print("Push notifcations accepted = ALREADY GRANTED")
+            }
+        })
+    }
+    
+    
+    
+    
 }

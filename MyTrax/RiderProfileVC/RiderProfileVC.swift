@@ -46,43 +46,43 @@ class RiderProfileVC: UIViewController {
     
     
     @IBAction func enableNotificationsAction(_ sender: UISwitch) {
-        let current = UNUserNotificationCenter.current()
-        switch sender.isOn {
-        case true:
-            UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: { [weak self] (isOn) in
-                DispatchQueue.main.async {
-                    self?.notificationsEnabledSwitch.setOn(isOn, animated: true)
-                }
-            })
-        default:
-            current.getNotificationSettings(completionHandler: { [weak self] (settings) in
-                if settings.authorizationStatus == .notDetermined {
-                    // Notification permission has not been asked yet, go for it!
-                    OneSignal.promptForPushNotifications(userResponse: { [weak self] accepted in
-                        DispatchQueue.main.async {
-                            self?.notificationsEnabledSwitch.setOn(accepted, animated: true)
-                        }
-                    })
-                }
-                
-                if settings.authorizationStatus == .denied {
-                    DispatchQueue.main.async {
-                        // Notification permission was previously denied, go to settings & privacy to re-enable
-                        UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: { [weak self] (isOn) in
-                            DispatchQueue.main.async {
-                                self?.notificationsEnabledSwitch.setOn(isOn, animated: true)
-                            }
-                        })
-                    }
-                }
-                if settings.authorizationStatus == .authorized {
-                    // Notification permission was already granted
-                    DispatchQueue.main.async {
-                        self?.notificationsEnabledSwitch.setOn(true, animated: true)
-                    }
-                }
-            })
-        }
+//        let current = UNUserNotificationCenter.current()
+//        switch sender.isOn {
+//        case true:
+//            UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: { [weak self] (isOn) in
+//                DispatchQueue.main.async {
+//                    self?.notificationsEnabledSwitch.setOn(isOn, animated: true)
+//                }
+//            })
+//        default:
+//            current.getNotificationSettings(completionHandler: { [weak self] (settings) in
+//                if settings.authorizationStatus == .notDetermined {
+//                    // Notification permission has not been asked yet, go for it!
+//                    OneSignal.promptForPushNotifications(userResponse: { [weak self] accepted in
+//                        DispatchQueue.main.async {
+//                            self?.notificationsEnabledSwitch.setOn(accepted, animated: true)
+//                        }
+//                    })
+//                }
+//
+//                if settings.authorizationStatus == .denied {
+//                    DispatchQueue.main.async {
+//                        // Notification permission was previously denied, go to settings & privacy to re-enable
+//                        UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: { [weak self] (isOn) in
+//                            DispatchQueue.main.async {
+//                                self?.notificationsEnabledSwitch.setOn(isOn, animated: true)
+//                            }
+//                        })
+//                    }
+//                }
+//                if settings.authorizationStatus == .authorized {
+//                    // Notification permission was already granted
+//                    DispatchQueue.main.async {
+//                        self?.notificationsEnabledSwitch.setOn(true, animated: true)
+//                    }
+//                }
+//            })
+//        }
         
         
         
