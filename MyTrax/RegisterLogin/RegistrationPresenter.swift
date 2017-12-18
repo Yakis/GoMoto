@@ -15,6 +15,8 @@ class RegistrationPresenter {
     
     private init() {}
     
+    
+    // Present requested VC
     func showPersonalInfoVC(with user: TraxUser, from viewController: UIViewController?) {
         let personalInfoVC = PersonalInfoVC(nibName: "PersonalInfoVC", bundle: nil)
         personalInfoVC.user = user
