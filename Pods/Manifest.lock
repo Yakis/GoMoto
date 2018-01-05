@@ -60,7 +60,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - OneSignal (2.6.0)
+  - OneSignal (2.6.1)
 
 DEPENDENCIES:
   - FacebookCore
@@ -87,7 +87,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  OneSignal: 4786d2ed24ea315ceff66d83cbd418af0cc94311
+  OneSignal: 5143194173b05027f89ce5c4481943ce000c87cd
 
 PODFILE CHECKSUM: e697c8c0b7cca4be736e40d7076f0d4c18fe6e94
 
