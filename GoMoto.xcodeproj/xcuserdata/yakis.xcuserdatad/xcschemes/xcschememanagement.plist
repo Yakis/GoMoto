@@ -4,10 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MyTrax.xcscheme</key>
+		<key>GoMoto.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>13</integer>
 		</dict>
 		<key>OneSignalNotificationServiceExtension.xcscheme</key>
 		<dict>
@@ -18,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1521D8981F8BF40A00105C17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>159EF69F1FB610E500B1C0EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

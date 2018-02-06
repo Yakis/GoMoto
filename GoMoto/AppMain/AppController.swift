@@ -49,8 +49,8 @@ class AppController: NSObject {
         
         let favoritesVC = UIViewController()
         let navFavorites = UINavigationController(rootViewController: favoritesVC)
-        navFavorites.navigationBar.topItem?.title = "Favorite"
-        favoritesVC.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favoriteTabBarFull"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
+        navFavorites.navigationBar.topItem?.title = "My Tracks"
+        favoritesVC.tabBarItem = UITabBarItem(title: "My Tracks", image: #imageLiteral(resourceName: "favoriteTabBarFull"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
         
         let riderProfileVC = RiderProfileVC(nibName: "RiderProfileVC", bundle: nil)
         let navRiderVC = UINavigationController(rootViewController: riderProfileVC)
@@ -82,8 +82,8 @@ class AppController: NSObject {
 
         let favoritesVC = UIViewController()
         let navFavorites = UINavigationController(rootViewController: favoritesVC)
-        navFavorites.navigationBar.topItem?.title = "Favorite"
-        favoritesVC.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favoriteTabBarFull"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
+        navFavorites.navigationBar.topItem?.title = "My Tracks"
+        favoritesVC.tabBarItem = UITabBarItem(title: "My Tracks", image: #imageLiteral(resourceName: "favoriteTabBarFull"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
 
         let riderProfileVC = RiderProfileVC(nibName: "RiderProfileVC", bundle: nil)
         let navRiderVC = UINavigationController(rootViewController: riderProfileVC)
