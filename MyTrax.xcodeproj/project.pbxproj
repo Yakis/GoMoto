@@ -36,7 +36,6 @@
 		1541F2A61F9B85290078B2FB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1541F2A51F9B85290078B2FB /* FirebaseManager.swift */; };
 		154B96B81FA3AC7700FF71E2 /* LogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B96B61FA3AC7700FF71E2 /* LogoCell.swift */; };
 		154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154B96B71FA3AC7700FF71E2 /* LogoCell.xib */; };
-		154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */; };
 		154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */; };
 		154C71BD1F8E955200EBAFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C71BC1F8E955200EBAFFF /* User.swift */; };
 		1565C0521FA7360B00A95B46 /* PersonalInfoTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565C0511FA7360B00A95B46 /* PersonalInfoTVExt.swift */; };
@@ -56,6 +55,7 @@
 		1584F9351FB24A2A00FD78B5 /* AllTracksTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584F9341FB24A2A00FD78B5 /* AllTracksTVExt.swift */; };
 		1584F9381FB30E5C00FD78B5 /* RiderProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584F9361FB30E5C00FD78B5 /* RiderProfileVC.swift */; };
 		1584F9391FB30E5C00FD78B5 /* RiderProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584F9371FB30E5C00FD78B5 /* RiderProfileVC.xib */; };
+		1586E76B2029A08A009E49B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1586E76A2029A08A009E49B0 /* GoogleService-Info.plist */; };
 		159EF6A31FB610E500B1C0EE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EF6A21FB610E500B1C0EE /* NotificationService.swift */; };
 		159EF6A71FB610E500B1C0EE /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 159EF6A01FB610E500B1C0EE /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AECC1F8E64FA00ABBFA6 /* Shackable.swift */; };
@@ -146,7 +146,6 @@
 		1541F2A51F9B85290078B2FB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		154B96B61FA3AC7700FF71E2 /* LogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCell.swift; sourceTree = "<group>"; };
 		154B96B71FA3AC7700FF71E2 /* LogoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoCell.xib; sourceTree = "<group>"; };
-		154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		154C71BA1F8E86F300EBAFFF /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		154C71BC1F8E955200EBAFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1565C0511FA7360B00A95B46 /* PersonalInfoTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTVExt.swift; sourceTree = "<group>"; };
@@ -166,6 +165,7 @@
 		1584F9341FB24A2A00FD78B5 /* AllTracksTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTracksTVExt.swift; sourceTree = "<group>"; };
 		1584F9361FB30E5C00FD78B5 /* RiderProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderProfileVC.swift; sourceTree = "<group>"; };
 		1584F9371FB30E5C00FD78B5 /* RiderProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiderProfileVC.xib; sourceTree = "<group>"; };
+		1586E76A2029A08A009E49B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		159EF6A01FB610E500B1C0EE /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		159EF6A21FB610E500B1C0EE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		159EF6A41FB610E500B1C0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -371,7 +371,7 @@
 		1541F2A21F9B82D10078B2FB /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				154C71B81F8E813000EBAFFF /* GoogleService-Info.plist */,
+				1586E76A2029A08A009E49B0 /* GoogleService-Info.plist */,
 				1521D8A31F8BF40A00105C17 /* Assets.xcassets */,
 				1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */,
 				1521D8A81F8BF40A00105C17 /* Info.plist */,
@@ -722,6 +722,7 @@
 				15F78EB01FAA4AE800241AB0 /* AddTrackFieldsCell.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				15A934A71FBC56C00020F05C /* LoginHeaderCell.xib in Resources */,
+				1586E76B2029A08A009E49B0 /* GoogleService-Info.plist in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				15F78EB91FAA570800241AB0 /* LocateTrackVC.xib in Resources */,
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
@@ -863,7 +864,6 @@
 				156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */,
 				15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */,
 				15F4951C1FA8F1FB0021340E /* LocationManager.swift in Sources */,
-				154C71B91F8E81CC00EBAFFF /* GoogleService-Info.plist in Sources */,
 				15F78EAF1FAA4AE800241AB0 /* AddTrackFieldsCell.swift in Sources */,
 				15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */,
 				1584F9351FB24A2A00FD78B5 /* AllTracksTVExt.swift in Sources */,

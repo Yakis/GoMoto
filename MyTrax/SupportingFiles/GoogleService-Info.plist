@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1033756512406-c5fo8c6fnt56dv22h4ohua7ulg83si53.apps.googleusercontent.com</string>
+	<string>98509282790-l8vd5ivpbdlkqvupq48l4q2j92u22uov.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1033756512406-c5fo8c6fnt56dv22h4ohua7ulg83si53</string>
+	<string>com.googleusercontent.apps.98509282790-l8vd5ivpbdlkqvupq48l4q2j92u22uov</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCo9g4-jtyiZEJELt4YeM_D9vEHPKnRKS8</string>
+	<string>AIzaSyAj_O-qLdASGVaFf97Sxa-7VujoqxeTsG4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1033756512406</string>
+	<string>98509282790</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.yakis.MyTrax</string>
+	<string>com.yakis.GoMoto</string>
 	<key>PROJECT_ID</key>
-	<string>mytrax-47920</string>
+	<string>go-moto-874f5</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mytrax-47920.appspot.com</string>
+	<string>go-moto-874f5.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1033756512406:ios:ed54d3b6b4a1d554</string>
+	<string>1:98509282790:ios:8add149f1f93ab8b</string>
 	<key>DATABASE_URL</key>
-	<string>https://mytrax-47920.firebaseio.com</string>
+	<string>https://go-moto-874f5.firebaseio.com</string>
 </dict>
 </plist>
