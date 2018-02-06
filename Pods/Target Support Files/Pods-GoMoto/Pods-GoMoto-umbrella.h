@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_MyTraxVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_MyTraxVersionString[];
+FOUNDATION_EXPORT double Pods_GoMotoVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_GoMotoVersionString[];
 
