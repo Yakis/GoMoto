@@ -12,8 +12,8 @@ import Firebase
 class RestAPIManager {
     
     static let shared = RestAPIManager()
-    
     private init() {}
+    
     
     func getData() {
         let urlString = "https://swift.mrgott.pro/blog.json"

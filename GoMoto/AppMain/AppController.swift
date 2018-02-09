@@ -47,10 +47,10 @@ class AppController: NSObject {
         navAllTracks.navigationBar.topItem?.title = "Tracks"
         allTracksVC.tabBarItem = UITabBarItem(title: "Tracks", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
         
-        let favoritesVC = UIViewController()
-        let navFavorites = UINavigationController(rootViewController: favoritesVC)
-        navFavorites.navigationBar.topItem?.title = "My Tracks"
-        favoritesVC.tabBarItem = UITabBarItem(title: "My Tracks", image: #imageLiteral(resourceName: "favoriteTabBarFull"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
+        let myTracks = UIViewController()
+        let navMyTracks = UINavigationController(rootViewController: myTracks)
+        navMyTracks.navigationBar.topItem?.title = "My Tracks"
+        myTracks.tabBarItem = UITabBarItem(title: "My Tracks", image: #imageLiteral(resourceName: "favoriteTabBarFull"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))
         
         let riderProfileVC = RiderProfileVC(nibName: "RiderProfileVC", bundle: nil)
         let navRiderVC = UINavigationController(rootViewController: riderProfileVC)
@@ -65,7 +65,7 @@ class AppController: NSObject {
         sellingVC.view.backgroundColor = UIColor.mediumGray
         sellingVC.tabBarItem = UITabBarItem(title: "Selling", image: #imageLiteral(resourceName: "sellTabBar"), selectedImage: #imageLiteral(resourceName: "sellTabBar"))
         
-        let viewControllers = [navAllTracks, navFavorites, navRiderVC, navNotifications, navSelling]
+        let viewControllers = [navAllTracks, navMyTracks, navRiderVC, navNotifications, navSelling]
         tabBarController.viewControllers = viewControllers
         return tabBarController
     }

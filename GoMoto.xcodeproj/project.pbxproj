@@ -62,6 +62,7 @@
 		15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */; };
 		15A934A61FBC56C00020F05C /* LoginHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A934A41FBC56C00020F05C /* LoginHeaderCell.swift */; };
 		15A934A71FBC56C00020F05C /* LoginHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A934A51FBC56C00020F05C /* LoginHeaderCell.xib */; };
+		15A9FAF1202DDEE1001E05BD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A9FAF0202DDEE1001E05BD /* Post.swift */; };
 		15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE891FA0DC6600298E51 /* Utils.swift */; };
 		15BDBE8F1FA0EF0E00298E51 /* EmailRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */; };
 		15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */; };
@@ -173,6 +174,7 @@
 		15A7AED11F8E75D800ABBFA6 /* Rotatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		15A934A41FBC56C00020F05C /* LoginHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeaderCell.swift; sourceTree = "<group>"; };
 		15A934A51FBC56C00020F05C /* LoginHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHeaderCell.xib; sourceTree = "<group>"; };
+		15A9FAF0202DDEE1001E05BD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		15BDBE891FA0DC6600298E51 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		15BDBE8D1FA0EF0E00298E51 /* EmailRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRegistrationVC.swift; sourceTree = "<group>"; };
 		15BDBE8E1FA0EF0E00298E51 /* EmailRegistrationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailRegistrationVC.xib; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 			children = (
 				154C71BC1F8E955200EBAFFF /* User.swift */,
 				15F78EB21FAA4C5800241AB0 /* Track.swift */,
+				15A9FAF0202DDEE1001E05BD /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -866,6 +869,7 @@
 				154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */,
 				15F78EB51FAA513500241AB0 /* AddTracksTVExt.swift in Sources */,
 				15248EDA1FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift in Sources */,
+				15A9FAF1202DDEE1001E05BD /* Post.swift in Sources */,
 				15EEF3771FA615F200E75A4F /* RegistrationPresenter.swift in Sources */,
 				156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */,
 				15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */,
