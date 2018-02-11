@@ -16,8 +16,8 @@ class AllTracksVC: UIViewController {
     
     var tracks: [Track] = [] {
         didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
             }
         }
     }
@@ -27,7 +27,6 @@ class AllTracksVC: UIViewController {
         super.viewDidLoad()
         setupTableView()
         getAllTracks()
-        getAllPosts()
     }
 
     
@@ -40,14 +39,6 @@ class AllTracksVC: UIViewController {
     
 
     
-    func getAllPosts() {
-        Post.getAllPosts { (posts, error) in
-            guard let posts = posts else {
-                print(error?.localizedDescription)
-                return
-            }
-            print("Here's your post: \(posts.first?.content) by --\(posts.first?.track_name)--")
-        }
-    }
+    
     
 }

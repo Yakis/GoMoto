@@ -73,6 +73,11 @@
 		15C7B3AF1FA75000001B1A8E /* AditionalInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C7B3AD1FA75000001B1A8E /* AditionalInfoVC.xib */; };
 		15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D108BB1F8E7BC400043F02 /* RegisterVC.swift */; };
 		15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D108BC1F8E7BC400043F02 /* RegisterVC.xib */; };
+		15D91DFE20308C00008FDF17 /* PostsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D91DFC20308C00008FDF17 /* PostsFeedVC.swift */; };
+		15D91DFF20308C00008FDF17 /* PostsFeedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D91DFD20308C00008FDF17 /* PostsFeedVC.xib */; };
+		15D91E0220308D3C008FDF17 /* PostsFeedTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D91E0120308D3C008FDF17 /* PostsFeedTVExt.swift */; };
+		15D91E0520308DBD008FDF17 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D91E0320308DBD008FDF17 /* PostCell.swift */; };
+		15D91E0620308DBD008FDF17 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D91E0420308DBD008FDF17 /* PostCell.xib */; };
 		15EEF3771FA615F200E75A4F /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */; };
 		15F4951C1FA8F1FB0021340E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F4951B1FA8F1FB0021340E /* LocationManager.swift */; };
 		15F78EA51FAA3E0000241AB0 /* AddTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F78EA31FAA3E0000241AB0 /* AddTracksVC.swift */; };
@@ -185,6 +190,11 @@
 		15C7B3AD1FA75000001B1A8E /* AditionalInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AditionalInfoVC.xib; sourceTree = "<group>"; };
 		15D108BB1F8E7BC400043F02 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		15D108BC1F8E7BC400043F02 /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		15D91DFC20308C00008FDF17 /* PostsFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsFeedVC.swift; sourceTree = "<group>"; };
+		15D91DFD20308C00008FDF17 /* PostsFeedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsFeedVC.xib; sourceTree = "<group>"; };
+		15D91E0120308D3C008FDF17 /* PostsFeedTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsFeedTVExt.swift; sourceTree = "<group>"; };
+		15D91E0320308DBD008FDF17 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		15D91E0420308DBD008FDF17 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		15F4951B1FA8F1FB0021340E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		15F78EA31FAA3E0000241AB0 /* AddTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTracksVC.swift; sourceTree = "<group>"; };
@@ -291,6 +301,7 @@
 				15248ED81FB06EFD00EA0DD5 /* ActivityIndicatorManager */,
 				1584F92E1FB22CB700FD78B5 /* AllTracksVC */,
 				1584F93A1FB30E6300FD78B5 /* RiderProfileVC */,
+				15D91E0020308C07008FDF17 /* PostsFeedVC */,
 			);
 			path = GoMoto;
 			sourceTree = "<group>";
@@ -556,6 +567,26 @@
 			path = AditionalInfoVC;
 			sourceTree = "<group>";
 		};
+		15D91E0020308C07008FDF17 /* PostsFeedVC */ = {
+			isa = PBXGroup;
+			children = (
+				15D91DFC20308C00008FDF17 /* PostsFeedVC.swift */,
+				15D91DFD20308C00008FDF17 /* PostsFeedVC.xib */,
+				15D91E0120308D3C008FDF17 /* PostsFeedTVExt.swift */,
+				15D91E0720308DC1008FDF17 /* PostCell */,
+			);
+			path = PostsFeedVC;
+			sourceTree = "<group>";
+		};
+		15D91E0720308DC1008FDF17 /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				15D91E0320308DBD008FDF17 /* PostCell.swift */,
+				15D91E0420308DBD008FDF17 /* PostCell.xib */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
 		15F78EA71FAA3E0400241AB0 /* AddTracksVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +752,7 @@
 				1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */,
 				1584F9391FB30E5C00FD78B5 /* RiderProfileVC.xib in Resources */,
 				15150A191FA735AA00448B3A /* PersonalInfoVC.xib in Resources */,
+				15D91E0620308DBD008FDF17 /* PostCell.xib in Resources */,
 				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
 				1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */,
 				15C7B3AA1FA744FA001B1A8E /* InfoLogoCell.xib in Resources */,
@@ -738,6 +770,7 @@
 				15110BC41FBB0646005411BE /* LoginCell.xib in Resources */,
 				1526A3091FAB971600346F4F /* AdminVC.xib in Resources */,
 				152D23251FA3700C0032F789 /* EmailRegistrationCell.xib in Resources */,
+				15D91DFF20308C00008FDF17 /* PostsFeedVC.xib in Resources */,
 				1568C5181F8BF5610018D52B /* WelcomeVC.xib in Resources */,
 				15248EDE1FB0C72100EA0DD5 /* AditionalInfoCell.xib in Resources */,
 				15F78EAB1FAA4A6900241AB0 /* AddTrackTitleCell.xib in Resources */,
@@ -879,7 +912,9 @@
 				1584F9351FB24A2A00FD78B5 /* AllTracksTVExt.swift in Sources */,
 				15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */,
 				152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */,
+				15D91E0520308DBD008FDF17 /* PostCell.swift in Sources */,
 				156E10351FAF43F8008F2C40 /* TrackImageCell.swift in Sources */,
+				15D91E0220308D3C008FDF17 /* PostsFeedTVExt.swift in Sources */,
 				15248ED71FB06CC700EA0DD5 /* ActivityIndicatorManager.swift in Sources */,
 				156C48A31FBAF9EF00D8B666 /* LoginTVExt.swift in Sources */,
 				15F78EAA1FAA4A6900241AB0 /* AddTrackTitleCell.swift in Sources */,
@@ -898,6 +933,7 @@
 				15F78EB31FAA4C5800241AB0 /* Track.swift in Sources */,
 				152D232D1FA372E50032F789 /* TableViewExt.swift in Sources */,
 				1568C5171F8BF5610018D52B /* WelcomeVC.swift in Sources */,
+				15D91DFE20308C00008FDF17 /* PostsFeedVC.swift in Sources */,
 				15A934A61FBC56C00020F05C /* LoginHeaderCell.swift in Sources */,
 				15F78EB81FAA570800241AB0 /* LocateTrackVC.swift in Sources */,
 				15110BC31FBB0646005411BE /* LoginCell.swift in Sources */,

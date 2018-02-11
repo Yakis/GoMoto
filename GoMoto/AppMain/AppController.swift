@@ -42,10 +42,15 @@ class AppController: NSObject {
      class func createAndReturnRiderTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
         
-        let allTracksVC = AllTracksVC(nibName: "AllTracksVC", bundle: nil)
-        let navAllTracks = UINavigationController(rootViewController: allTracksVC)
-        navAllTracks.navigationBar.topItem?.title = "Tracks"
-        allTracksVC.tabBarItem = UITabBarItem(title: "Tracks", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
+//        let allTracksVC = AllTracksVC(nibName: "AllTracksVC", bundle: nil)
+//        let navAllTracks = UINavigationController(rootViewController: allTracksVC)
+//        navAllTracks.navigationBar.topItem?.title = "Tracks"
+//        allTracksVC.tabBarItem = UITabBarItem(title: "Tracks", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
+        
+        let postsFeedVC = PostsFeedVC(nibName: "PostsFeedVC", bundle: nil)
+        let navPostsFeed = UINavigationController(rootViewController: postsFeedVC)
+        navPostsFeed.navigationBar.topItem?.title = "Posts"
+        postsFeedVC.tabBarItem = UITabBarItem(title: "Posts", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
         
         let myTracks = UIViewController()
         let navMyTracks = UINavigationController(rootViewController: myTracks)
@@ -65,7 +70,7 @@ class AppController: NSObject {
         sellingVC.view.backgroundColor = UIColor.mediumGray
         sellingVC.tabBarItem = UITabBarItem(title: "Selling", image: #imageLiteral(resourceName: "sellTabBar"), selectedImage: #imageLiteral(resourceName: "sellTabBar"))
         
-        let viewControllers = [navAllTracks, navMyTracks, navRiderVC, navNotifications, navSelling]
+        let viewControllers = [navPostsFeed, navMyTracks, navRiderVC, navNotifications, navSelling]
         tabBarController.viewControllers = viewControllers
         return tabBarController
     }
@@ -75,11 +80,17 @@ class AppController: NSObject {
      class func createAndReturnOwnerTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
         
-        let allTracksVC = AllTracksVC(nibName: "AllTracksVC", bundle: nil)
-        let navAllTracks = UINavigationController(rootViewController: allTracksVC)
-        navAllTracks.navigationBar.topItem?.title = "Tracks"
-        allTracksVC.tabBarItem = UITabBarItem(title: "Tracks", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
+//        let allTracksVC = AllTracksVC(nibName: "AllTracksVC", bundle: nil)
+//        let navAllTracks = UINavigationController(rootViewController: allTracksVC)
+//        navAllTracks.navigationBar.topItem?.title = "Tracks"
+//        allTracksVC.tabBarItem = UITabBarItem(title: "Tracks", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
 
+        
+        let postsFeedVC = PostsFeedVC(nibName: "PostsFeedVC", bundle: nil)
+        let navPostsFeed = UINavigationController(rootViewController: postsFeedVC)
+        navPostsFeed.navigationBar.topItem?.title = "Posts"
+        postsFeedVC.tabBarItem = UITabBarItem(title: "Posts", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
+        
         let favoritesVC = UIViewController()
         let navFavorites = UINavigationController(rootViewController: favoritesVC)
         navFavorites.navigationBar.topItem?.title = "My Tracks"
@@ -99,7 +110,7 @@ class AppController: NSObject {
         sellingVC.view.backgroundColor = UIColor.mediumGray
         sellingVC.tabBarItem = UITabBarItem(title: "Selling", image: #imageLiteral(resourceName: "sellTabBar"), selectedImage: #imageLiteral(resourceName: "sellTabBar"))
 
-        let viewControllers = [navAllTracks, navFavorites, navRiderVC, navNotifications, navSelling]
+        let viewControllers = [navPostsFeed, navFavorites, navRiderVC, navNotifications, navSelling]
         tabBarController.viewControllers = viewControllers
         return tabBarController
     }
