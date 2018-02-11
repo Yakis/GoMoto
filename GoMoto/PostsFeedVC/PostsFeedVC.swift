@@ -30,6 +30,8 @@ class PostsFeedVC: UIViewController {
         super.viewDidLoad()
         setupTableView()
         getAllPosts()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
     }
 
    
