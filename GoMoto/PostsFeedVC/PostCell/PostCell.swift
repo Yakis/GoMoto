@@ -14,7 +14,7 @@ class PostCell: UITableViewCell, NibLoadable, ReusableView {
     
     @IBOutlet weak var trackIcon: UIImageView!
     @IBOutlet weak var trackNameLabel: UILabel!
-    @IBOutlet weak var contentLabel: UITextView!
+    @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var commentsButtonLabel: UIButton!
     @IBOutlet weak var dateTimeLabel: UILabel!
     
@@ -34,6 +34,7 @@ class PostCell: UITableViewCell, NibLoadable, ReusableView {
     func setupCell(with post: Post) {
         contentLabel.text = post.content
         trackNameLabel.text = post.track_name
+        dateTimeLabel.text = post.created_at.shortDate()
         guard let trackIconUrl = URL(string: post.track_icon) else {return}
         trackIcon.kf.setImage(with: trackIconUrl)
         

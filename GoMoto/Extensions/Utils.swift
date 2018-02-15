@@ -12,6 +12,15 @@ import Foundation
 
 extension String {
     
+    func shortDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        guard let date = dateFormatter.date(from:self) else {return "Invalid date format"}
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let convertedDate = dateFormatter.string(from: date)
+        return String(describing: convertedDate)
+    }
+    
     func splitName() -> [String] {
         return self.components(separatedBy: " ")
     }

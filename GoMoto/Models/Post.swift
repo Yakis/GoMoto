@@ -16,6 +16,8 @@ struct Post: Codable {
     var track_id: Int
     var track_name: String
     var track_icon: String
+    var created_at: String
+    var updated_at: String
     
     
     
