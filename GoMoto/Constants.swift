@@ -25,6 +25,8 @@ struct Endpoints {
     
     static let getAll = "/all"
     static let createNew = "/create"
+    static let likes = "/likes"
+    static let likesCount = "/post?id="
     
     struct Users {
         static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/users"
@@ -38,7 +40,8 @@ struct Endpoints {
     struct Posts {
         static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/posts"
     }
-
+    
+    
     struct Images {
         static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/images"
     }

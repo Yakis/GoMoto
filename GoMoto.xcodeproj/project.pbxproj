@@ -90,6 +90,7 @@
 		15F78EB51FAA513500241AB0 /* AddTracksTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F78EB41FAA513500241AB0 /* AddTracksTVExt.swift */; };
 		15F78EB81FAA570800241AB0 /* LocateTrackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F78EB61FAA570800241AB0 /* LocateTrackVC.swift */; };
 		15F78EB91FAA570800241AB0 /* LocateTrackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F78EB71FAA570800241AB0 /* LocateTrackVC.xib */; };
+		15FFB7FD2035E93300BEF10C /* PostLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FFB7FC2035E93300BEF10C /* PostLike.swift */; };
 		4BEC3CBE51EC2356CA33964A /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFECA23FD8E5F95B4E6E358 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		8536CF6BB2FD32E3785B2F00 /* Pods_GoMoto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CC1A0941DA41243E3E5FC9 /* Pods_GoMoto.framework */; };
 /* End PBXBuildFile section */
@@ -207,6 +208,7 @@
 		15F78EB41FAA513500241AB0 /* AddTracksTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTracksTVExt.swift; sourceTree = "<group>"; };
 		15F78EB61FAA570800241AB0 /* LocateTrackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateTrackVC.swift; sourceTree = "<group>"; };
 		15F78EB71FAA570800241AB0 /* LocateTrackVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocateTrackVC.xib; sourceTree = "<group>"; };
+		15FFB7FC2035E93300BEF10C /* PostLike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLike.swift; sourceTree = "<group>"; };
 		1F1E609FA35768A1E6270880 /* Pods-GoMoto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoMoto.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoMoto/Pods-GoMoto.release.xcconfig"; sourceTree = "<group>"; };
 		21EF99C86E5B2EE0F63B9D2B /* Pods-MyTrax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrax.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTrax/Pods-MyTrax.release.xcconfig"; sourceTree = "<group>"; };
 		37C7282D26FB43B4F6B74511 /* Pods-GoMoto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoMoto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoMoto/Pods-GoMoto.debug.xcconfig"; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				154C71BC1F8E955200EBAFFF /* User.swift */,
 				15F78EB21FAA4C5800241AB0 /* Track.swift */,
 				15A9FAF0202DDEE1001E05BD /* Post.swift */,
+				15FFB7FC2035E93300BEF10C /* PostLike.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -941,6 +944,7 @@
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
 				152D232F1FA374F60032F789 /* EmailRegTVExtension.swift in Sources */,
 				1584F92C1FB22CB400FD78B5 /* AllTracksVC.swift in Sources */,
+				15FFB7FD2035E93300BEF10C /* PostLike.swift in Sources */,
 				154C71BD1F8E955200EBAFFF /* User.swift in Sources */,
 				156E10321FAF3CEE008F2C40 /* CameraExtension.swift in Sources */,
 				15F78EA51FAA3E0000241AB0 /* AddTracksVC.swift in Sources */,
