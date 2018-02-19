@@ -73,6 +73,7 @@ struct TraxUser: Codable {
                     completionHandler(user, nil)
                     let userDefaults = UserDefaults.standard
                     userDefaults.set(user.user_type, forKey: "userType")
+                    userDefaults.set(user.id, forKey: "userId")
                 } catch {
                     completionHandler(nil, error)
                 }

@@ -28,6 +28,13 @@ extension OwnerTracksVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let track = tracks[indexPath.row]
+        let trackDetailsVC = OwnerTrackDetails(nibName: "OwnerTrackDetails", bundle: nil)
+        trackDetailsVC.track = track
+        self.navigationController?.pushViewController(trackDetailsVC, animated: true)
+    }
+    
     
     func setupTableView () {
         tableView.delegate = self

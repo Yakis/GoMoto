@@ -13,7 +13,7 @@ class OwnerTracksVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var user: TraxUser!
     var tracks: [Track] = [] {
         didSet {
             DispatchQueue.main.async { [weak self] in
@@ -27,12 +27,39 @@ class OwnerTracksVC: UIViewController {
         super.viewDidLoad()
         setupTableView()
         getOwnerTracks()
+        getCurrentUser()
+        setupAddTrackButton()
     }
 
+    
+    func getCurrentUser() {
+        guard let uid = UserDefaults.standard.value(forKey: "uid") as? String else {return}
+        TraxUser.getUser(for: uid) { [weak self] (user, error) in
+            guard let user = user else {return}
+            self?.user = user
+        }
+    }
+    
+    
+    func setupAddTrackButton() {
+        let addTrackButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(OwnerTracksVC.addTrackButtonAction))
+        self.navigationItem.rightBarButtonItem = addTrackButton
+    }
+    
 
+    @objc func addTrackButtonAction() {
+        let addTrackVC = AddTracksVC(nibName: "AddTracksVC", bundle: nil)
+        addTrackVC.user = user
+        self.navigationController?.pushViewController(addTrackVC, animated: true)
+    }
+    
     
     func getOwnerTracks () {
-        Track.getTracksByOwner(ownerId: 1) { [weak self] (tracks, error) in
+        guard let userId: Int = UserDefaults.standard.value(forKey: "userId") as? Int else {
+            print("No user id found!")
+            return
+        }
+        Track.getTracksByOwner(ownerId: userId) { [weak self] (tracks, error) in
             guard let tracks = tracks else {
                 print(error?.localizedDescription)
                 return
