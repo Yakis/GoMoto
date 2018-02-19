@@ -38,7 +38,7 @@ class PostCell: UITableViewCell, NibLoadable, ReusableView {
         self.post = post
         contentLabel.text = post.content
         trackNameLabel.text = post.track_name
-        dateTimeLabel.text = post.created_at.shortDate()
+        dateTimeLabel.text = post.created_at?.shortDate()
         likesCountLabel.text = "Likes [\(post.likes_count)]"
         guard let trackIconUrl = URL(string: post.track_icon) else {return}
         trackIcon.kf.setImage(with: trackIconUrl)
@@ -54,7 +54,7 @@ class PostCell: UITableViewCell, NibLoadable, ReusableView {
 
 
     @objc func likeAction() {
-        let like = PostLike(user_id: 1, post_id: post.id)
+        let like = PostLike(user_id: 1, post_id: post.id!)
         PostLike.likePost(like: like) { (newPost, error) in
             if let newPost = newPost {
                 DispatchQueue.main.async {

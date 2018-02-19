@@ -11,6 +11,7 @@ import Firebase
 
 struct Track: Codable {
 
+    var id: Int?
     var name: String
     var adress: String
     var postcode: String

@@ -22,6 +22,7 @@ class OwnerTrackDetails: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
     }
 
     

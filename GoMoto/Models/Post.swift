@@ -11,14 +11,14 @@ import Firebase
 
 struct Post: Codable {
     
-    var id: Int
+    var id: Int?
     var content: String
     var image: String
     var track_id: Int
     var track_name: String
     var track_icon: String
-    var created_at: String
-    var updated_at: String
+    var created_at: String?
+    var updated_at: String?
     var likes_count: Int
     var comments_count: Int
     
@@ -34,8 +34,8 @@ struct Post: Codable {
         let encoder = JSONEncoder()
         let decoder = JSONDecoder()
         do {
-            let newTrackAsJSON = try encoder.encode(post)
-            request.httpBody = newTrackAsJSON
+            let newPostAsJSON = try encoder.encode(post)
+            request.httpBody = newPostAsJSON
         } catch {
             print(error.localizedDescription)
             completionHandler(nil, error)
