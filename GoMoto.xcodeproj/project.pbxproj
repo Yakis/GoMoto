@@ -78,6 +78,11 @@
 		15D91E0220308D3C008FDF17 /* PostsFeedTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D91E0120308D3C008FDF17 /* PostsFeedTVExt.swift */; };
 		15D91E0520308DBD008FDF17 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D91E0320308DBD008FDF17 /* PostCell.swift */; };
 		15D91E0620308DBD008FDF17 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D91E0420308DBD008FDF17 /* PostCell.xib */; };
+		15E65C29203AED870019DA91 /* OwnerTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E65C27203AED870019DA91 /* OwnerTracksVC.swift */; };
+		15E65C2A203AED870019DA91 /* OwnerTracksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15E65C28203AED870019DA91 /* OwnerTracksVC.xib */; };
+		15E65C2D203AF3A30019DA91 /* OwnerTracksTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E65C2C203AF3A30019DA91 /* OwnerTracksTVExt.swift */; };
+		15E65C30203AF3F60019DA91 /* OwnerTrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E65C2E203AF3F60019DA91 /* OwnerTrackListCell.swift */; };
+		15E65C31203AF3F60019DA91 /* OwnerTrackListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15E65C2F203AF3F60019DA91 /* OwnerTrackListCell.xib */; };
 		15EEF3771FA615F200E75A4F /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */; };
 		15F4951C1FA8F1FB0021340E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F4951B1FA8F1FB0021340E /* LocationManager.swift */; };
 		15F78EA51FAA3E0000241AB0 /* AddTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F78EA31FAA3E0000241AB0 /* AddTracksVC.swift */; };
@@ -196,6 +201,11 @@
 		15D91E0120308D3C008FDF17 /* PostsFeedTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsFeedTVExt.swift; sourceTree = "<group>"; };
 		15D91E0320308DBD008FDF17 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		15D91E0420308DBD008FDF17 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		15E65C27203AED870019DA91 /* OwnerTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerTracksVC.swift; sourceTree = "<group>"; };
+		15E65C28203AED870019DA91 /* OwnerTracksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerTracksVC.xib; sourceTree = "<group>"; };
+		15E65C2C203AF3A30019DA91 /* OwnerTracksTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerTracksTVExt.swift; sourceTree = "<group>"; };
+		15E65C2E203AF3F60019DA91 /* OwnerTrackListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerTrackListCell.swift; sourceTree = "<group>"; };
+		15E65C2F203AF3F60019DA91 /* OwnerTrackListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerTrackListCell.xib; sourceTree = "<group>"; };
 		15EEF3761FA615F200E75A4F /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		15F4951B1FA8F1FB0021340E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		15F78EA31FAA3E0000241AB0 /* AddTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTracksVC.swift; sourceTree = "<group>"; };
@@ -304,6 +314,7 @@
 				1584F92E1FB22CB700FD78B5 /* AllTracksVC */,
 				1584F93A1FB30E6300FD78B5 /* RiderProfileVC */,
 				15D91E0020308C07008FDF17 /* PostsFeedVC */,
+				15E65C2B203AED910019DA91 /* OwnerTracksVC */,
 			);
 			path = GoMoto;
 			sourceTree = "<group>";
@@ -590,6 +601,26 @@
 			path = PostCell;
 			sourceTree = "<group>";
 		};
+		15E65C2B203AED910019DA91 /* OwnerTracksVC */ = {
+			isa = PBXGroup;
+			children = (
+				15E65C27203AED870019DA91 /* OwnerTracksVC.swift */,
+				15E65C28203AED870019DA91 /* OwnerTracksVC.xib */,
+				15E65C2C203AF3A30019DA91 /* OwnerTracksTVExt.swift */,
+				15E65C32203AF3FF0019DA91 /* OwnerTrackListCell */,
+			);
+			path = OwnerTracksVC;
+			sourceTree = "<group>";
+		};
+		15E65C32203AF3FF0019DA91 /* OwnerTrackListCell */ = {
+			isa = PBXGroup;
+			children = (
+				15E65C2E203AF3F60019DA91 /* OwnerTrackListCell.swift */,
+				15E65C2F203AF3F60019DA91 /* OwnerTrackListCell.xib */,
+			);
+			path = OwnerTrackListCell;
+			sourceTree = "<group>";
+		};
 		15F78EA71FAA3E0400241AB0 /* AddTracksVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -756,6 +787,7 @@
 				1584F9391FB30E5C00FD78B5 /* RiderProfileVC.xib in Resources */,
 				15150A191FA735AA00448B3A /* PersonalInfoVC.xib in Resources */,
 				15D91E0620308DBD008FDF17 /* PostCell.xib in Resources */,
+				15E65C2A203AED870019DA91 /* OwnerTracksVC.xib in Resources */,
 				154B96B91FA3AC7700FF71E2 /* LogoCell.xib in Resources */,
 				1565C0561FA7366600A95B46 /* PersonalInfoCell.xib in Resources */,
 				15C7B3AA1FA744FA001B1A8E /* InfoLogoCell.xib in Resources */,
@@ -768,6 +800,7 @@
 				15A934A71FBC56C00020F05C /* LoginHeaderCell.xib in Resources */,
 				15974571202A05EB006456C9 /* GoogleService-Info.plist in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
+				15E65C31203AF3F60019DA91 /* OwnerTrackListCell.xib in Resources */,
 				15F78EB91FAA570800241AB0 /* LocateTrackVC.xib in Resources */,
 				15BDBE901FA0EF0E00298E51 /* EmailRegistrationVC.xib in Resources */,
 				15110BC41FBB0646005411BE /* LoginCell.xib in Resources */,
@@ -931,6 +964,7 @@
 				15C7B3AE1FA75000001B1A8E /* AditionalInfoVC.swift in Sources */,
 				15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */,
 				15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */,
+				15E65C30203AF3F60019DA91 /* OwnerTrackListCell.swift in Sources */,
 				152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */,
 				1584F9311FB2474A00FD78B5 /* TrackListCell.swift in Sources */,
 				15F78EB31FAA4C5800241AB0 /* Track.swift in Sources */,
@@ -950,6 +984,8 @@
 				15F78EA51FAA3E0000241AB0 /* AddTracksVC.swift in Sources */,
 				15A7AECD1F8E64FA00ABBFA6 /* Shackable.swift in Sources */,
 				1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */,
+				15E65C29203AED870019DA91 /* OwnerTracksVC.swift in Sources */,
+				15E65C2D203AF3A30019DA91 /* OwnerTracksTVExt.swift in Sources */,
 				15248EDD1FB0C72100EA0DD5 /* AditionalInfoCell.swift in Sources */,
 				1526A3081FAB971600346F4F /* AdminVC.swift in Sources */,
 				1565C0551FA7366600A95B46 /* PersonalInfoCell.swift in Sources */,

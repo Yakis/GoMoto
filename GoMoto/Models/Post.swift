@@ -23,6 +23,38 @@ struct Post: Codable {
     var comments_count: Int
     
     
+    static func savePost(post: Post, completionHandler: @escaping (Post?, Error?) -> Void) {
+        let postsEndpoint = "\(Endpoints.Posts.baseUrl)\(Endpoints.createNew)"
+        guard let postsUrl = URL(string: postsEndpoint) else {return}
+        var request = URLRequest(url: postsUrl)
+        request.httpMethod = "POST"
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        request.setValue(uid, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let encoder = JSONEncoder()
+        let decoder = JSONDecoder()
+        do {
+            let newTrackAsJSON = try encoder.encode(post)
+            request.httpBody = newTrackAsJSON
+        } catch {
+            print(error.localizedDescription)
+            completionHandler(nil, error)
+        }
+        let session = URLSession.shared
+        let task = session.dataTask(with: request, completionHandler: {
+            (data, response, error) in
+            guard let data = data else {return}
+            do {
+                let newPost = try decoder.decode(Post.self, from: data)
+                completionHandler(newPost, nil)
+            } catch {
+                
+            }
+        })
+        task.resume()
+    }
+    
+    
     static func getAllPosts(completionHandler: @escaping ([Post]?, Error?) -> Void) {
         let postsEndpoint = "\(Endpoints.Posts.baseUrl)\(Endpoints.getAll)"
         guard let postsUrl = URL(string: postsEndpoint) else {return}
@@ -38,7 +70,6 @@ struct Post: Codable {
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                print("RESPONSE: \(response)")
             let decoder = JSONDecoder()
             do {
                 guard let data = data else {return}
