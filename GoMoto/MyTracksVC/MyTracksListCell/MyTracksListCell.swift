@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MyTracksListCell: UITableViewCell, NibLoadable, ReusableView {
 
+    
+    @IBOutlet weak var trackNameLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var trackImageView: UIImageView!
+    
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,7 +28,10 @@ class MyTracksListCell: UITableViewCell, NibLoadable, ReusableView {
   
     
     func setupCell(with track: Track) {
-        
+        self.trackNameLabel.text = track.name
+        self.distanceLabel.text = ""
+        let imageUrl = URL(fileURLWithPath: track.image)
+        self.trackImageView.kf.setImage(with: imageUrl)
     }
     
     

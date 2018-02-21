@@ -20,6 +20,8 @@
 		15216995203D920600F82680 /* MyTracksListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15216993203D920600F82680 /* MyTracksListCell.xib */; };
 		1521699B203D94B600F82680 /* PlaceholderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15216999203D94B600F82680 /* PlaceholderCell.swift */; };
 		1521699C203D94B600F82680 /* PlaceholderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1521699A203D94B600F82680 /* PlaceholderCell.xib */; };
+		152169A0203DA13F00F82680 /* SearchTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521699E203DA13F00F82680 /* SearchTracksVC.swift */; };
+		152169A1203DA13F00F82680 /* SearchTracksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1521699F203DA13F00F82680 /* SearchTracksVC.xib */; };
 		1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D89C1F8BF40A00105C17 /* AppDelegate.swift */; };
 		1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A31F8BF40A00105C17 /* Assets.xcassets */; };
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
@@ -153,6 +155,8 @@
 		15216993203D920600F82680 /* MyTracksListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTracksListCell.xib; sourceTree = "<group>"; };
 		15216999203D94B600F82680 /* PlaceholderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderCell.swift; sourceTree = "<group>"; };
 		1521699A203D94B600F82680 /* PlaceholderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderCell.xib; sourceTree = "<group>"; };
+		1521699E203DA13F00F82680 /* SearchTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTracksVC.swift; sourceTree = "<group>"; };
+		1521699F203DA13F00F82680 /* SearchTracksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTracksVC.xib; sourceTree = "<group>"; };
 		1521D8991F8BF40A00105C17 /* GoMoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521D89C1F8BF40A00105C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1521D8A31F8BF40A00105C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 				1521698C203D904600F82680 /* MyTracksVC.xib */,
 				15216990203D915800F82680 /* MyTracksTVExt.swift */,
 				15216996203D922A00F82680 /* MyTracksListCell */,
+				152169A2203DA14D00F82680 /* SearchTracksVC */,
 			);
 			path = MyTracksVC;
 			sourceTree = "<group>";
@@ -329,6 +334,15 @@
 				1521699A203D94B600F82680 /* PlaceholderCell.xib */,
 			);
 			path = PlaceholderCell;
+			sourceTree = "<group>";
+		};
+		152169A2203DA14D00F82680 /* SearchTracksVC */ = {
+			isa = PBXGroup;
+			children = (
+				1521699E203DA13F00F82680 /* SearchTracksVC.swift */,
+				1521699F203DA13F00F82680 /* SearchTracksVC.xib */,
+			);
+			path = SearchTracksVC;
 			sourceTree = "<group>";
 		};
 		1521D8901F8BF40A00105C17 = {
@@ -893,6 +907,7 @@
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				15A934A71FBC56C00020F05C /* LoginHeaderCell.xib in Resources */,
 				15974571202A05EB006456C9 /* GoogleService-Info.plist in Resources */,
+				152169A1203DA13F00F82680 /* SearchTracksVC.xib in Resources */,
 				1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */,
 				15E65C31203AF3F60019DA91 /* OwnerTrackListCell.xib in Resources */,
 				15F78EB91FAA570800241AB0 /* LocateTrackVC.xib in Resources */,
@@ -1061,6 +1076,7 @@
 				1565C0521FA7360B00A95B46 /* PersonalInfoTVExt.swift in Sources */,
 				152D232B1FA3727C0032F789 /* ReusableView.swift in Sources */,
 				15C7B3AE1FA75000001B1A8E /* AditionalInfoVC.swift in Sources */,
+				152169A0203DA13F00F82680 /* SearchTracksVC.swift in Sources */,
 				15E65C41203B18270019DA91 /* TrackDetailsAddPostCell.swift in Sources */,
 				15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */,
 				15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */,
