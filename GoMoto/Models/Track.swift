@@ -25,6 +25,7 @@ struct Track: Codable {
     var user_id: Int
     var featured: Int
     var image: String
+    var distance: Double?
     
     
     
