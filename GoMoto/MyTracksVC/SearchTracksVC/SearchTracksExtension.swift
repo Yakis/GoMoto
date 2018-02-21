@@ -12,6 +12,8 @@ import CoreLocation
 
 extension SearchTracksVC: UISearchBarDelegate {
     
+    // 51.531955, 0.725454
+    
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
@@ -21,8 +23,10 @@ extension SearchTracksVC: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // Search action here
         guard let postcode = searchBar.text else {return}
-        getLocation(from: postcode) { (coordinates, error) in
-            print(coordinates)
+        getLocation(from: postcode) { [weak self] (coordinates, error) in
+            let firstLocation = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
+            let secondLocation = CLLocation(latitude: 52.291693, longitude: 0.468611)
+            self?.getDistanceBetweenLocations(firstLocation: firstLocation, secondLocation: secondLocation)
         }
         searchBar.endEditing(true)
         searchBar.resignFirstResponder()
@@ -50,7 +54,11 @@ extension SearchTracksVC: UISearchBarDelegate {
         }
     
     
-    
+    func getDistanceBetweenLocations(firstLocation: CLLocation, secondLocation: CLLocation) {
+        let distance: CLLocationDistance = firstLocation.distance(from: secondLocation)
+        let distanceInMiles = (distance * 0.000621371192) * 1.2
+        print("Distance: \(distanceInMiles) miles")
+    }
     
     
 }
