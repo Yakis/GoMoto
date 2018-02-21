@@ -13,6 +13,13 @@
 		15150A191FA735AA00448B3A /* PersonalInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15150A171FA735AA00448B3A /* PersonalInfoVC.xib */; };
 		1517E15F1FB9BE1E008DA5B8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1517E15D1FB9BE1E008DA5B8 /* LoginVC.swift */; };
 		1517E1601FB9BE1E008DA5B8 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1517E15E1FB9BE1E008DA5B8 /* LoginVC.xib */; };
+		1521698D203D904600F82680 /* MyTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521698B203D904600F82680 /* MyTracksVC.swift */; };
+		1521698E203D904600F82680 /* MyTracksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1521698C203D904600F82680 /* MyTracksVC.xib */; };
+		15216991203D915800F82680 /* MyTracksTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15216990203D915800F82680 /* MyTracksTVExt.swift */; };
+		15216994203D920600F82680 /* MyTracksListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15216992203D920600F82680 /* MyTracksListCell.swift */; };
+		15216995203D920600F82680 /* MyTracksListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15216993203D920600F82680 /* MyTracksListCell.xib */; };
+		1521699B203D94B600F82680 /* PlaceholderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15216999203D94B600F82680 /* PlaceholderCell.swift */; };
+		1521699C203D94B600F82680 /* PlaceholderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1521699A203D94B600F82680 /* PlaceholderCell.xib */; };
 		1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D89C1F8BF40A00105C17 /* AppDelegate.swift */; };
 		1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A31F8BF40A00105C17 /* Assets.xcassets */; };
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
@@ -139,6 +146,13 @@
 		15150A171FA735AA00448B3A /* PersonalInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoVC.xib; sourceTree = "<group>"; };
 		1517E15D1FB9BE1E008DA5B8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1517E15E1FB9BE1E008DA5B8 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		1521698B203D904600F82680 /* MyTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTracksVC.swift; sourceTree = "<group>"; };
+		1521698C203D904600F82680 /* MyTracksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTracksVC.xib; sourceTree = "<group>"; };
+		15216990203D915800F82680 /* MyTracksTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTracksTVExt.swift; sourceTree = "<group>"; };
+		15216992203D920600F82680 /* MyTracksListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTracksListCell.swift; sourceTree = "<group>"; };
+		15216993203D920600F82680 /* MyTracksListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTracksListCell.xib; sourceTree = "<group>"; };
+		15216999203D94B600F82680 /* PlaceholderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderCell.swift; sourceTree = "<group>"; };
+		1521699A203D94B600F82680 /* PlaceholderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderCell.xib; sourceTree = "<group>"; };
 		1521D8991F8BF40A00105C17 /* GoMoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521D89C1F8BF40A00105C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1521D8A31F8BF40A00105C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -288,6 +302,35 @@
 			path = LoginVC;
 			sourceTree = "<group>";
 		};
+		1521698F203D904F00F82680 /* MyTracksVC */ = {
+			isa = PBXGroup;
+			children = (
+				1521698B203D904600F82680 /* MyTracksVC.swift */,
+				1521698C203D904600F82680 /* MyTracksVC.xib */,
+				15216990203D915800F82680 /* MyTracksTVExt.swift */,
+				15216996203D922A00F82680 /* MyTracksListCell */,
+			);
+			path = MyTracksVC;
+			sourceTree = "<group>";
+		};
+		15216996203D922A00F82680 /* MyTracksListCell */ = {
+			isa = PBXGroup;
+			children = (
+				15216992203D920600F82680 /* MyTracksListCell.swift */,
+				15216993203D920600F82680 /* MyTracksListCell.xib */,
+			);
+			path = MyTracksListCell;
+			sourceTree = "<group>";
+		};
+		1521699D203D94BD00F82680 /* PlaceholderCell */ = {
+			isa = PBXGroup;
+			children = (
+				15216999203D94B600F82680 /* PlaceholderCell.swift */,
+				1521699A203D94B600F82680 /* PlaceholderCell.xib */,
+			);
+			path = PlaceholderCell;
+			sourceTree = "<group>";
+		};
 		1521D8901F8BF40A00105C17 = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +372,8 @@
 				1584F93A1FB30E6300FD78B5 /* RiderProfileVC */,
 				15D91E0020308C07008FDF17 /* PostsFeedVC */,
 				15E65C2B203AED910019DA91 /* OwnerTracksVC */,
+				1521698F203D904F00F82680 /* MyTracksVC */,
+				1521699D203D94BD00F82680 /* PlaceholderCell */,
 			);
 			path = GoMoto;
 			sourceTree = "<group>";
@@ -828,6 +873,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1521698E203D904600F82680 /* MyTracksVC.xib in Resources */,
 				1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */,
 				1584F9391FB30E5C00FD78B5 /* RiderProfileVC.xib in Resources */,
 				15150A191FA735AA00448B3A /* PersonalInfoVC.xib in Resources */,
@@ -842,6 +888,7 @@
 				1584F9321FB2474A00FD78B5 /* TrackListCell.xib in Resources */,
 				156E10361FAF43F8008F2C40 /* TrackImageCell.xib in Resources */,
 				1584F92D1FB22CB400FD78B5 /* AllTracksVC.xib in Resources */,
+				1521699C203D94B600F82680 /* PlaceholderCell.xib in Resources */,
 				15F78EB01FAA4AE800241AB0 /* AddTrackFieldsCell.xib in Resources */,
 				15D108BE1F8E7BC400043F02 /* RegisterVC.xib in Resources */,
 				15A934A71FBC56C00020F05C /* LoginHeaderCell.xib in Resources */,
@@ -860,6 +907,7 @@
 				15F78EAB1FAA4A6900241AB0 /* AddTrackTitleCell.xib in Resources */,
 				15C7B3AF1FA75000001B1A8E /* AditionalInfoVC.xib in Resources */,
 				1541F2A41F9B83090078B2FB /* Default-568h@2x.png in Resources */,
+				15216995203D920600F82680 /* MyTracksListCell.xib in Resources */,
 				15F78EA61FAA3E0000241AB0 /* AddTracksVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -998,7 +1046,9 @@
 				152D23291FA3722C0032F789 /* NibLoadable.swift in Sources */,
 				15D91E0520308DBD008FDF17 /* PostCell.swift in Sources */,
 				156E10351FAF43F8008F2C40 /* TrackImageCell.swift in Sources */,
+				15216994203D920600F82680 /* MyTracksListCell.swift in Sources */,
 				15D91E0220308D3C008FDF17 /* PostsFeedTVExt.swift in Sources */,
+				1521699B203D94B600F82680 /* PlaceholderCell.swift in Sources */,
 				15248ED71FB06CC700EA0DD5 /* ActivityIndicatorManager.swift in Sources */,
 				156C48A31FBAF9EF00D8B666 /* LoginTVExt.swift in Sources */,
 				15F78EAA1FAA4A6900241AB0 /* AddTrackTitleCell.swift in Sources */,
@@ -1026,6 +1076,7 @@
 				15F78EB81FAA570800241AB0 /* LocateTrackVC.swift in Sources */,
 				15110BC31FBB0646005411BE /* LoginCell.swift in Sources */,
 				1517E15F1FB9BE1E008DA5B8 /* LoginVC.swift in Sources */,
+				15216991203D915800F82680 /* MyTracksTVExt.swift in Sources */,
 				1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */,
 				152D232F1FA374F60032F789 /* EmailRegTVExtension.swift in Sources */,
 				1584F92C1FB22CB400FD78B5 /* AllTracksVC.swift in Sources */,
@@ -1038,6 +1089,7 @@
 				15E65C29203AED870019DA91 /* OwnerTracksVC.swift in Sources */,
 				15E65C2D203AF3A30019DA91 /* OwnerTracksTVExt.swift in Sources */,
 				15E65C3A203B10170019DA91 /* TrackDetailsImageCell.swift in Sources */,
+				1521698D203D904600F82680 /* MyTracksVC.swift in Sources */,
 				15248EDD1FB0C72100EA0DD5 /* AditionalInfoCell.swift in Sources */,
 				1526A3081FAB971600346F4F /* AdminVC.swift in Sources */,
 				1565C0551FA7366600A95B46 /* PersonalInfoCell.swift in Sources */,

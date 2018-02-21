@@ -52,7 +52,7 @@ class AppController: NSObject {
         navPostsFeed.navigationBar.topItem?.title = "Posts"
         postsFeedVC.tabBarItem = UITabBarItem(title: "Posts", image: #imageLiteral(resourceName: "trackListTabBar"), selectedImage: #imageLiteral(resourceName: "trackListTabBar"))
         
-        let myTracks = UIViewController()
+        let myTracks = MyTracksVC(nibName: "MyTracksVC", bundle: nil)
         let navMyTracks = UINavigationController(rootViewController: myTracks)
         navMyTracks.navigationBar.topItem?.title = "My Tracks"
         myTracks.tabBarItem = UITabBarItem(title: "My Tracks", image: #imageLiteral(resourceName: "favoriteTabBarFull"), selectedImage: #imageLiteral(resourceName: "favoriteTabBarFull"))

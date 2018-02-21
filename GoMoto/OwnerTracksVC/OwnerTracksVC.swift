@@ -61,7 +61,7 @@ class OwnerTracksVC: UIViewController {
         }
         Track.getTracksByOwner(ownerId: userId) { [weak self] (tracks, error) in
             guard let tracks = tracks else {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "Unknown error!")
                 return
             }
             self?.tracks = tracks
