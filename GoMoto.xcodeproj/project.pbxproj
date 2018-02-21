@@ -22,6 +22,7 @@
 		1521699C203D94B600F82680 /* PlaceholderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1521699A203D94B600F82680 /* PlaceholderCell.xib */; };
 		152169A0203DA13F00F82680 /* SearchTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521699E203DA13F00F82680 /* SearchTracksVC.swift */; };
 		152169A1203DA13F00F82680 /* SearchTracksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1521699F203DA13F00F82680 /* SearchTracksVC.xib */; };
+		152169A4203DA46600F82680 /* SearchTracksExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152169A3203DA46600F82680 /* SearchTracksExtension.swift */; };
 		1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D89C1F8BF40A00105C17 /* AppDelegate.swift */; };
 		1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A31F8BF40A00105C17 /* Assets.xcassets */; };
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
@@ -157,6 +158,7 @@
 		1521699A203D94B600F82680 /* PlaceholderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderCell.xib; sourceTree = "<group>"; };
 		1521699E203DA13F00F82680 /* SearchTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTracksVC.swift; sourceTree = "<group>"; };
 		1521699F203DA13F00F82680 /* SearchTracksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTracksVC.xib; sourceTree = "<group>"; };
+		152169A3203DA46600F82680 /* SearchTracksExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTracksExtension.swift; sourceTree = "<group>"; };
 		1521D8991F8BF40A00105C17 /* GoMoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521D89C1F8BF40A00105C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1521D8A31F8BF40A00105C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			children = (
 				1521699E203DA13F00F82680 /* SearchTracksVC.swift */,
 				1521699F203DA13F00F82680 /* SearchTracksVC.xib */,
+				152169A3203DA46600F82680 /* SearchTracksExtension.swift */,
 			);
 			path = SearchTracksVC;
 			sourceTree = "<group>";
@@ -1079,6 +1082,7 @@
 				152169A0203DA13F00F82680 /* SearchTracksVC.swift in Sources */,
 				15E65C41203B18270019DA91 /* TrackDetailsAddPostCell.swift in Sources */,
 				15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */,
+				152169A4203DA46600F82680 /* SearchTracksExtension.swift in Sources */,
 				15BDBE931FA0F1D900298E51 /* TextFieldExtension.swift in Sources */,
 				15E65C30203AF3F60019DA91 /* OwnerTrackListCell.swift in Sources */,
 				152D23241FA3700C0032F789 /* EmailRegistrationCell.swift in Sources */,
