@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class SearchTracksVC: UIViewController {
 
@@ -16,13 +17,43 @@ class SearchTracksVC: UIViewController {
     
     
     
+    var userLocation: CLLocation!
+    
+    var estimatedTracks: [Track] = [] {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+    var tracks: [Track] = [] {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
+        setupSearchBar()
+        setupTableView()
+        getAllTracks()
     }
 
     
+    
+    
+    func getAllTracks() {
+        Track.getAllTracks { [weak self] (tracks, error) in
+            if error == nil {
+                guard let tracks = tracks else {return}
+                self?.tracks = tracks
+            }
+        }
+    }
     
     
     

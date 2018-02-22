@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class SearchTracksCell: UITableViewCell {
+class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
 
     
     @IBOutlet weak var trackNameLabel: UILabel!
@@ -30,9 +30,13 @@ class SearchTracksCell: UITableViewCell {
     
     func setupCell(with track: Track) {
         self.trackNameLabel.text = track.name
-        self.distanceLabel.text = "\(String(describing: track.distance)) miles"
-        let imageUrl = URL(fileURLWithPath: track.image)
+        self.distanceLabel.text = ""
+        let imageUrl = URL(string: track.image)
+        print("Track image==== \(imageUrl)")
         self.trackImageView.kf.setImage(with: imageUrl)
+        guard let distance = track.distance else {return}
+        let roundDistance = round(distance)
+        self.distanceLabel.text = "\(String(describing: roundDistance)) miles"
     }
     
 }

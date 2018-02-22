@@ -30,7 +30,7 @@ class MyTracksListCell: UITableViewCell, NibLoadable, ReusableView {
     func setupCell(with track: Track) {
         self.trackNameLabel.text = track.name
         self.distanceLabel.text = ""
-        let imageUrl = URL(fileURLWithPath: track.image)
+        let imageUrl = URL(string: track.image)
         self.trackImageView.kf.setImage(with: imageUrl)
     }
     

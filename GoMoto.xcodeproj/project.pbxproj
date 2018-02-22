@@ -25,6 +25,7 @@
 		152169A4203DA46600F82680 /* SearchTracksExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152169A3203DA46600F82680 /* SearchTracksExtension.swift */; };
 		152169AC203DC44100F82680 /* SearchTracksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152169AA203DC44100F82680 /* SearchTracksCell.swift */; };
 		152169AD203DC44100F82680 /* SearchTracksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152169AB203DC44100F82680 /* SearchTracksCell.xib */; };
+		152169B0203DC68A00F82680 /* SearchTracksTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152169AF203DC68A00F82680 /* SearchTracksTVExt.swift */; };
 		1521D89D1F8BF40A00105C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D89C1F8BF40A00105C17 /* AppDelegate.swift */; };
 		1521D8A41F8BF40A00105C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A31F8BF40A00105C17 /* Assets.xcassets */; };
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
@@ -163,6 +164,7 @@
 		152169A3203DA46600F82680 /* SearchTracksExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTracksExtension.swift; sourceTree = "<group>"; };
 		152169AA203DC44100F82680 /* SearchTracksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTracksCell.swift; sourceTree = "<group>"; };
 		152169AB203DC44100F82680 /* SearchTracksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTracksCell.xib; sourceTree = "<group>"; };
+		152169AF203DC68A00F82680 /* SearchTracksTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTracksTVExt.swift; sourceTree = "<group>"; };
 		1521D8991F8BF40A00105C17 /* GoMoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1521D89C1F8BF40A00105C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1521D8A31F8BF40A00105C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				1521699F203DA13F00F82680 /* SearchTracksVC.xib */,
 				152169A3203DA46600F82680 /* SearchTracksExtension.swift */,
 				152169AE203DC44A00F82680 /* SearchTracksCell */,
+				152169AF203DC68A00F82680 /* SearchTracksTVExt.swift */,
 			);
 			path = SearchTracksVC;
 			sourceTree = "<group>";
@@ -1073,6 +1076,7 @@
 				15BDBE8A1FA0DC6600298E51 /* Utils.swift in Sources */,
 				15F4951C1FA8F1FB0021340E /* LocationManager.swift in Sources */,
 				15F78EAF1FAA4AE800241AB0 /* AddTrackFieldsCell.swift in Sources */,
+				152169B0203DC68A00F82680 /* SearchTracksTVExt.swift in Sources */,
 				15A7AED21F8E75D800ABBFA6 /* Rotatable.swift in Sources */,
 				1584F9351FB24A2A00FD78B5 /* AllTracksTVExt.swift in Sources */,
 				15D108BD1F8E7BC400043F02 /* RegisterVC.swift in Sources */,

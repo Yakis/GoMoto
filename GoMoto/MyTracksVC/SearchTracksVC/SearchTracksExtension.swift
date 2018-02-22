@@ -24,9 +24,10 @@ extension SearchTracksVC: UISearchBarDelegate {
         // Search action here
         guard let postcode = searchBar.text else {return}
         getLocation(from: postcode) { [weak self] (coordinates, error) in
-            let firstLocation = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
-            let secondLocation = CLLocation(latitude: 52.291693, longitude: 0.468611)
-            self?.getDistanceBetweenLocations(firstLocation: firstLocation, secondLocation: secondLocation)
+            self?.userLocation = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
+            self?.sortTracks(userLocation: (self?.userLocation)!)
+//            let secondLocation = CLLocation(latitude: 52.291693, longitude: 0.468611)
+//            self?.getDistanceBetweenLocations(firstLocation: firstLocation, secondLocation: secondLocation)
         }
         searchBar.endEditing(true)
         searchBar.resignFirstResponder()
@@ -54,11 +55,29 @@ extension SearchTracksVC: UISearchBarDelegate {
         }
     
     
-    func getDistanceBetweenLocations(firstLocation: CLLocation, secondLocation: CLLocation) {
+    func getDistanceBetweenLocations(firstLocation: CLLocation, secondLocation: CLLocation) -> Double {
         let distance: CLLocationDistance = firstLocation.distance(from: secondLocation)
         let distanceInMiles = (distance * 0.000621371192) * 1.2
         print("Distance: \(distanceInMiles) miles")
+        return distanceInMiles
     }
     
+    
+    
+    func sortTracks(userLocation: CLLocation) {
+        var withDistance: [Track] = []
+        for var track in tracks {
+           let trackLocation = CLLocation(latitude: track.latitude, longitude: track.longitude)
+            track.distance = getDistanceBetweenLocations(firstLocation: userLocation, secondLocation: trackLocation)
+            withDistance.append(track)
+        }
+        let sorted: [Track] = withDistance.sorted(by: { Double($0.distance!) < Double($1.distance!) })
+        self.estimatedTracks = sorted
+    }
+    
+    
+    func setupSearchBar() {
+        searchBar.delegate = self
+    }
     
 }

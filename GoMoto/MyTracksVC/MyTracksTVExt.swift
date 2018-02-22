@@ -27,7 +27,7 @@ extension MyTracksVC: UITableViewDataSource, UITableViewDelegate {
         switch tracks.count {
         case 0:
             let placeholderCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as PlaceholderCell
-            placeholderCell.setupCell(with: "You don't have any favorite track yet. You cand add tracks from top right corner button.")
+            placeholderCell.setupCell(with: "You don't have any favorite track yet. You can add tracks from top right corner button.")
             return placeholderCell
         default:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as MyTracksListCell
