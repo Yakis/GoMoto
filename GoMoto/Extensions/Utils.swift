@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Foundation
+import CoreLocation
 
 
 extension String {
@@ -57,5 +57,13 @@ extension Notification.Name {
     static let imageUrlIsReady = Notification.Name(rawValue: "imageUrlIsReady")
 }
 
+
+extension CLLocationDistance {
+    
+    func toMiles() -> Double {
+        return (self * 0.000621371192) * 1.2
+    }
+    
+}
 
 
