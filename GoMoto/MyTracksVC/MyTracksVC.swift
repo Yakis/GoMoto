@@ -22,6 +22,10 @@ class MyTracksVC: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getFavoriteTracks()
+    }
     
     
     override func viewDidLoad() {
@@ -45,6 +49,10 @@ class MyTracksVC: UIViewController {
     }
     
     
+    
+    func getFavoriteTracks() {
+        
+    }
     
     
 
