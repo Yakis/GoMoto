@@ -27,6 +27,9 @@ struct Endpoints {
     static let createNew = "/create"
     static let likes = "/likes"
     static let likesCount = "/post?id="
+    static let favorites = "/favorites"
+    static let user_idKey = "?user_id="
+    static let track_idKey = "&track_id="
     
     struct Users {
         static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/users"

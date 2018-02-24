@@ -20,42 +20,24 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
     var track: Track!
     var isFavorite: Bool = false
     
-    private let favoriteTracksKey: String = "favoriteTracks"
-    private var userDefaults: UserDefaults!
-    private var favoritesTracks: [Int] {
-        get {
-            guard let array = userDefaults.value(forKey: favoriteTracksKey) as? [Int] else {return [Int]()}
-            return array
-        }
-        
-        set {
-            userDefaults.set(newValue, forKey: favoriteTracksKey)
-            userDefaults.synchronize()
-        }
-    }
+    
 
     
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        userDefaults = UserDefaults.standard
-        print(favoritesTracks)
         // Initialization code
     }
 
     
     
     func setupCell(with track: Track) {
-       // UserDefaults.standard.setValue([], forKey: "favoriteTracks")
         self.track = track
         self.trackNameLabel.text = track.name
         self.distanceLabel.text = ""
         let imageUrl = URL(string: track.image)
-        if favoritesTracks.contains(track.id!) {
-            isFavorite = true
-            favoriteButtonOutlet.setImage(#imageLiteral(resourceName: "FavoriteTrackIconFull"), for: .normal)
-        }
+        
         self.trackImageView.kf.setImage(with: imageUrl)
         guard let distance = track.distance else {return}
         let roundDistance = round(distance)
@@ -67,34 +49,34 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
         switch isFavorite {
         case true:
             isFavorite = false
-            removeTrackFromFavorites(id: trackId)
+            removeTrackFromFavorites(track_id: trackId)
             favoriteButtonOutlet.setImage(#imageLiteral(resourceName: "FavoriteTrackIconEmpty"), for: .normal)
-            print(favoritesTracks.count)
         default:
             isFavorite = true
             favoriteButtonOutlet.setImage(#imageLiteral(resourceName: "FavoriteTrackIconFull"), for: .normal)
-            saveTrackAsFavorite(id: trackId)
-            print(favoritesTracks.count)
+            saveTrackAsFavorite(track_id: trackId)
         }
     }
     
     
     
-    func saveTrackAsFavorite(id: Int) {
-        var favorites = favoritesTracks
-        favorites.append(id)
-        self.favoritesTracks = favorites
-        print(self.favoritesTracks)
+    func saveTrackAsFavorite(track_id: Int) {
+        guard let userId = UserDefaults.standard.value(forKey: "user_id") as? Int else {return}
+        let favorite = FavoriteTrack(user_id: userId, track_id: track_id)
+        FavoriteTrack.setFavorite(favorite: favorite) { (track, error) in
+            print(track?.favorites_count)
+        }
     }
     
     
-    func removeTrackFromFavorites(id: Int) {
-        var favorites = self.favoritesTracks
-        if let index = favorites.index(of: id) {
-            favorites.remove(at: index)
-            self.favoritesTracks = favorites
+    func removeTrackFromFavorites(track_id: Int) {
+        guard let userId = UserDefaults.standard.value(forKey: "user_id") as? Int else {return}
+        let favorite = FavoriteTrack(user_id: userId, track_id: track_id)
+        FavoriteTrack.removeFavorite(favorite: favorite) { (confirmation, error) in
+            if error == nil {
+                print(confirmation)
+            }
         }
-        print(self.favoritesTracks)
     }
     
     

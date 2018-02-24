@@ -26,6 +26,7 @@ struct Track: Codable {
     var featured: Int
     var image: String
     var distance: Double?
+    var favorites_count: Int
     
     
     
@@ -42,6 +43,7 @@ struct Track: Codable {
         do {
             let newTrackAsJSON = try encoder.encode(track)
             request.httpBody = newTrackAsJSON
+            print(newTrackAsJSON)
         } catch {
             print(error.localizedDescription)
             completionHandler(nil, error)
@@ -54,7 +56,7 @@ struct Track: Codable {
                 let newTrack = try decoder.decode(Track.self, from: data)
                 completionHandler(newTrack, nil)
             } catch {
-                
+                print(error.localizedDescription)
             }
         })
         task.resume()

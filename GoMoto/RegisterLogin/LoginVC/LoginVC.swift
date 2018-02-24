@@ -33,6 +33,7 @@ class LoginVC: UIViewController, LoginDelegate {
             TraxUser.getUser(for: firebaseUser.uid, completionHandler: { [weak self] (traxUser, error) in
                         guard let traxUser = traxUser else {return}
                         DispatchQueue.main.async {
+                            UserDefaults.standard.set(traxUser.id, forKey: "user_id")
                             self?.showVCForUser(user: traxUser)
                         }
             })
@@ -49,6 +50,7 @@ class LoginVC: UIViewController, LoginDelegate {
                     return
                 }
                 DispatchQueue.main.async {
+                    UserDefaults.standard.set(traxUser.id, forKey: "user_id")
                     self?.showVCForUser(user: traxUser)
                 }
             })

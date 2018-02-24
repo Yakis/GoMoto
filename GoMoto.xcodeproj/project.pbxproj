@@ -31,6 +31,7 @@
 		1521D8A71F8BF40A00105C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D8A51F8BF40A00105C17 /* LaunchScreen.storyboard */; };
 		1521D8AF1F8BF47900105C17 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8AE1F8BF47900105C17 /* AppController.swift */; };
 		1521D8B11F8BF4A800105C17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D8B01F8BF4A800105C17 /* Constants.swift */; };
+		1523F638204154D700EAB734 /* FavoriteTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523F637204154D700EAB734 /* FavoriteTrack.swift */; };
 		15242B5E1FA8C9110027E18F /* UserAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15242B5D1FA8C9110027E18F /* UserAlert.swift */; };
 		15248ED71FB06CC700EA0DD5 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15248ED61FB06CC700EA0DD5 /* ActivityIndicatorManager.swift */; };
 		15248EDA1FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15248ED91FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift */; };
@@ -172,6 +173,7 @@
 		1521D8A81F8BF40A00105C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1521D8AE1F8BF47900105C17 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		1521D8B01F8BF4A800105C17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1523F637204154D700EAB734 /* FavoriteTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTrack.swift; sourceTree = "<group>"; };
 		15242B5D1FA8C9110027E18F /* UserAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlert.swift; sourceTree = "<group>"; };
 		15248ED61FB06CC700EA0DD5 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		15248ED91FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AditionalInfoTVExt.swift; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 				15F78EB21FAA4C5800241AB0 /* Track.swift */,
 				15A9FAF0202DDEE1001E05BD /* Post.swift */,
 				15FFB7FC2035E93300BEF10C /* PostLike.swift */,
+				1523F637204154D700EAB734 /* FavoriteTrack.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1070,6 +1073,7 @@
 				154C71BB1F8E86F300EBAFFF /* RestAPIManager.swift in Sources */,
 				15F78EB51FAA513500241AB0 /* AddTracksTVExt.swift in Sources */,
 				15248EDA1FB0C6B000EA0DD5 /* AditionalInfoTVExt.swift in Sources */,
+				1523F638204154D700EAB734 /* FavoriteTrack.swift in Sources */,
 				15A9FAF1202DDEE1001E05BD /* Post.swift in Sources */,
 				15EEF3771FA615F200E75A4F /* RegistrationPresenter.swift in Sources */,
 				156F20DA1F9B7D7B007FEE27 /* Beautifier.swift in Sources */,

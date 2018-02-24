@@ -36,6 +36,7 @@ class OwnerTracksVC: UIViewController {
         guard let uid = UserDefaults.standard.value(forKey: "uid") as? String else {return}
         TraxUser.getUser(for: uid) { [weak self] (user, error) in
             guard let user = user else {return}
+            UserDefaults.standard.set(user.id, forKey: "user_id")
             self?.user = user
         }
     }

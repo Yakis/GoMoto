@@ -33,6 +33,8 @@ class RiderProfileVC: UIViewController {
             guard let firstName = user?.first_name else {return}
             guard let lastName = user?.last_name else {return}
             DispatchQueue.main.async {
+                guard let user = user else {return}
+                UserDefaults.standard.set(user.id, forKey: "user_id")
                 self?.welcomeLabel.text = "Welcome, \(firstName) \(lastName)"
             }
         }
