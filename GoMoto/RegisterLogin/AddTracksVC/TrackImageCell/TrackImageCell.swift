@@ -38,7 +38,7 @@ class TrackImageCell: UITableViewCell, ReusableView, NibLoadable, TrackImagePick
     
     
     func imageIsReady(image: UIImage, trackName: String) {
-        let path = "/trackProfile/\(trackName).jpg"
+        let path = "/trackProfile/\(trackName)\(image.hashValue).jpg"
         let storageRef = storage.reference(withPath: path)
         guard let imageData = getData(from: image) else {return}
         let metadata = StorageMetadata()
