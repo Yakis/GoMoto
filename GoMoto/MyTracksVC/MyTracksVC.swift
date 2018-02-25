@@ -51,7 +51,11 @@ class MyTracksVC: UIViewController {
     
     
     func getFavoriteTracks() {
-        
+        guard let userId = UserDefaults.standard.value(forKey: "user_id") as? Int else {return}
+        Track.getFavoriteTracks(for: userId) { [weak self] (tracks, error) in
+            guard let tracks = tracks else {return}
+            self?.tracks = tracks
+        }
     }
     
     

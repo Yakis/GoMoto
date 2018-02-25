@@ -26,11 +26,11 @@ extension SearchTracksVC: UITableViewDataSource, UITableViewDelegate {
         switch estimatedTracks.count {
         case 0:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SearchTracksCell
-            cell.setupCell(with: tracks[indexPath.row])
+            cell.setupCell(with: tracks[indexPath.row], favoritesIds: favoritesIds)
             return cell
         default:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SearchTracksCell
-            cell.setupCell(with: estimatedTracks[indexPath.row])
+            cell.setupCell(with: estimatedTracks[indexPath.row], favoritesIds: favoritesIds)
             return cell
         }
         

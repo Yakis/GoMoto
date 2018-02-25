@@ -28,6 +28,7 @@ struct Endpoints {
     static let likes = "/likes"
     static let likesCount = "/post?id="
     static let favorites = "/favorites"
+    static let favs = "/favs"
     static let user_idKey = "?user_id="
     static let track_idKey = "&track_id="
     

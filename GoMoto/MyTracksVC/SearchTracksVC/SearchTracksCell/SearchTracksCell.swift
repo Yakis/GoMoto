@@ -21,10 +21,6 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
     var isFavorite: Bool = false
     
     
-
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,12 +28,15 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
 
     
     
-    func setupCell(with track: Track) {
+    func setupCell(with track: Track, favoritesIds: [Int]) {
         self.track = track
         self.trackNameLabel.text = track.name
         self.distanceLabel.text = ""
+        if favoritesIds.contains(track.id!) {
+            isFavorite = true
+            favoriteButtonOutlet.setImage(#imageLiteral(resourceName: "FavoriteTrackIconFull"), for: .normal)
+        }
         let imageUrl = URL(string: track.image)
-        
         self.trackImageView.kf.setImage(with: imageUrl)
         guard let distance = track.distance else {return}
         let roundDistance = round(distance)
@@ -59,7 +58,6 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
     }
     
     
-    
     func saveTrackAsFavorite(track_id: Int) {
         guard let userId = UserDefaults.standard.value(forKey: "user_id") as? Int else {return}
         let favorite = FavoriteTrack(user_id: userId, track_id: track_id)
@@ -72,6 +70,7 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
     func removeTrackFromFavorites(track_id: Int) {
         guard let userId = UserDefaults.standard.value(forKey: "user_id") as? Int else {return}
         let favorite = FavoriteTrack(user_id: userId, track_id: track_id)
+        print("Deleted \(favorite.user_id)")
         FavoriteTrack.removeFavorite(favorite: favorite) { (confirmation, error) in
             if error == nil {
                 print(confirmation)
