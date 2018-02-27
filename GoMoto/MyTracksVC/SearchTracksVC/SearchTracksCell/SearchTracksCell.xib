@@ -29,25 +29,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="120.5"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eez-Rz-iwU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcN-7T-ccq">
-                                <rect key="frame" x="137.5" y="1" width="45" height="23.5"/>
+                                <rect key="frame" x="137.5" y="6" width="45" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNw-Xo-ULK">
-                                <rect key="frame" x="278" y="3" width="34" height="19.5"/>
+                                <rect key="frame" x="278" y="8" width="34" height="19.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="14"/>
                                 <color key="textColor" red="0.98496952068885868" green="1" blue="0.98244120077748631" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrr-d2-EgR">
-                                <rect key="frame" x="8" y="2.5" width="20" height="20"/>
+                                <rect key="frame" x="8" y="2.5" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="ggO-Gm-dvx"/>
-                                    <constraint firstAttribute="height" constant="20" id="ypl-YA-g9l"/>
+                                    <constraint firstAttribute="width" constant="30" id="ggO-Gm-dvx"/>
+                                    <constraint firstAttribute="height" constant="30" id="ypl-YA-g9l"/>
                                 </constraints>
                                 <state key="normal" image="FavoriteTrackIconEmpty"/>
                                 <connections>
@@ -60,7 +60,7 @@
                             <constraint firstItem="CNw-Xo-ULK" firstAttribute="centerY" secondItem="kcN-7T-ccq" secondAttribute="centerY" id="0oN-qz-hJT"/>
                             <constraint firstItem="wrr-d2-EgR" firstAttribute="leading" secondItem="Eez-Rz-iwU" secondAttribute="leading" constant="8" id="5yh-5Z-E8U"/>
                             <constraint firstAttribute="trailing" secondItem="CNw-Xo-ULK" secondAttribute="trailing" constant="8" id="PGb-ID-mIN"/>
-                            <constraint firstAttribute="height" constant="25" id="Xog-ns-H6Q"/>
+                            <constraint firstAttribute="height" constant="35" id="Xog-ns-H6Q"/>
                             <constraint firstItem="kcN-7T-ccq" firstAttribute="centerY" secondItem="Eez-Rz-iwU" secondAttribute="centerY" id="tmm-SQ-5uj"/>
                             <constraint firstItem="wrr-d2-EgR" firstAttribute="centerY" secondItem="Eez-Rz-iwU" secondAttribute="centerY" id="unv-yc-br0"/>
                             <constraint firstItem="kcN-7T-ccq" firstAttribute="centerX" secondItem="Eez-Rz-iwU" secondAttribute="centerX" id="xrQ-Qx-saG"/>

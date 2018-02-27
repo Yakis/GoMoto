@@ -29,16 +29,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="171.5"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKV-ML-DUx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LI-MU-uii">
-                                <rect key="frame" x="137.5" y="1" width="45" height="23.5"/>
+                                <rect key="frame" x="137.5" y="6" width="45" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nci-OO-fmU">
-                                <rect key="frame" x="278" y="3.5" width="34" height="19.5"/>
+                                <rect key="frame" x="278" y="8.5" width="34" height="19.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="25" id="6K4-eX-nlL"/>
+                            <constraint firstAttribute="height" constant="35" id="6K4-eX-nlL"/>
                             <constraint firstItem="3LI-MU-uii" firstAttribute="centerX" secondItem="aKV-ML-DUx" secondAttribute="centerX" id="N44-mg-AxZ"/>
                             <constraint firstItem="3LI-MU-uii" firstAttribute="centerY" secondItem="aKV-ML-DUx" secondAttribute="centerY" id="Nuz-Lo-VPL"/>
                             <constraint firstItem="Nci-OO-fmU" firstAttribute="centerY" secondItem="3LI-MU-uii" secondAttribute="centerY" id="ckQ-3G-i5a"/>

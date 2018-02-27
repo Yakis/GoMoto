@@ -42,7 +42,7 @@ extension MyTracksVC: UITableViewDataSource, UITableViewDelegate {
         case 0:
             return tableView.frame.size.height
         default:
-            return 100
+            return 140
         }
     }
     

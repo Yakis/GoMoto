@@ -27,6 +27,11 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
     }
 
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        favoriteButtonOutlet.setImage(#imageLiteral(resourceName: "FavoriteTrackIconEmpty"), for: .normal)
+    }
+    
     
     func setupCell(with track: Track, favoritesIds: [Int]) {
         self.track = track
