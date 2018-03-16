@@ -118,7 +118,7 @@ struct Track: Codable {
     
     
     static func getTracksByOwner(ownerId: Int, completionHandler: @escaping ([Track]?, Error?) -> Void) {
-        let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)?userid=\(ownerId)"
+        let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)?user_id=\(ownerId)"
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
         print(tracksUrl)
         var request = URLRequest(url: tracksUrl)

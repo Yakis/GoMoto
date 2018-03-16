@@ -56,10 +56,11 @@ class OwnerTracksVC: UIViewController {
     
     
     func getOwnerTracks () {
-        guard let userId: Int = UserDefaults.standard.value(forKey: "userId") as? Int else {
+        guard let userId: Int = UserDefaults.standard.value(forKey: "user_id") as? Int else {
             print("No user id found!")
             return
         }
+        print("User ID ==== \(userId)")
         Track.getTracksByOwner(ownerId: userId) { [weak self] (tracks, error) in
             guard let tracks = tracks else {
                 print(error?.localizedDescription ?? "Unknown error!")
