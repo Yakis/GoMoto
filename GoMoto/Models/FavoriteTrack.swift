@@ -21,7 +21,7 @@ struct FavoriteTrack: Codable {
         let favoritesEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favorites)\(Endpoints.createNew)"
         guard let favoritesUrl = URL(string: favoritesEndpoint) else {return}
         var request = URLRequest(url: favoritesUrl)
-        request.httpMethod = "POST"
+        request.httpMethod = HTTPMethods.POST.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         request.setValue(uid, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -53,7 +53,7 @@ struct FavoriteTrack: Codable {
         let likesEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favorites)\(Endpoints.user_idKey)\(favorite.user_id)\(Endpoints.track_idKey)\(favorite.track_id)"
         guard let likesUrl = URL(string: likesEndpoint) else {return}
         var request = URLRequest(url: likesUrl)
-        request.httpMethod = "DELETE"
+        request.httpMethod = HTTPMethods.DELETE.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         request.setValue(uid, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

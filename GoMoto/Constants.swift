@@ -9,6 +9,14 @@
 import UIKit
 
 
+enum HTTPMethods: String {
+    case GET = "GET"
+    case POST = "POST"
+    case PATCH = "PATCH"
+    case PUT = "PUT"
+    case DELETE = "DELETE"
+}
+
 struct DashboardNibs {
     
     static let dashboardVC = "DashboardVC"
