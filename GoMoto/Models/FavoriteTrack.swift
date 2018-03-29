@@ -17,7 +17,6 @@ struct FavoriteTrack: Codable {
     
     
     
-    // WORK in progress
     static func setFavorite(favorite: FavoriteTrack, completionHandler: @escaping (Track?, Error?) -> Void) {
         let favoritesEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favorites)\(Endpoints.createNew)"
         guard let favoritesUrl = URL(string: favoritesEndpoint) else {return}
