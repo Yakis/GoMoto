@@ -23,8 +23,8 @@ struct FavoriteTrack: Codable {
         var request = URLRequest(url: favoritesUrl)
         request.httpMethod = HTTPMethods.POST.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
-        request.setValue(uid, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(uid, forHTTPHeaderField: HTTPHeaderField.Authorization.rawValue)
+        request.setValue(HTTPContentType.JSON.rawValue, forHTTPHeaderField: HTTPHeaderField.ContentType.rawValue)
         let encoder = JSONEncoder()
         let decoder = JSONDecoder()
         do {
@@ -55,8 +55,8 @@ struct FavoriteTrack: Codable {
         var request = URLRequest(url: likesUrl)
         request.httpMethod = HTTPMethods.DELETE.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
-        request.setValue(uid, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(uid, forHTTPHeaderField: HTTPHeaderField.Authorization.rawValue)
+        request.setValue(HTTPContentType.JSON.rawValue, forHTTPHeaderField: HTTPHeaderField.ContentType.rawValue)
         let decoder = JSONDecoder()
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {

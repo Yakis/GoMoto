@@ -36,8 +36,8 @@ struct Track: Codable {
         var request = URLRequest(url: tracksUrl)
         request.httpMethod = HTTPMethods.POST.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
-        request.setValue(uid, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(uid, forHTTPHeaderField: HTTPHeaderField.Authorization.rawValue)
+        request.setValue(HTTPContentType.JSON.rawValue, forHTTPHeaderField: HTTPHeaderField.ContentType.rawValue)
         let encoder = JSONEncoder()
         let decoder = JSONDecoder()
         do {
@@ -69,8 +69,8 @@ struct Track: Codable {
         var request = URLRequest(url: tracksUrl)
         request.httpMethod = HTTPMethods.GET.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
-        request.setValue(uid, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(uid, forHTTPHeaderField: HTTPHeaderField.Authorization.rawValue)
+        request.setValue(HTTPContentType.JSON.rawValue, forHTTPHeaderField: HTTPHeaderField.ContentType.rawValue)
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
@@ -95,8 +95,8 @@ struct Track: Codable {
         var request = URLRequest(url: tracksUrl)
         request.httpMethod = HTTPMethods.GET.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
-        request.setValue(uid, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(uid, forHTTPHeaderField: HTTPHeaderField.Authorization.rawValue)
+        request.setValue(HTTPContentType.JSON.rawValue, forHTTPHeaderField: HTTPHeaderField.ContentType.rawValue)
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
@@ -122,8 +122,8 @@ struct Track: Codable {
         request.httpMethod = HTTPMethods.GET.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         print("UID=== \(uid)")
-        request.setValue(uid, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(uid, forHTTPHeaderField: HTTPHeaderField.Authorization.rawValue)
+        request.setValue(HTTPContentType.JSON.rawValue, forHTTPHeaderField: HTTPHeaderField.ContentType.rawValue)
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
@@ -148,8 +148,8 @@ struct Track: Codable {
         var request = URLRequest(url: tracksUrl)
         request.httpMethod = HTTPMethods.GET.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
-        request.setValue(uid, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(uid, forHTTPHeaderField: HTTPHeaderField.Authorization.rawValue)
+        request.setValue(HTTPContentType.JSON.rawValue, forHTTPHeaderField: HTTPHeaderField.ContentType.rawValue)
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in

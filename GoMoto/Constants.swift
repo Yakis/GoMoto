@@ -17,6 +17,15 @@ enum HTTPMethods: String {
     case DELETE = "DELETE"
 }
 
+enum HTTPContentType: String {
+    case JSON = "application/json"
+}
+
+enum HTTPHeaderField: String {
+    case Authorization = "Authorization"
+    case ContentType = "Content-Type"
+}
+
 struct DashboardNibs {
     
     static let dashboardVC = "DashboardVC"

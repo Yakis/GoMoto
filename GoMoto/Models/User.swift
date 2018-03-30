@@ -31,7 +31,7 @@ struct TraxUser: Codable {
         print(usersUrl)
         var request = URLRequest(url: usersUrl)
         request.httpMethod = HTTPMethods.POST.rawValue
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(HTTPContentType.JSON.rawValue, forHTTPHeaderField: HTTPHeaderField.ContentType.rawValue)
         let encoder = JSONEncoder()
         do {
             let newUserAsJSON = try encoder.encode(user)
