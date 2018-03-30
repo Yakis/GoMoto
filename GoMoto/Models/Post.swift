@@ -27,7 +27,7 @@ struct Post: Codable {
         let postsEndpoint = "\(Endpoints.Posts.baseUrl)\(Endpoints.createNew)"
         guard let postsUrl = URL(string: postsEndpoint) else {return}
         var request = URLRequest(url: postsUrl)
-        request.httpMethod = "POST"
+        request.httpMethod = HTTPMethods.POST.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         request.setValue(uid, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -60,7 +60,7 @@ struct Post: Codable {
         guard let postsUrl = URL(string: postsEndpoint) else {return}
         print(postsUrl)
         var request = URLRequest(url: postsUrl)
-        request.httpMethod = "GET"
+        request.httpMethod = HTTPMethods.GET.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         request.setValue(uid, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -21,7 +21,7 @@ struct PostLike: Codable {
         let likesEndpoint = "\(Endpoints.Posts.baseUrl)\(Endpoints.likes)\(Endpoints.createNew)"
         guard let likesUrl = URL(string: likesEndpoint) else {return}
         var request = URLRequest(url: likesUrl)
-        request.httpMethod = "POST"
+        request.httpMethod = HTTPMethods.POST.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         request.setValue(uid, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

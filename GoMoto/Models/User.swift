@@ -30,7 +30,7 @@ struct TraxUser: Codable {
         guard let usersUrl = URL(string: usersEndpoint) else {return}
         print(usersUrl)
         var request = URLRequest(url: usersUrl)
-        request.httpMethod = "POST"
+        request.httpMethod = HTTPMethods.POST.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let encoder = JSONEncoder()
         do {

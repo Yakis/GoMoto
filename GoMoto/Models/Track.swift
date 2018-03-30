@@ -34,7 +34,7 @@ struct Track: Codable {
         let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.createNew)"
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
         var request = URLRequest(url: tracksUrl)
-        request.httpMethod = "POST"
+        request.httpMethod = HTTPMethods.POST.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         request.setValue(uid, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -66,9 +66,8 @@ struct Track: Codable {
     static func getAllTracks(completionHandler: @escaping ([Track]?, Error?) -> Void) {
         let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.getAll)"
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
-        print(tracksUrl)
         var request = URLRequest(url: tracksUrl)
-        request.httpMethod = "GET"
+        request.httpMethod = HTTPMethods.GET.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         request.setValue(uid, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -93,9 +92,8 @@ struct Track: Codable {
     static func getFavoriteTracks(for userId: Int, completionHandler: @escaping ([Track]?, Error?) -> Void) {
         let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favorites)\(Endpoints.user_idKey)\(userId)"
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
-        print(tracksUrl)
         var request = URLRequest(url: tracksUrl)
-        request.httpMethod = "GET"
+        request.httpMethod = HTTPMethods.GET.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         request.setValue(uid, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -120,9 +118,8 @@ struct Track: Codable {
     static func getTracksByOwner(ownerId: Int, completionHandler: @escaping ([Track]?, Error?) -> Void) {
         let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)?user_id=\(ownerId)"
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
-        print(tracksUrl)
         var request = URLRequest(url: tracksUrl)
-        request.httpMethod = "GET"
+        request.httpMethod = HTTPMethods.GET.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         print("UID=== \(uid)")
         request.setValue(uid, forHTTPHeaderField: "Authorization")
@@ -148,9 +145,8 @@ struct Track: Codable {
     static func getFavoriteTracksIds(for userId: Int, completionHandler: @escaping ([FavoriteTrack]?, Error?) -> Void) {
         let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favs)\(Endpoints.user_idKey)\(userId)"
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
-        print(tracksUrl)
         var request = URLRequest(url: tracksUrl)
-        request.httpMethod = "GET"
+        request.httpMethod = HTTPMethods.GET.rawValue
         guard let uid = Auth.auth().currentUser?.uid else {return}
         request.setValue(uid, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
