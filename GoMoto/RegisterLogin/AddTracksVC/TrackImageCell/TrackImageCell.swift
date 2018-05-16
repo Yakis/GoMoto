@@ -54,8 +54,8 @@ class TrackImageCell: UITableViewCell, ReusableView, NibLoadable, TrackImagePick
             }
         }
         uploadTask.observe(.success) { [ weak self ] (snapshot) in
-            guard let metadata = snapshot.metadata else {return}
-            guard let url = metadata.downloadURL() else {return}
+            storageRef.downloadURL(completion: { (url, error) in
+            guard let url = url else {return}
             self?.postNotificationWhenImageUrlIsReady(imageUrl: url.absoluteString)
             uploadTask.removeAllObservers(for: .progress)
             DispatchQueue.main.async {
@@ -65,6 +65,7 @@ class TrackImageCell: UITableViewCell, ReusableView, NibLoadable, TrackImagePick
                 self?.trackProfileImageView.clipsToBounds = true
                 self?.progresView.progress = 0.0
             }
+            })
             
         }
         

@@ -13,54 +13,47 @@ PODS:
     - FacebookCore (~> 0.3)
     - FBSDKCoreKit (~> 4.27)
     - FBSDKLoginKit (~> 4.27)
-  - FBSDKCoreKit (4.32.0):
+  - FBSDKCoreKit (4.33.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.32.0):
+  - FBSDKLoginKit (4.33.0):
     - FBSDKCoreKit
-  - Firebase/Auth (4.13.0):
-    - Firebase/Core
-    - FirebaseAuth (= 4.6.1)
-  - Firebase/Core (4.13.0):
-    - FirebaseAnalytics (= 4.2.0)
-    - FirebaseCore (= 4.0.20)
-  - Firebase/Storage (4.13.0):
-    - Firebase/Core
-    - FirebaseStorage (= 2.2.0)
-  - FirebaseAnalytics (4.2.0):
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
+  - Firebase/Auth (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.0.0)
+  - Firebase/Core (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.0.0)
+  - Firebase/CoreOnly (5.0.1):
+    - FirebaseCore (= 5.0.1)
+  - Firebase/Storage (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.0.0)
+  - FirebaseAnalytics (5.0.0):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
-  - FirebaseAuth (4.6.1):
-    - FirebaseAnalytics (~> 4.2)
-    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+  - FirebaseAuth (5.0.0):
+    - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (4.0.20):
+  - FirebaseCore (5.0.1):
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
-  - FirebaseInstanceID (2.0.10):
-    - FirebaseCore (~> 4.0)
-  - FirebaseStorage (2.2.0):
-    - FirebaseAnalytics (~> 4.1)
-    - FirebaseCore (~> 4.0)
+  - FirebaseInstanceID (3.0.0):
+    - FirebaseCore (~> 5.0)
+  - FirebaseStorage (3.0.0):
+    - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - GoogleToolboxForMac/DebugUtils (2.1.4):
-    - GoogleToolboxForMac/Defines (= 2.1.4)
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
-  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4)":
-    - GoogleToolboxForMac/DebugUtils (= 2.1.4)
-    - GoogleToolboxForMac/Defines (= 2.1.4)
-    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
-  - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
   - GTMSessionFetcher/Core (1.1.15)
-  - Kingfisher (4.7.0)
+  - Kingfisher (4.8.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - OneSignal (2.8.2)
+  - OneSignal (2.8.4)
 
 DEPENDENCIES:
   - FacebookCore
@@ -94,19 +87,19 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
-  FBSDKCoreKit: 55d7f2ac45d9c4b9b6119f4e43900fe84b9b7b1b
-  FBSDKLoginKit: 32ac05c2a59952c363c2e85aafa8f73ba93bcbad
-  Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
-  FirebaseAnalytics: 7ef69e76a5142f643aeb47c780e1cdce4e23632e
-  FirebaseAuth: bf22cacf22c60ab454bf2636f556d8892b10b53f
-  FirebaseCore: 90cb1c53d69b556f112a1bf72b5fcfaad7650790
-  FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
-  FirebaseStorage: 0c223481c8f89ed300cf1239ddd2d9833622c65f
+  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
+  FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
+  Firebase: d6861c2059d8c32d1e6dd8932e22ada346d90a3a
+  FirebaseAnalytics: 19812b49fa5f283dd6b23edf8a14b5d477029ab8
+  FirebaseAuth: acbeef02fe7c3a26624e309849f3fe30c84115af
+  FirebaseCore: cafc814b2d84fc8733f09e653041cc2165332ad7
+  FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
+  FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
-  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  OneSignal: ab5c509192ca8390bdd3570a6261e6decf4c79c1
+  OneSignal: 7218a5a787f6685de81bdb487e696439e8c8f59b
 
 PODFILE CHECKSUM: 5b080c153c52ce7e051a52431a258e5e71fc3562
 

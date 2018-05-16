@@ -53,23 +53,26 @@ class FirebaseManager {
             ActivityIndicatorManager.shared.showActivityIndicator(on: viewController.view, interactionEnabled: false)
             switch result {
             case .failed(let error):
+                ActivityIndicatorManager.shared.stopActivityIndicator()
                 UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
             case .cancelled:
+                ActivityIndicatorManager.shared.stopActivityIndicator()
                 UserAlert.showMessage(from: viewController, title: "Error", message: "User canceled login")
             case .success(_, _, let accessToken):
                 let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
-                Auth.auth().signIn(with: credential, completion: { (user, error) in
-                    guard let user = user else {
+                Auth.auth().signInAndRetrieveData(with: credential, completion: { (authResult, error) in
+                    guard let authResult = authResult else {
                         guard let error = error else {return}
                         UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
                         return
                     }
                     ActivityIndicatorManager.shared.stopActivityIndicator()
+                    let user = authResult.user
                     save(uid: user.uid)
                     completion(user)
                 })
-            }
         }
+    }
     }
     
     
@@ -80,9 +83,9 @@ class FirebaseManager {
                 UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
                 return
             }
-            guard let email = user.email else {return}
-            let traxUser = TraxUser(id: 0, username: "", email: email, first_name: "", last_name: "", postcode: "", contact_number: "", user_type: userType, avatar: "", device_token: "", firebase_uid: user.uid, created_at: nil, updated_at: nil)
-            save(uid: user.uid)
+            guard let email = user.user.email else {return}
+            let traxUser = TraxUser(id: 0, username: "", email: email, first_name: "", last_name: "", postcode: "", contact_number: "", user_type: userType, avatar: "", device_token: "", firebase_uid: user.user.uid, created_at: nil, updated_at: nil)
+            save(uid: user.user.uid)
             completion(traxUser)
         }
     }
@@ -91,8 +94,8 @@ class FirebaseManager {
     static func signInWithEmail(email: String, password: String, completion: @escaping (User?, Error?) -> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if let user = user {
-                save(uid: user.uid)
-                completion(user, nil)
+                save(uid: user.user.uid)
+                completion(user.user, nil)
             } else {
                 completion(nil, error)
             }
