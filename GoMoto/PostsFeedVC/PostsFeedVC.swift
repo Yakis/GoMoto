@@ -40,7 +40,9 @@ class PostsFeedVC: UIViewController {
     func getAllPosts() {
         Post.getAllPosts { [weak self] (posts, error) in
             guard let posts = posts else {
-                print(error?.localizedDescription)
+                if let error = error {
+                    print(error.localizedDescription)
+                }
                 return
             }
             self?.posts = posts

@@ -67,7 +67,7 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
         guard let userId = UserDefaults.standard.value(forKey: "user_id") as? Int else {return}
         let favorite = FavoriteTrack(user_id: userId, track_id: track_id)
         FavoriteTrack.setFavorite(favorite: favorite) { (track, error) in
-            print(track?.favorites_count)
+            print(track?.favorites_count ?? "There's no tracks!")
         }
     }
     
@@ -78,7 +78,7 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
         print("Deleted \(favorite.user_id)")
         FavoriteTrack.removeFavorite(favorite: favorite) { (confirmation, error) in
             if error == nil {
-                print(confirmation)
+                print(confirmation ?? "Track can't be removed!")
             }
         }
     }

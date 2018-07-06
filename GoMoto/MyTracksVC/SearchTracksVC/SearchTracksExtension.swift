@@ -33,7 +33,7 @@ extension SearchTracksVC: UISearchBarDelegate {
     
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        print(searchBar.text)
+        print(searchBar.text ?? "No text in search bar!")
     }
     
     

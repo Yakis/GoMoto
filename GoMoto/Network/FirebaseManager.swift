@@ -31,12 +31,13 @@ class FirebaseManager {
                 ActivityIndicatorManager.shared.stopActivityIndicator()
             case .success(_, _, let accessToken):
                 let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
-                Auth.auth().signIn(with: credential, completion: { (user, error) in
-                    guard let user = user else {
-                        guard let error = error else {return}
-                        UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
-                        return
-                    }
+                    Auth.auth().signInAndRetrieveData(with: credential, completion: { (result, error) in
+                        guard let result = result else {
+                            guard let error = error else {return}
+                            UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
+                            return
+                        }
+                        let user = result.user
                     ActivityIndicatorManager.shared.stopActivityIndicator()
                     save(uid: user.uid)
                         completion(user)
