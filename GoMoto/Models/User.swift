@@ -10,22 +10,23 @@ import Foundation
 
 struct TraxUser: Codable {
     
-    var id: Int = 0
+    var id: Int?
     var username: String = ""
     var email: String = ""
-    var first_name: String = ""
-    var last_name: String = ""
+    var firstName: String = ""
+    var lastName: String = ""
     var postcode: String = ""
-    var contact_number: String = ""
-    var user_type: String = ""
+    var contactNumber: String = ""
+    var userType: String = ""
     var avatar: String = ""
-    var device_token: String = ""
-    var firebase_uid: String = ""
-    var created_at: Date?
-    var updated_at: Date?
+    var deviceToken: String = ""
+    var firebaseUid: String = ""
+//    var createdAt: Date?
+//    var updatedAt: Date?
     
     
     static func save(user: TraxUser, completionHandler: @escaping (TraxUser?, Error?) -> Void) {
+        print(user)
         let usersEndpoint = "\(Endpoints.Users.baseUrl)\(Endpoints.createNew)"
         guard let usersUrl = URL(string: usersEndpoint) else {return}
         print(usersUrl)
@@ -49,8 +50,8 @@ struct TraxUser: Codable {
                 let newUser = try decoder.decode(TraxUser.self, from: data)
                 completionHandler(newUser, nil)
                 let userDefaults = UserDefaults.standard
-                userDefaults.set(newUser.user_type, forKey: "userType")
-                print(newUser.first_name)
+                userDefaults.set(newUser.userType, forKey: "userType")
+                print(newUser.firstName)
             } catch {
                 
             }
@@ -72,8 +73,8 @@ struct TraxUser: Codable {
                     let user = try decoder.decode(TraxUser.self, from: data!)
                     completionHandler(user, nil)
                     let userDefaults = UserDefaults.standard
-                    userDefaults.set(user.user_type, forKey: "userType")
-                    userDefaults.set(user.id, forKey: "user_id")
+                    userDefaults.set(user.userType, forKey: "userType")
+                    userDefaults.set(user.id, forKey: "userId")
                 } catch {
                     completionHandler(nil, error)
                 }

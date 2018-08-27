@@ -10,15 +10,16 @@ import Foundation
 import Firebase
 
 struct PostLike: Codable {
-    var user_id: Int
-    var post_id: Int
+    var id: Int?
+    var userId: Int
+    var postId: Int
     
     
     
     
     
     static func likePost(like: PostLike, completionHandler: @escaping (Post?, Error?) -> Void) {
-        let likesEndpoint = "\(Endpoints.Posts.baseUrl)\(Endpoints.likes)\(Endpoints.createNew)"
+        let likesEndpoint = "\(Endpoints.Posts.baseUrl)\(Endpoints.like)"
         guard let likesUrl = URL(string: likesEndpoint) else {return}
         var request = URLRequest(url: likesUrl)
         request.httpMethod = HTTPMethods.POST.rawValue

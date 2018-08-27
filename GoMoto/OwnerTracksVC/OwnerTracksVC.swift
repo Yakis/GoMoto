@@ -36,7 +36,7 @@ class OwnerTracksVC: UIViewController {
         guard let uid = UserDefaults.standard.value(forKey: "uid") as? String else {return}
         TraxUser.getUser(for: uid) { [weak self] (user, error) in
             guard let user = user else {return}
-            UserDefaults.standard.set(user.id, forKey: "user_id")
+            UserDefaults.standard.set(user.id, forKey: "userId")
             self?.user = user
         }
     }
@@ -56,7 +56,7 @@ class OwnerTracksVC: UIViewController {
     
     
     func getOwnerTracks () {
-        guard let userId: Int = UserDefaults.standard.value(forKey: "user_id") as? Int else {
+        guard let userId: Int = UserDefaults.standard.value(forKey: "userId") as? Int else {
             print("No user id found!")
             return
         }

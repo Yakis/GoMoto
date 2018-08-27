@@ -14,13 +14,14 @@ struct Post: Codable {
     var id: Int?
     var content: String
     var image: String
-    var track_id: Int
-    var track_name: String
-    var track_icon: String
-    var created_at: String?
-    var updated_at: String?
-    var likes_count: Int
-    var comments_count: Int
+    var trackId: Int
+    var userId: Int
+    var trackName: String
+    var trackIcon: String
+    var createdAt: String?
+    var updatedAt: String?
+    var likesCount: Int
+    var commentsCount: Int
     
     
     static func savePost(post: Post, completionHandler: @escaping (Post?, Error?) -> Void) {

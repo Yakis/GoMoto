@@ -30,11 +30,11 @@ class RiderProfileVC: UIViewController {
     func setupNameLabel() {
         guard let uid = Auth.auth().currentUser?.uid else {return}
         TraxUser.getUser(for: uid) { [weak self] (user, error) in
-            guard let firstName = user?.first_name else {return}
-            guard let lastName = user?.last_name else {return}
+            guard let firstName = user?.firstName else {return}
+            guard let lastName = user?.lastName else {return}
             DispatchQueue.main.async {
                 guard let user = user else {return}
-                UserDefaults.standard.set(user.id, forKey: "user_id")
+                UserDefaults.standard.set(user.id, forKey: "userId")
                 self?.welcomeLabel.text = "Welcome, \(firstName) \(lastName)"
             }
         }

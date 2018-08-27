@@ -79,12 +79,12 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
         guard let postcode = self.trackPostcodeField.text else {return}
         guard let latitude = self.latitude?.toDouble() else {return}
         guard let longitude = self.longitude?.toDouble() else {return}
-        guard let soil_type = self.trackSoilField.text else {return}
-        guard let opening_times = self.trackOpeningField.text else {return}
+        guard let soilType = self.trackSoilField.text else {return}
+        guard let openingTimes = self.trackOpeningField.text else {return}
         guard let prices = self.trackPricesField.text else {return}
-        let child_friendly = self.childFriendly
-        let user_id = user.id
-        let track = Track(id: nil, name: name, adress: adress, postcode: postcode, latitude: latitude, longitude: longitude, soil_type: soil_type, opening_times: opening_times, prices: prices, child_friendly: child_friendly, rating: 0.0, user_id: user_id, featured: 0, image: trackProfileImageUrl, distance: nil, favorites_count: 0)
+        let childFriendly = self.childFriendly
+        guard let userId = self.user.id else {return}
+        let track = Track(id: nil, name: name, adress: adress, postcode: postcode, latitude: latitude, longitude: longitude, soilType: soilType, openingTimes: openingTimes, prices: prices, childFriendly: childFriendly, rating: 0.0, userId: userId, featured: 0, image: trackProfileImageUrl, distance: nil, favoritesCount: 0)
         Track.saveTrack(track: track) { [weak self] (track, error) in
             guard let track = track else {return}
             guard let user = self?.user else {return}

@@ -17,16 +17,16 @@ struct Track: Codable {
     var postcode: String
     var latitude: Double
     var longitude: Double
-    var soil_type: String
-    var opening_times: String
+    var soilType: String
+    var openingTimes: String
     var prices: String
-    var child_friendly: Bool
+    var childFriendly: Bool
     var rating: Double
-    var user_id: Int
+    var userId: Int
     var featured: Int
     var image: String
     var distance: Double?
-    var favorites_count: Int
+    var favoritesCount: Int
     
     
     
@@ -90,7 +90,7 @@ struct Track: Codable {
     
     
     static func getFavoriteTracks(for userId: Int, completionHandler: @escaping ([Track]?, Error?) -> Void) {
-        let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favorites)\(Endpoints.user_idKey)\(userId)"
+        let tracksEndpoint = "\(Endpoints.Users.baseUrl)\(Endpoints.favoriteTracks)\(Endpoints.userIdKey)\(userId)"
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
         var request = URLRequest(url: tracksUrl)
         request.httpMethod = HTTPMethods.GET.rawValue
@@ -116,7 +116,7 @@ struct Track: Codable {
     
     
     static func getTracksByOwner(ownerId: Int, completionHandler: @escaping ([Track]?, Error?) -> Void) {
-        let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)?user_id=\(ownerId)"
+        let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)?userId=\(ownerId)"
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
         var request = URLRequest(url: tracksUrl)
         request.httpMethod = HTTPMethods.GET.rawValue
@@ -143,7 +143,7 @@ struct Track: Codable {
     
     
     static func getFavoriteTracksIds(for userId: Int, completionHandler: @escaping ([FavoriteTrack]?, Error?) -> Void) {
-        let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favs)\(Endpoints.user_idKey)\(userId)"
+        let tracksEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favs)\(Endpoints.userIdKey)\(userId)"
         guard let tracksUrl = URL(string: tracksEndpoint) else {return}
         var request = URLRequest(url: tracksUrl)
         request.httpMethod = HTTPMethods.GET.rawValue

@@ -33,7 +33,7 @@ class LoginVC: UIViewController, LoginDelegate {
             TraxUser.getUser(for: firebaseUser.uid, completionHandler: { [weak self] (traxUser, error) in
                         guard let traxUser = traxUser else {return}
                         DispatchQueue.main.async {
-                            UserDefaults.standard.set(traxUser.id, forKey: "user_id")
+                            UserDefaults.standard.set(traxUser.id, forKey: "userId")
                             self?.showVCForUser(user: traxUser)
                         }
             })
@@ -50,7 +50,7 @@ class LoginVC: UIViewController, LoginDelegate {
                     return
                 }
                 DispatchQueue.main.async {
-                    UserDefaults.standard.set(traxUser.id, forKey: "user_id")
+                    UserDefaults.standard.set(traxUser.id, forKey: "userId")
                     self?.showVCForUser(user: traxUser)
                 }
             })
@@ -60,7 +60,7 @@ class LoginVC: UIViewController, LoginDelegate {
     
     
     func showVCForUser(user: TraxUser) {
-        switch user.user_type {
+        switch user.userType {
         case "owner":
             let ownerDashboard = AppController.createAndReturnOwnerTabBarController()
             self.present(ownerDashboard, animated: true, completion: nil)

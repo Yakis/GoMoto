@@ -37,10 +37,10 @@ class PostCell: UITableViewCell, NibLoadable, ReusableView {
     func setupCell(with post: Post) {
         self.post = post
         contentLabel.text = post.content
-        trackNameLabel.text = post.track_name
-        dateTimeLabel.text = post.created_at?.shortDate()
-        likesCountLabel.text = "Likes [\(post.likes_count)]"
-        guard let trackIconUrl = URL(string: post.track_icon) else {return}
+        trackNameLabel.text = post.trackName
+        dateTimeLabel.text = post.createdAt?.shortDate()
+        likesCountLabel.text = "Likes [\(post.likesCount)]"
+        guard let trackIconUrl = URL(string: post.trackIcon) else {return}
         trackIcon.kf.setImage(with: trackIconUrl)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(likeAction))
@@ -54,11 +54,13 @@ class PostCell: UITableViewCell, NibLoadable, ReusableView {
 
 
     @objc func likeAction() {
-        let like = PostLike(user_id: 1, post_id: post.id!)
+        guard let userId = UserDefaults.standard.value(forKey: "userId") as? Int else {return}
+        let like = PostLike(id: nil, userId: userId, postId: post.id!)
+        print("LIKE ========== \(like)")
         PostLike.likePost(like: like) { (newPost, error) in
             if let newPost = newPost {
                 DispatchQueue.main.async {
-                    self.likesCountLabel.text = "Likes [\(newPost.likes_count)]"
+                    self.likesCountLabel.text = "Likes [\(newPost.likesCount)]"
                 }
             } else {
                 print("Error like this post")

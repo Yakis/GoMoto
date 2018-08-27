@@ -85,7 +85,7 @@ class FirebaseManager {
                 return
             }
             guard let email = user.user.email else {return}
-            let traxUser = TraxUser(id: 0, username: "", email: email, first_name: "", last_name: "", postcode: "", contact_number: "", user_type: userType, avatar: "", device_token: "", firebase_uid: user.user.uid, created_at: nil, updated_at: nil)
+            let traxUser = TraxUser(id: nil, username: "", email: email, firstName: "", lastName: "", postcode: "", contactNumber: "", userType: userType, avatar: "", deviceToken: "", firebaseUid: user.user.uid)
             save(uid: user.user.uid)
             completion(traxUser)
         }

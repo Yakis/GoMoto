@@ -48,12 +48,12 @@ class SearchTracksVC: UIViewController {
 
     
     func getFavoriteIds() {
-        guard let userId = UserDefaults.standard.value(forKey: "user_id") as? Int else {return}
+        guard let userId = UserDefaults.standard.value(forKey: "userId") as? Int else {return}
         Track.getFavoriteTracksIds(for: userId) { [weak self] (favs, error) in
             if error == nil {
                 guard let favs = favs else {return}
                 for fav in favs {
-                    self?.favoritesIds.append(fav.track_id)
+                    self?.favoritesIds.append(fav.trackId)
                 }
             }
         }

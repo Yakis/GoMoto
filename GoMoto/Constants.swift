@@ -42,29 +42,30 @@ struct Endpoints {
     
     static let getAll = "/all"
     static let createNew = "/create"
-    static let likes = "/likes"
-    static let likesCount = "/post?id="
+    static let like = "/like"
+    //static let likesCount = "/post?id="
     static let favorites = "/favorites"
+    static let favoriteTracks = "/favoriteTracks"
     static let favs = "/favs"
-    static let user_idKey = "?user_id="
-    static let track_idKey = "&track_id="
+    static let userIdKey = "?userId="
+    static let trackIdKey = "&trackId="
     
     struct Users {
-        static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/users"
+        static let baseUrl = "https://serveroo.herokuapp.com/users"
         static let getByUid = "?uid="
     }
 
     struct Tracks {
-        static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/tracks"
+        static let baseUrl = "https://serveroo.herokuapp.com/tracks"
     }
     
     struct Posts {
-        static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/posts"
+        static let baseUrl = "https://serveroo.herokuapp.com/posts"
     }
     
     
     struct Images {
-        static let baseUrl = "https://traxapiserver.herokuapp.com/api/v1/images"
+        static let baseUrl = "https://serveroo.herokuapp.com/images"
     }
     
     

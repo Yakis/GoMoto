@@ -12,8 +12,8 @@ import Firebase
 struct FavoriteTrack: Codable {
     
     
-    var user_id: Int
-    var track_id: Int
+    var userId: Int
+    var trackId: Int
     
     
     
@@ -50,7 +50,7 @@ struct FavoriteTrack: Codable {
     
     
     static func removeFavorite(favorite: FavoriteTrack, completionHandler: @escaping (String?, Error?) -> Void) {
-        let likesEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favorites)\(Endpoints.user_idKey)\(favorite.user_id)\(Endpoints.track_idKey)\(favorite.track_id)"
+        let likesEndpoint = "\(Endpoints.Tracks.baseUrl)\(Endpoints.favorites)\(Endpoints.userIdKey)\(favorite.userId)\(Endpoints.trackIdKey)\(favorite.trackId)"
         guard let likesUrl = URL(string: likesEndpoint) else {return}
         var request = URLRequest(url: likesUrl)
         request.httpMethod = HTTPMethods.DELETE.rawValue

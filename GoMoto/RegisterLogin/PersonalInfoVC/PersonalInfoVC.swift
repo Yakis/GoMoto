@@ -13,7 +13,7 @@ class PersonalInfoVC: UIViewController, PersonalInfoDelegate {
     
     
     func personalInfoReady(with user: TraxUser) {
-        if user.contact_number.isValidPhone() {
+        if user.contactNumber.isValidPhone() {
        RegistrationPresenter.shared.showAditionalInfoVC(with: user, from: self)
         } else {
             UserAlert.showMessage(from: self, title: "Error", message: "Please enter a valid phone number!")

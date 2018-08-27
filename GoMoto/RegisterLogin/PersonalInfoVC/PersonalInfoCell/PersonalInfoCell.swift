@@ -40,8 +40,8 @@ class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView, UITextFieldD
     func setupCell(with user: TraxUser) {
         self.user = user
         self.emailField.text = user.email
-        self.firstNameField.text = user.first_name
-        self.lastNameField.text = user.last_name
+        self.firstNameField.text = user.firstName
+        self.lastNameField.text = user.lastName
         firstNameField.delegate = self
         lastNameField.delegate = self
         emailField.delegate = self
@@ -77,9 +77,9 @@ class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView, UITextFieldD
         guard let lastName = self.lastNameField.text else {return}
         guard let email = emailField.text else {return}
         guard let phoneNumber = phoneNumberField.text else {return}
-        let userType = self.user.user_type
-        let firebaseUID = self.user.firebase_uid
-        let user = TraxUser(id: 0, username: "", email: email, first_name: firstName, last_name: lastName, postcode: "", contact_number: phoneNumber, user_type: userType, avatar: "", device_token: "", firebase_uid: firebaseUID, created_at: nil, updated_at: nil)
+        let userType = self.user.userType
+        let firebaseUID = self.user.firebaseUid
+        let user = TraxUser(id: nil, username: "", email: email, firstName: firstName, lastName: lastName, postcode: "", contactNumber: phoneNumber, userType: userType, avatar: "", deviceToken: "", firebaseUid: firebaseUID)
         self.delegate?.personalInfoReady(with: user)
     }
     

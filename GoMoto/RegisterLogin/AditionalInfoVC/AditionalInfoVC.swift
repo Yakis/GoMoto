@@ -30,7 +30,7 @@ class AditionalInfoVC: UIViewController, UsernameDelegate {
         TraxUser.save(user: user) { [weak self] (savedUser, error)  in
             guard let savedUser = savedUser else {return}
             DispatchQueue.main.async {
-                switch savedUser.user_type {
+                switch savedUser.userType {
                 case "owner":
                     RegistrationPresenter.shared.showAddTracksVC(with: savedUser, from: self)
                 default:

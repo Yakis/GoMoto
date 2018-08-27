@@ -53,29 +53,29 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
         switch isFavorite {
         case true:
             isFavorite = false
-            removeTrackFromFavorites(track_id: trackId)
+            removeTrackFromFavorites(trackId: trackId)
             favoriteButtonOutlet.setImage(#imageLiteral(resourceName: "FavoriteTrackIconEmpty"), for: .normal)
         default:
             isFavorite = true
             favoriteButtonOutlet.setImage(#imageLiteral(resourceName: "FavoriteTrackIconFull"), for: .normal)
-            saveTrackAsFavorite(track_id: trackId)
+            saveTrackAsFavorite(trackId: trackId)
         }
     }
     
     
-    func saveTrackAsFavorite(track_id: Int) {
-        guard let userId = UserDefaults.standard.value(forKey: "user_id") as? Int else {return}
-        let favorite = FavoriteTrack(user_id: userId, track_id: track_id)
+    func saveTrackAsFavorite(trackId: Int) {
+        guard let userId = UserDefaults.standard.value(forKey: "userId") as? Int else {return}
+        let favorite = FavoriteTrack(userId: userId, trackId: trackId)
         FavoriteTrack.setFavorite(favorite: favorite) { (track, error) in
-            print(track?.favorites_count ?? "There's no tracks!")
+            print(track?.favoritesCount ?? "There's no tracks!")
         }
     }
     
     
-    func removeTrackFromFavorites(track_id: Int) {
-        guard let userId = UserDefaults.standard.value(forKey: "user_id") as? Int else {return}
-        let favorite = FavoriteTrack(user_id: userId, track_id: track_id)
-        print("Deleted \(favorite.user_id)")
+    func removeTrackFromFavorites(trackId: Int) {
+        guard let userId = UserDefaults.standard.value(forKey: "userId") as? Int else {return}
+        let favorite = FavoriteTrack(userId: userId, trackId: trackId)
+        print("Deleted \(favorite.userId)")
         FavoriteTrack.removeFavorite(favorite: favorite) { (confirmation, error) in
             if error == nil {
                 print(confirmation ?? "Track can't be removed!")
