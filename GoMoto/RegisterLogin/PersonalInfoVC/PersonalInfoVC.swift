@@ -10,15 +10,6 @@ import UIKit
 
 class PersonalInfoVC: UIViewController, PersonalInfoDelegate {
     
-    
-    
-    func personalInfoReady(with user: TraxUser) {
-        if user.contactNumber.isValidPhone() {
-       RegistrationPresenter.shared.showAditionalInfoVC(with: user, from: self)
-        } else {
-            UserAlert.showMessage(from: self, title: "Error", message: "Please enter a valid phone number!")
-        }
-    }
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,7 +19,19 @@ class PersonalInfoVC: UIViewController, PersonalInfoDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        print("PersonalInfoVC viewDidLoad \(user.id)")
     }
+    
+    
+    func personalInfoReady(with user: TraxUser) {
+        if user.contactNumber.isValidPhone() {
+            RegistrationPresenter.shared.showAditionalInfoVC(with: user, from: self)
+            print("PersonalInfo \(user.id)")
+        } else {
+            UserAlert.showMessage(from: self, title: "Error", message: "Please enter a valid phone number!")
+        }
+    }
+    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

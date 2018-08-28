@@ -80,12 +80,13 @@ class FirebaseManager {
     static func emailRegistration(userType: String, email: String, password: String, viewController: UIViewController, completion: @escaping (TraxUser) -> ()) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             guard let user = user else {
+                
                 guard let error = error else {return}
                 UserAlert.showMessage(from: viewController, title: "Error", message: error.localizedDescription)
                 return
             }
             guard let email = user.user.email else {return}
-            let traxUser = TraxUser(id: nil, username: "", email: email, firstName: "", lastName: "", postcode: "", contactNumber: "", userType: userType, avatar: "", deviceToken: "", firebaseUid: user.user.uid)
+            let traxUser = TraxUser(id: user.user.uid, username: "", email: email, firstName: "", lastName: "", postcode: "", contactNumber: "", userType: userType, avatar: "", deviceToken: "")
             save(uid: user.user.uid)
             completion(traxUser)
         }

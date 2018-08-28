@@ -33,7 +33,7 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
     }
     
     
-    func setupCell(with track: Track, favoritesIds: [Int]) {
+    func setupCell(with track: Track, favoritesIds: [String]) {
         self.track = track
         self.trackNameLabel.text = track.name
         self.distanceLabel.text = ""
@@ -63,8 +63,8 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
     }
     
     
-    func saveTrackAsFavorite(trackId: Int) {
-        guard let userId = UserDefaults.standard.value(forKey: "userId") as? Int else {return}
+    func saveTrackAsFavorite(trackId: String) {
+        guard let userId = UserDefaults.standard.value(forKey: "uid") as? String else {return}
         let favorite = FavoriteTrack(userId: userId, trackId: trackId)
         FavoriteTrack.setFavorite(favorite: favorite) { (track, error) in
             print(track?.favoritesCount ?? "There's no tracks!")
@@ -72,8 +72,8 @@ class SearchTracksCell: UITableViewCell, NibLoadable, ReusableView {
     }
     
     
-    func removeTrackFromFavorites(trackId: Int) {
-        guard let userId = UserDefaults.standard.value(forKey: "userId") as? Int else {return}
+    func removeTrackFromFavorites(trackId: String) {
+        guard let userId = UserDefaults.standard.value(forKey: "uid") as? String else {return}
         let favorite = FavoriteTrack(userId: userId, trackId: trackId)
         print("Deleted \(favorite.userId)")
         FavoriteTrack.removeFavorite(favorite: favorite) { (confirmation, error) in

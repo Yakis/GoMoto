@@ -56,6 +56,7 @@ class AddTrackFieldsCell: UITableViewCell, NibLoadable, ReusableView {
 
     
     func setupCell(with user: TraxUser) {
+        print(user.id)
         self.user = user
         trackNameField.text = user.username
     }

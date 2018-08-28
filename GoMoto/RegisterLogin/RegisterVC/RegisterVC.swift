@@ -46,7 +46,8 @@ class RegisterVC: UIViewController {
             let firstName = user.displayName?.splitName().first ?? ""
             let lastName = user.displayName?.splitName().last ?? ""
             let email = user.email ?? ""
-            let traxUser = TraxUser(id: nil, username: "", email: email, firstName: firstName, lastName: lastName, postcode: "", contactNumber: "", userType: (self?.userType.rawValue)!, avatar: "", deviceToken: "", firebaseUid: user.uid)
+            let uid = user.uid
+            let traxUser = TraxUser(id: uid, username: "", email: email, firstName: firstName, lastName: lastName, postcode: "", contactNumber: "", userType: (self?.userType.rawValue)!, avatar: "", deviceToken: "")
             RegistrationPresenter.shared.showPersonalInfoVC(with: traxUser, from: self)
         }
     }

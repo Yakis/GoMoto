@@ -56,7 +56,7 @@ class TrackDetailsAddPostCell: UITableViewCell, NibLoadable, ReusableView {
     
     
     @IBAction func postButtonAction(_ sender: Any) {
-        guard let userId = UserDefaults.standard.value(forKey: "userId") as? Int else {return}
+        guard let userId = UserDefaults.standard.value(forKey: "uid") as? String else {return}
         let newPost = Post(id: nil, content: newPostTextView.text, image: "", trackId: track.id!, userId: userId, trackName: track.name, trackIcon: track.image, createdAt: nil, updatedAt: nil, likesCount: 0, commentsCount: 0)
         Post.savePost(post: newPost) { (post, error) in
             if let post = post {

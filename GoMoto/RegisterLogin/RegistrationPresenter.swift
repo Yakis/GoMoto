@@ -21,6 +21,7 @@ class RegistrationPresenter {
         let personalInfoVC = PersonalInfoVC(nibName: "PersonalInfoVC", bundle: nil)
         personalInfoVC.user = user
         guard let viewController = viewController else {return}
+        print("showPersonalInfoVC method \(user.id)")
         viewController.navigationController?.pushViewController(personalInfoVC, animated: true)
     }
     
@@ -28,6 +29,7 @@ class RegistrationPresenter {
     func showAditionalInfoVC(with user: TraxUser, from viewController: UIViewController?) {
         let aditionalInfoVC = AditionalInfoVC(nibName: "AditionalInfoVC", bundle: nil)
         aditionalInfoVC.user = user
+        print("showAditionalInfoVC method \(user.id)")
         guard let viewController = viewController else {return}
         viewController.navigationController?.pushViewController(aditionalInfoVC, animated: true)
     }

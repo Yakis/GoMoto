@@ -12,8 +12,8 @@ import Firebase
 struct FavoriteTrack: Codable {
     
     
-    var userId: Int
-    var trackId: Int
+    var userId: String
+    var trackId: String
     
     
     

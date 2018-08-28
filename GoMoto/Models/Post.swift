@@ -11,11 +11,11 @@ import Firebase
 
 struct Post: Codable {
     
-    var id: Int?
+    var id: String?
     var content: String
     var image: String
-    var trackId: Int
-    var userId: Int
+    var trackId: String
+    var userId: String
     var trackName: String
     var trackIcon: String
     var createdAt: String?

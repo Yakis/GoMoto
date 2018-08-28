@@ -19,7 +19,7 @@ class SearchTracksVC: UIViewController {
     
     var userLocation: CLLocation!
     
-    var favoritesIds: [Int] = []
+    var favoritesIds: [String] = []
     
     var estimatedTracks: [Track] = [] {
         didSet {
@@ -48,7 +48,7 @@ class SearchTracksVC: UIViewController {
 
     
     func getFavoriteIds() {
-        guard let userId = UserDefaults.standard.value(forKey: "userId") as? Int else {return}
+        guard let userId = UserDefaults.standard.value(forKey: "uid") as? String else {return}
         Track.getFavoriteTracksIds(for: userId) { [weak self] (favs, error) in
             if error == nil {
                 guard let favs = favs else {return}

@@ -5,6 +5,12 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - BoringSSL (10.0.6):
+    - BoringSSL/Implementation (= 10.0.6)
+    - BoringSSL/Interface (= 10.0.6)
+  - BoringSSL/Implementation (10.0.6):
+    - BoringSSL/Interface (= 10.0.6)
+  - BoringSSL/Interface (10.0.6)
   - FacebookCore (0.3.2):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.35)
@@ -17,18 +23,21 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.35.0):
     - FBSDKCoreKit
-  - Firebase/Auth (5.5.0):
+  - Firebase/Auth (5.6.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.3)
-  - Firebase/Core (5.5.0):
+  - Firebase/Core (5.6.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 5.1.0)
-  - Firebase/CoreOnly (5.5.0):
-    - FirebaseCore (= 5.1.0)
-  - Firebase/Storage (5.5.0):
+    - FirebaseAnalytics (= 5.1.1)
+  - Firebase/CoreOnly (5.6.0):
+    - FirebaseCore (= 5.1.1)
+  - Firebase/Firestore (5.6.0):
+    - Firebase/CoreOnly
+    - FirebaseFirestore (= 0.13.1)
+  - Firebase/Storage (5.6.0):
     - Firebase/CoreOnly
     - FirebaseStorage (= 3.0.0)
-  - FirebaseAnalytics (5.1.0):
+  - FirebaseAnalytics (5.1.1):
     - FirebaseCore (~> 5.1)
     - FirebaseInstanceID (~> 3.2)
     - GoogleAppMeasurement (~> 5.1)
@@ -43,15 +52,30 @@ PODS:
     - GoogleUtilities/Environment (~> 5.2)
     - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseAuthInterop (1.0.0)
-  - FirebaseCore (5.1.0):
+  - FirebaseCore (5.1.1):
     - GoogleUtilities/Logger (~> 5.2)
-  - FirebaseInstanceID (3.2.0):
+  - FirebaseFirestore (0.13.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.0)
+    - FirebaseFirestore/abseil-cpp (= 0.13.1)
+    - gRPC-ProtoRPC (~> 1.0)
+    - leveldb-library (~> 1.18)
+    - nanopb (~> 0.3.8)
+    - Protobuf (~> 3.1)
+  - FirebaseFirestore/abseil-cpp (0.13.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.0)
+    - gRPC-ProtoRPC (~> 1.0)
+    - leveldb-library (~> 1.18)
+    - nanopb (~> 0.3.8)
+    - Protobuf (~> 3.1)
+  - FirebaseInstanceID (3.2.1):
     - FirebaseCore (~> 5.1)
     - GoogleUtilities/Environment (~> 5.2)
   - FirebaseStorage (3.0.0):
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - GoogleAppMeasurement (5.1.0):
+  - GoogleAppMeasurement (5.1.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2.0)
     - GoogleUtilities/MethodSwizzler (~> 5.2.0)
     - GoogleUtilities/Network (~> 5.2)
@@ -73,20 +97,44 @@ PODS:
   - "GoogleUtilities/NSData+zlib (5.2.2)"
   - GoogleUtilities/Reachability (5.2.2):
     - GoogleUtilities/Logger
+  - gRPC (1.14.1):
+    - gRPC-RxLibrary (= 1.14.1)
+    - gRPC/Main (= 1.14.1)
+  - gRPC-Core (1.14.1):
+    - gRPC-Core/Implementation (= 1.14.1)
+    - gRPC-Core/Interface (= 1.14.1)
+  - gRPC-Core/Implementation (1.14.1):
+    - BoringSSL (~> 10.0)
+    - gRPC-Core/Interface (= 1.14.1)
+    - nanopb (~> 0.3)
+  - gRPC-Core/Interface (1.14.1)
+  - gRPC-ProtoRPC (1.14.1):
+    - gRPC-ProtoRPC/Main (= 1.14.1)
+  - gRPC-ProtoRPC/Main (1.14.1):
+    - gRPC (= 1.14.1)
+    - gRPC-RxLibrary (= 1.14.1)
+    - Protobuf (~> 3.0)
+  - gRPC-RxLibrary (1.14.1)
+  - gRPC/Main (1.14.1):
+    - gRPC-Core (= 1.14.1)
+    - gRPC-RxLibrary (= 1.14.1)
   - GTMSessionFetcher/Core (1.2.0)
   - Kingfisher (4.8.1)
+  - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - OneSignal (2.8.6)
+  - OneSignal (2.8.7)
+  - Protobuf (3.6.1)
 
 DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/Firestore
   - Firebase/Storage
   - Kingfisher (~> 4.0)
   - OneSignal (< 3.0, >= 2.5.2)
@@ -94,6 +142,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bolts
+    - BoringSSL
     - FacebookCore
     - FacebookLogin
     - FBSDKCoreKit
@@ -103,35 +152,50 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseAuthInterop
     - FirebaseCore
+    - FirebaseFirestore
     - FirebaseInstanceID
     - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleUtilities
+    - gRPC
+    - gRPC-Core
+    - gRPC-ProtoRPC
+    - gRPC-RxLibrary
     - GTMSessionFetcher
     - Kingfisher
+    - leveldb-library
     - nanopb
     - OneSignal
+    - Protobuf
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
   FacebookCore: fe93222bb70346730ef33b061d493e9e7a7cb1f5
   FacebookLogin: a4e225974791c82836765a294582b4778baffc07
   FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
   FBSDKLoginKit: 00a3d65d1226852f9d76dcddff01981e5e6d9c38
-  Firebase: 8c957f9cb3852b519180fb378801b7eeeba4d288
-  FirebaseAnalytics: d4a260c114aec0d765ab5b9c404ac63de1d29381
+  Firebase: 75ea9e232eefa158c1049028030b8f661a2ccb62
+  FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
   FirebaseAuth: 657a25e4be044d2d333663ebf515a861c5a59cd7
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
-  FirebaseCore: ee4b35cf8c8e781da296cc7c15125e4608bb954d
-  FirebaseInstanceID: 8cd2c6cfe7b9ab65ce7e248f6da7f26f6775b9be
+  FirebaseCore: cb9ee75e0894def766167c95a4d5a14b1c138269
+  FirebaseFirestore: e953e8e02544cc60372f3787d4c30cb47a691aa7
+  FirebaseInstanceID: ea5af6920d0a4a29b40459d055bebe4a6c1333c4
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
-  GoogleAppMeasurement: e785bdb86d3d280abc778156cec323a975f11d1d
+  GoogleAppMeasurement: f7507b39b70ad0bd80b3d81518b2f43868974307
   GoogleUtilities: 06b66f9567769a7958db20a92f0128b2843e49d5
+  gRPC: 65fa2a50c4fd61940b76f4962d75c239c92c6a8d
+  gRPC-Core: e3ace1e1161e75903135de8d8231bb69c9d35721
+  gRPC-ProtoRPC: 78f976fc6a1eafc0e1f4965c255c313aa0859b1e
+  gRPC-RxLibrary: c4c826507ad3c8c8fab6887f153938eb04b86d59
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  OneSignal: 0173a4e48c620089e4a1aba44c82d4148547d812
+  OneSignal: a48968a4096ac9146af91f31870204dcd731c939
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 5b080c153c52ce7e051a52431a258e5e71fc3562
+PODFILE CHECKSUM: e037fb5957e627eabaa620d353857403f7a4838c
 
 COCOAPODS: 1.5.3

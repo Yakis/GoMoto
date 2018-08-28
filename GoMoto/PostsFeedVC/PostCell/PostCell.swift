@@ -54,7 +54,7 @@ class PostCell: UITableViewCell, NibLoadable, ReusableView {
 
 
     @objc func likeAction() {
-        guard let userId = UserDefaults.standard.value(forKey: "userId") as? Int else {return}
+        guard let userId = UserDefaults.standard.value(forKey: "uid") as? String else {return}
         let like = PostLike(id: nil, userId: userId, postId: post.id!)
         print("LIKE ========== \(like)")
         PostLike.likePost(like: like) { (newPost, error) in

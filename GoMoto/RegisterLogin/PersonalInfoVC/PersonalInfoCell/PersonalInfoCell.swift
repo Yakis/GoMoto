@@ -77,9 +77,9 @@ class PersonalInfoCell: UITableViewCell, NibLoadable, ReusableView, UITextFieldD
         guard let lastName = self.lastNameField.text else {return}
         guard let email = emailField.text else {return}
         guard let phoneNumber = phoneNumberField.text else {return}
+        guard let uid = self.user.id else {return}
         let userType = self.user.userType
-        let firebaseUID = self.user.firebaseUid
-        let user = TraxUser(id: nil, username: "", email: email, firstName: firstName, lastName: lastName, postcode: "", contactNumber: phoneNumber, userType: userType, avatar: "", deviceToken: "", firebaseUid: firebaseUID)
+        let user = TraxUser(id: uid, username: "", email: email, firstName: firstName, lastName: lastName, postcode: "", contactNumber: phoneNumber, userType: userType, avatar: "", deviceToken: "")
         self.delegate?.personalInfoReady(with: user)
     }
     

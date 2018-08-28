@@ -10,9 +10,9 @@ import Foundation
 import Firebase
 
 struct PostLike: Codable {
-    var id: Int?
-    var userId: Int
-    var postId: Int
+    var id: String?
+    var userId: String
+    var postId: String
     
     
     

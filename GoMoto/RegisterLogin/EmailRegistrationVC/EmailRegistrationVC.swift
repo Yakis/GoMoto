@@ -12,9 +12,9 @@ class EmailRegistrationVC: UIViewController, EmailRegistrationDelegate {
     
     var userType: String!
     
-    
     func registerButtonPressed(email: String, password: String) {
         FirebaseManager.emailRegistration(userType: userType, email: email, password: password, viewController: self) { (user) in
+            print("EmailRegistrationVC \(user.id)")
             RegistrationPresenter.shared.showPersonalInfoVC(with: user, from: self)
         }
     }
