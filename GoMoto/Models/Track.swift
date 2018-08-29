@@ -43,6 +43,59 @@ struct Track: Codable {
     var favoritesCount: Int
     
     
+    init(document: QueryDocumentSnapshot) {
+        self.id = document.documentID
+        self.name = document.get("name") as? String ?? ""
+        self.adress = document.get("adress") as? String ?? ""
+        self.postcode = document.get("postcode") as? String ?? ""
+        self.latitude = document.get("latitude") as? Double ?? 0.0
+        self.longitude = document.get("longitude") as? Double ?? 0.0
+        self.soilType = document.get("soilType") as? String ?? ""
+        self.openingTimes = document.get("openingTimes") as? String ?? ""
+        self.prices = document.get("prices") as? String ?? ""
+        self.childFriendly = document.get("childFriendly") as? Bool ?? false
+        self.rating = document.get("rating") as? Double ?? 0.0
+        self.userId = document.get("userId") as? String ?? ""
+        self.featured = document.get("featured") as? Int ?? 0
+        self.image = document.get("image") as? String ?? ""
+        self.distance = document.get("distance") as? Double ?? 0.0
+        self.favoritesCount = document.get("favoritesCount") as? Int ?? 0
+    }
+    
+    
+    init(id: String?,
+    name: String,
+    adress: String,
+    postcode: String,
+    latitude: Double,
+    longitude: Double,
+    soilType: String,
+    openingTimes: String,
+    prices: String,
+    childFriendly: Bool,
+    rating: Double,
+    userId: String,
+    featured: Int,
+    image: String,
+    distance: Double?,
+    favoritesCount: Int) {
+        
+        self.name = name
+        self.adress = adress
+        self.postcode = postcode
+        self.latitude = latitude
+        self.longitude = longitude
+        self.soilType = soilType
+        self.openingTimes = openingTimes
+        self.prices = prices
+        self.childFriendly = childFriendly
+        self.rating = rating
+        self.userId = userId
+        self.featured = featured
+        self.image = image
+        self.distance = distance
+        self.favoritesCount = favoritesCount
+    }
     
     static func saveTrack(track: Track, completionHandler: @escaping (Track?, Error?) -> Void) {
         let db = Firestore.firestore()
@@ -65,23 +118,7 @@ struct Track: Codable {
         tracksCollectionRef.getDocuments { (snap, error) in
             guard let documents = snap?.documents else {return}
             for document in documents {
-                let id = document.documentID
-                guard let name = document.get("name") as? String else {return}
-                guard let adress = document.get("adress") as? String else {return}
-                guard let postcode = document.get("postcode") as? String else {return}
-                guard let latitude = document.get("latitude") as? Double else {return}
-                guard let longitude = document.get("longitude") as? Double else {return}
-                guard let soilType = document.get("soilType") as? String else {return}
-                guard let openingTimes = document.get("openingTimes") as? String else {return}
-                guard let prices = document.get("prices") as? String else {return}
-                guard let childFriendly = document.get("childFriendly") as? Bool else {return}
-                guard let rating = document.get("rating") as? Double else {return}
-                guard let userId = document.get("userId") as? String else {return}
-                guard let featured = document.get("featured") as? Int else {return}
-                guard let image = document.get("image") as? String else {return}
-                guard let distance = document.get("distance") as? Double else {return}
-                guard let favoritesCount = document.get("favoritesCount") as? Int else {return}
-                let track = Track(id: id, name: name, adress: adress, postcode: postcode, latitude: latitude, longitude: longitude, soilType: soilType, openingTimes: openingTimes, prices: prices, childFriendly: childFriendly, rating: rating, userId: userId, featured: featured, image: image, distance: distance, favoritesCount: favoritesCount)
+                let track = Track(document: document)
                 tracksArray.append(track)
             }
             completionHandler(tracksArray, nil)
@@ -124,23 +161,7 @@ struct Track: Codable {
         query.getDocuments { (snap, error) in
             guard let documents = snap?.documents else {return}
             for document in documents {
-                let id = document.documentID
-                guard let name = document.get("name") as? String else {return}
-                guard let adress = document.get("adress") as? String else {return}
-                guard let postcode = document.get("postcode") as? String else {return}
-                guard let latitude = document.get("latitude") as? Double else {return}
-                guard let longitude = document.get("longitude") as? Double else {return}
-                guard let soilType = document.get("soilType") as? String else {return}
-                guard let openingTimes = document.get("openingTimes") as? String else {return}
-                guard let prices = document.get("prices") as? String else {return}
-                guard let childFriendly = document.get("childFriendly") as? Bool else {return}
-                guard let rating = document.get("rating") as? Double else {return}
-                guard let userId = document.get("userId") as? String else {return}
-                guard let featured = document.get("featured") as? Int else {return}
-                guard let image = document.get("image") as? String else {return}
-                let distance = document.get("distance") as? Double ?? 0.0
-                guard let favoritesCount = document.get("favoritesCount") as? Int else {return}
-                let track = Track(id: id, name: name, adress: adress, postcode: postcode, latitude: latitude, longitude: longitude, soilType: soilType, openingTimes: openingTimes, prices: prices, childFriendly: childFriendly, rating: rating, userId: userId, featured: featured, image: image, distance: distance, favoritesCount: favoritesCount)
+                let track = Track(document: document)
                 tracksArray.append(track)
             }
             completionHandler(tracksArray, nil)
